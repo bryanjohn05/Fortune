@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+/* General Styles */
+
+
+/* Header */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", serif;
+}
+
+body {
+    font-family: "Libre Franklin", serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+}
+
+h4 {
+    color: #2BA6DC;
+    text-align: center;
+    display: block;
+    margin: 20px 0 0 0;
+    padding-top: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-size: 52px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    width: 100%;
+    height: 940PX;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 20px;
+    border: 1px solid #000;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+    color: #2BA6DC;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.value {
+    font-size: 20px;
+    color: #666;
+}
+
+.overview,
+.amenities,
+.gallery {
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 20px;
+}
+
+h2,
+h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute buttons across the row */
+    width: 100%;
+    /* Occupy full row width */
+    margin: 20px 0;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    width: 183px;
+    height: 52px;
+    border: none;
+    background-color: #2BA6DC;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+
+.amenities {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.amenity {
+    text-align: center;
+    width: 100%;
+
+}
+
+.icon-circle {
+    width: 215px;
+    height: 217px;
+    background-color: #2BA6DC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.icon-circle img {
+    width: 140px;
+    height: 140px;
+}
+
+.amenity p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer div {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer .social-icons img {
+    width: 25px;
+    margin-right: 10px;
+}
