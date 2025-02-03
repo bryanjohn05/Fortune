@@ -103,6 +103,23 @@ nav ul li a {
     color: #666;
 }
 
+.overview h2{
+    color: black; 
+    font-size: 40px;
+  }
+#amenities h2{
+    color: black; 
+    font-size: 40px;
+}
+  @media (max-width: 600px) {
+    .overview h2{
+        font-size: 25px;
+    }  
+    #amenities{
+        font-size: 25px;
+    }
+}
+
 .overview,
 .amenities,
 .gallery {
@@ -244,7 +261,6 @@ footer .social-icons img {
 }
 
 @media (max-width: 768px) {
-    /* Stack elements for mobile */
     header {
         flex-direction: column;
         align-items: center;
@@ -259,6 +275,10 @@ footer .social-icons img {
     .hero{
         width: 100%;
         height: auto;
+    }
+
+    .overview p{
+        text-align: justify;
     }
 
     .project-details {
