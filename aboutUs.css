@@ -1,0 +1,239 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  width: 100vw;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap");
+
+.hero {
+  background-image: url("assets/images/aboutus.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Ensures content is stacked vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  width: 100%;
+  text-align: center;
+  color: white; /* Adjust text color to ensure visibility on the background image */
+}
+
+.hero h1,
+.hero p {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+  font-size: 50px; /* Set the font size for both h1 and p */
+  line-height: 72.72px; /* Line height to match the specified value */
+  color: white;
+  margin: 0; /* Prevent any default margins */
+}
+
+.custom-milestone-container {
+  padding-top: 200px; /* Adjust this value as needed */
+  padding-bottom: 200px; /* Adjust this value as needed */
+  height: 700px;
+}
+
+.milestone-heading {
+  font-family: "Libre Franklin", sans-serif; /* Set font */
+  font-weight: 600; /* Set font weight */
+  font-size: 20px; /* Set font size */
+  line-height: 24.24px; /* Set line height */
+  letter-spacing: 10%; /* Adjust letter spacing */
+  text-align: center; /* Center align the text */
+  color: #2ba6dc;
+}
+
+.quality-heading {
+  font-family: "Libre Franklin", sans-serif; /* Set font */
+  font-weight: 600; /* Set font weight */
+  font-size: 40px; /* Set font size */
+  line-height: 48.48px; /* Set line height */
+  text-align: center; /* Center align the text */
+}
+
+.about {
+  background-color: #2ba6dc; /* New background color for the about section */
+  width: 100%; /* Set fixed width */
+  height: 384px; /* Set fixed height */
+  padding: 2rem;
+  color: white; /* Changed text color to white for better contrast */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center the text */
+  margin: 0 auto; /* Center the section horizontally on the page */
+}
+
+.our {
+  font-family: "Libre Franklin", sans-serif; /* Set font */
+  font-weight: 600; /* Set font weight */
+  font-size: 20px; /* Set font size */
+  line-height: 24.24px; /* Set line height */
+  letter-spacing: 10%; /* Adjust letter spacing */
+  text-align: center; /* Center align the text */
+}
+
+.custom-team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between team members */
+  flex-wrap: wrap;
+}
+
+.custom-team-member {
+  text-align: center;
+}
+
+.custom-circle-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.custom-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.custom-blue {
+  background-color: #2ba6dc; /* Blue background */
+  top: 0;
+  left: 10px;
+}
+
+.custom-grey {
+  background-color: #d3d3d3; /* Grey background */
+  top: 25px;
+  left: 25px;
+}
+
+.custom-h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.custom-p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 82px; /* Set width to match the logo size */
+  height: 94px; /* Set height to match the logo size */
+  background-image: url("CompanyLogo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+  font-family: "Libre Franklin"; /* Apply Libre Franklin font */
+}
+
+.navbar-link:hover {
+  color: #007bff;
+}
+
+/* Underline effect on hover */
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+
+  .navbar-links {
+    display: none; /* Hide links on mobile - you'll need to implement a mobile menu */
+  }
+}
+
+/* Active link style */
+.navbar-link.active {
+  color: #007bff;
+}
+
+.navbar-link.active::after {
+  width: 100%;
+}
