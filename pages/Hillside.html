@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="/css/ongoing.css">
     <title>Fortune Hillside</title>
     <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
+    <style>
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        .gallery img:nth-child(3) {
+            grid-column: span 2;
+            width:50%;
+            justify-self: center; /* Center the image */
+          }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr; /* 1 column layout */
+            }
+            
+            .gallery img:nth-child(3) {
+                width:100%;
+                grid-column: span 1; /* Ensure the 3rd image takes only 1 column */
+            }
+        }
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: 1fr; /* 1 column layout */
+            }
+            
+            .gallery img:nth-child(3) {
+                width:100%;
+                grid-column: span 1; /* Ensure the 3rd image takes only 1 column */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -62,8 +94,7 @@
                 </div>
                 <div class="detail">
                     <span class="label">APPROVED BY</span>
-                    <span class="value">PRM/KA/RERA/1273/319
-                        /PR/160223/005732</span>
+                    <span class="value">PRM/KA/RERA/1273/319/PR/160223/005732</span>
                 </div>
             </div>
 
@@ -83,10 +114,10 @@
                 Welcome to Fortune Hillside, where every aspect of your life is thoughtfully designed and taken care of.
             </p>
             <div class="buttons">
-                <button>Brochure</button>
-                <button>Gallery</button>
-                <button>Floor Plan</button>
-                <button>Location</button>
+                <button><b>Brochure</b></button>
+                <button><b>Gallery</b></button>
+                <button><b>Floor Plan</b></button>
+                <button><b>Location</b></button>
             </div>
         </section>
 
@@ -97,19 +128,19 @@
                 <div class="icon-circle">
                     <img src="/assets/icons/ev-charging.svg" alt="EV Charging Points">
                 </div>
-                <p>EV Charging Points</p>
+                <p><b>EV Charging Points</b></p>
             </div>
             <div class="amenity">
                 <div class="icon-circle">
                     <img src="/assets/icons/gym.svg" alt="Gym & Fitness Center">
                 </div>
-                <p>Gym & Fitness Center</p>
+                <p><b>Gym & Fitness Center</b></p>
             </div>
             <div class="amenity">
                 <div class="icon-circle">
                     <img src="/assets/icons/gas.svg" alt="Reticulated Gas">
                 </div>
-                <p>Reticulated Gas</p>
+                <p><b>Reticulated Gas</b></p>
             </div>
         </section>
 
