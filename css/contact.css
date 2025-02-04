@@ -97,6 +97,7 @@ section.image-section {
     gap: 20px;
     max-width: 1100px;
     width: 100%;
+    padding: 25px;
 }
 
 .callback-image img {
@@ -211,6 +212,238 @@ section.image-section {
     background: #007bff;
     padding-right: 20px; /* Expands button on hover */
 }
+  /* whatsapp Bot icons*/
+        
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #05ae3d;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
+  .chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2BA6DC;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; 
+    flex-direction: column;
+  }
+
+  .chat-header {
+    background: #2BA6DC;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius:12px ;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    
+  }
+
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    color: black;
+  }
+
+  .bot{
+    background-color: #2ba6dc;
+    color: black;
+    padding-left: 5px;
+
+    border-radius: 8px;
+  }
+  .user{
+  background-color: white;
+    color: black;
+    text-align: right;
+    padding : 10px;
+    
+    
+  }
+
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 12px;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 12px;
+  }
+
+  .chat-input button {
+    padding: 10px;
+    background: #ffffff;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+  }
+/*FOOTER*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    background-color: #666666;
+    color: #fff;
+    padding-top: 2rem ;
+    font-size: 16px;
+
+  }
+
+  /*
+  .footer .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+*/
+  .footer .columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 140px;
+    padding: 0px 0 4px 0;
+    max-width: auto;
+    margin: 0 auto;
+  }
+
+  .foot {
+    width: auto;
+  }
+
+  .footer .container .columns .foot {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  #footer_heading{
+    text-align: left;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+  .footer .columns div {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px;
+  }
+
+  .footer .explore h4 {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .footer .explore ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer .explore ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer .explore li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+  .footer .bottom-bar {
+    background-color: #2BA6DC;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .get_in_touch {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .get_in_touch p {
+    font-size: 14px;
+    padding-bottom: none;
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    padding-left: none;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: #2dbcf5;
+    font-size: 40px;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+
+
+  .email {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
 
 
 @media screen and (max-width: 700px) {
@@ -241,7 +474,7 @@ section.image-section {
 
     .callback-container {
         display: flex;
-        padding: 0px 24px;
+        padding: 24px 24px;
         flex-direction: column;  /* Stack the content vertically on mobile */
         align-items: center;  /* Center the content */
         gap: 20px;  /* Gap between image and form */
@@ -267,6 +500,68 @@ section.image-section {
         margin: 0 auto; /* Ensure button takes full width */
         padding: 10px 20px;
     }
+     /*---------------------------------------------------------------------------------------*/
+     .footer .columns {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        gap: 20px;
+        /* Reduce gap between columns */
+        padding: 20px 0;
+        /* Adjust padding */
+      }
+
+      .footer .columns div {
+        text-align: center;
+        /* Center align text */
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a {
+        color: #ffffff;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+
+      .social-icons {
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+
+      .social-icons i {
+        font-size: 28px;
+
+      }
+
+      .footer {
+        font-size: 14px;
+        /* Reduce footer font size */
+        text-align: justify;
+
+      }
+
+      .footer .bottom-bar {
+        font-size: 9px;
+      }
+
+      /*---------------------------------------------------------------------------------------*/
 }
 
 @media (min-width:700px) and (max-width: 1200px) {
@@ -299,7 +594,7 @@ section.image-section {
     }
     .callback-container {
         flex-direction: column;
-        padding: 0 30px;
+        padding: 30px 30px;
         gap: 30px;
     }
     .callback-form{
@@ -322,4 +617,46 @@ section.image-section {
     .input-container p{
         font-size: 24px;
     }
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    .footer .columns {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 0px;
+        padding: 50px 0 0 0;
+        max-width: 98%;
+        margin: 0;
+      }
+
+      .footer .columns div {
+        text-align: center;
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+     
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      .social-icons {
+
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+      /*-------------------------------------------------------------------------------------------------------------------*/
 }
