@@ -322,28 +322,124 @@ h2{
   }
 
 
-footer {
-    background-color: #333;
+/*FOOTER*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    background-color: #666666;
     color: #fff;
-    padding: 20px;
+    padding-top: 2rem 0;
+    font-size: 16px;
+
+  }
+
+  /*
+  .footer .columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+    padding: 2rem 0;
+  }
+*/
+  .footer .columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 140px;
+    padding: 0px 0 4px 0;
+    max-width: auto;
+    margin: 0 auto;
+  }
 
-footer div {
-    margin: 10px 0;
-}
+  .foot {
+    width: auto;
+  }
 
-footer a {
-    color: #007bff;
+  .footer .container .columns .foot {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  #footer_heading{
+    text-align: left;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+  .footer .columns div {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px;
+  }
+
+  .footer .explore h4 {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .footer .explore ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer .explore ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer .explore li a {
+    color: #fff;
     text-decoration: none;
-}
+  }
 
-footer .social-icons img {
-    width: 25px;
-    margin-right: 10px;
-}
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+  .footer .bottom-bar {
+    background-color: #2BA6DC;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .get_in_touch {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .get_in_touch p {
+    font-size: 14px;
+    padding-bottom: none;
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    padding-left: none;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: #2dbcf5;
+    font-size: 40px;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+
+
+  .email {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
+  
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
     /* Adjust grid for tablets */
@@ -374,6 +470,49 @@ footer .social-icons img {
         width: 120px;
         height: 120px;
     }
+
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    .footer .columns {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 0px;
+        padding: 50px 0 0 0;
+        max-width: 98%;
+        margin: 0;
+      }
+
+      .footer .columns div {
+        text-align: center;
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+     
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      .social-icons {
+
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+      /*-------------------------------------------------------------------------------------------------------------------*/
 }
 
 @media (max-width: 768px) {
@@ -458,9 +597,66 @@ footer .social-icons img {
         height: 100px;
     }
 
-    footer {
-        flex-direction: column;
-        align-items: center;
+    /*---------------------------------------------------------------------------------------*/
+    .footer .columns {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        gap: 20px;
+        /* Reduce gap between columns */
+        padding: 20px 0;
+        /* Adjust padding */
+      }
+
+      .footer .columns div {
         text-align: center;
-    }
+        /* Center align text */
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a {
+        color: #ffffff;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+
+      .social-icons {
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+
+      .social-icons i {
+        font-size: 28px;
+
+      }
+
+      .footer {
+        font-size: 14px;
+        /* Reduce footer font size */
+        text-align: justify;
+
+      }
+
+      .footer .bottom-bar {
+        font-size: 9px;
+      }
+
+      /*---------------------------------------------------------------------------------------*/
 }

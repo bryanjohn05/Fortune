@@ -97,6 +97,7 @@ section.image-section {
     gap: 20px;
     max-width: 1100px;
     width: 100%;
+    padding: 25px;
 }
 
 .callback-image img {
@@ -326,7 +327,123 @@ section.image-section {
     cursor: pointer;
     border: none;
   }
+/*FOOTER*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    background-color: #666666;
+    color: #fff;
+    padding-top: 2rem ;
+    font-size: 16px;
 
+  }
+
+  /*
+  .footer .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+*/
+  .footer .columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 140px;
+    padding: 0px 0 4px 0;
+    max-width: auto;
+    margin: 0 auto;
+  }
+
+  .foot {
+    width: auto;
+  }
+
+  .footer .container .columns .foot {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  #footer_heading{
+    text-align: left;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+  .footer .columns div {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px;
+  }
+
+  .footer .explore h4 {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .footer .explore ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer .explore ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer .explore li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+  .footer .bottom-bar {
+    background-color: #2BA6DC;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .get_in_touch {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .get_in_touch p {
+    font-size: 14px;
+    padding-bottom: none;
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    padding-left: none;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: #2dbcf5;
+    font-size: 40px;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+
+
+  .email {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
 
 
 @media screen and (max-width: 700px) {
@@ -357,7 +474,7 @@ section.image-section {
 
     .callback-container {
         display: flex;
-        padding: 0px 24px;
+        padding: 24px 24px;
         flex-direction: column;  /* Stack the content vertically on mobile */
         align-items: center;  /* Center the content */
         gap: 20px;  /* Gap between image and form */
@@ -383,6 +500,68 @@ section.image-section {
         margin: 0 auto; /* Ensure button takes full width */
         padding: 10px 20px;
     }
+     /*---------------------------------------------------------------------------------------*/
+     .footer .columns {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        gap: 20px;
+        /* Reduce gap between columns */
+        padding: 20px 0;
+        /* Adjust padding */
+      }
+
+      .footer .columns div {
+        text-align: center;
+        /* Center align text */
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a {
+        color: #ffffff;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+
+      .social-icons {
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+
+      .social-icons i {
+        font-size: 28px;
+
+      }
+
+      .footer {
+        font-size: 14px;
+        /* Reduce footer font size */
+        text-align: justify;
+
+      }
+
+      .footer .bottom-bar {
+        font-size: 9px;
+      }
+
+      /*---------------------------------------------------------------------------------------*/
 }
 
 @media (min-width:700px) and (max-width: 1200px) {
@@ -415,7 +594,7 @@ section.image-section {
     }
     .callback-container {
         flex-direction: column;
-        padding: 0 30px;
+        padding: 30px 30px;
         gap: 30px;
     }
     .callback-form{
@@ -438,4 +617,46 @@ section.image-section {
     .input-container p{
         font-size: 24px;
     }
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    .footer .columns {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 0px;
+        padding: 50px 0 0 0;
+        max-width: 98%;
+        margin: 0;
+      }
+
+      .footer .columns div {
+        text-align: center;
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+     
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      .social-icons {
+
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+      /*-------------------------------------------------------------------------------------------------------------------*/
 }
