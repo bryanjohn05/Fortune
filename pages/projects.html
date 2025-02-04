@@ -6,7 +6,7 @@
   <title>Fortune Promoters</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" type="image/svg+xml" href="./assets/icons/fortune logo original 2.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/fortunelogo.svg">
 
   <script>
     window.addEventListener('scroll', function () {
@@ -278,7 +278,21 @@
       color: white;
     }
 
-
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #05ae3d;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
     /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
     .chatbot-icon {
       position: fixed;
@@ -388,7 +402,7 @@
   <!-- Header Section -->
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/icons/fortune logo original 2.svg" alt="CompanyLogo" />
+      <img src="/assets/icons/fortunelogo.svg" alt="CompanyLogo" />
     </div>
     <div class="navbar-links">
       <a href="/" class="navbar-link">Home</a>
@@ -400,14 +414,14 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <img src="assets/images/Project1.png" alt="Hero Image">
+    <img src="/assets/images/Project1.png" alt="Hero Image">
   </div>
 
   <!-- Section 1 -->
   <section class="section">
     <div class="container">
       <button class="mid_btn">Our Residential & Commercial Buildings</button>
-      <img src="assets/images/Project2.png" alt="Building Image">
+      <img src="/assets/images/Project2.png" alt="Building Image">
       <p>
         When it comes to finding your perfect home, Fortune Promoters is your trusted partner. Our residential offerings
         include a wide range of well-thought-out apartments designed to meet diverse lifestyles and budgets. Whether
@@ -422,7 +436,7 @@
     <div class="container">
       <div class="columns">
         <div>
-          <img src="assets/icons/fortune logo original 2.svg" alt="Logo" style="width: 80px;">
+          <img src="/assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
           <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their portfolio
             includes
             residential spaces, commercial properties, and plots, offering exceptional quality and value in every
@@ -462,7 +476,9 @@
       Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision Flow Technologies
     </div>
   </footer>
-
+  <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></div>
+  
+  
   <!-- Chatbot -->
   <div class="chatbot-icon" onclick="toggleChat()">💬</div>
   <div class="chat-container" id="chat-container">
@@ -480,6 +496,10 @@
   <script>
     let isChatOpened = false;
     const apiKey = "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"; // Replace with your actual API key
+
+    function whatsapp_link(){
+      window.open('https://wa.me/', '_blank');
+    }
 
     function toggleChat() {
       const chatContainer = document.getElementById("chat-container");
