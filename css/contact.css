@@ -49,7 +49,7 @@ section.image-section {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     nav ul {
         display: none;
         flex-direction: column;
@@ -81,13 +81,7 @@ section.image-section {
     transition: all 0.3s ease;  /* Add a smooth transition for resizing */
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .image-section img {
-        width: 100%;  /* Make the image take the full width on mobile */
-        max-width: 100%;  /* Ensure the image doesn't exceed its container */
-    }
-}
+
 
 .callback-section {
     display: flex;
@@ -219,7 +213,11 @@ section.image-section {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
+    .image-section img {
+        width: 100%;  /* Make the image take the full width on mobile */
+        max-width: 100%;  /* Ensure the image doesn't exceed its container */
+    }
     .callback-section {
         padding: 0px 24px;  /* Reduced padding for mobile */
         flex-direction: column;  /* Stack items vertically */
@@ -235,7 +233,7 @@ section.image-section {
         left: 0px; /* Smaller width for mobile */
         padding: 10px;  /* Reduced padding */
         font-size: 10px;  
-        margin-bottom: 18px;
+        margin-bottom: 6px;
         
         /* Smaller font size */
          /* Ensure it's not too far left */
@@ -271,3 +269,57 @@ section.image-section {
     }
 }
 
+@media (min-width:700px) and (max-width: 1200px) {
+    header {
+        padding: 10px 40px;
+    }
+    .callback-image img {
+        max-width: 100%;
+        margin-left: 10px;
+        opacity: 0.8;
+    }
+    .details-box {
+        width: 350px;
+        height: 400px;;
+        left: 0px; /* Smaller width for mobile */
+        padding: 5px;  /* Reduced padding */
+        font-size: 10px;  
+        margin-bottom: 2px;
+        left: -2px;
+        box-shadow: 3px 3px 10px rgba(0, 86, 179, 0.5);
+        
+        /* Smaller font size */
+         /* Ensure it's not too far left */
+    }
+    .details-box p {
+        font-size: 20px;
+        
+        /* Smaller font size */
+         /* Ensure it's not too far left */
+    }
+    .callback-container {
+        flex-direction: column;
+        padding: 0 30px;
+        gap: 30px;
+    }
+    .callback-form{
+        width: 80%;
+    }
+    .callback-form h2{
+        font-size: 28px;
+        padding: 0;
+    }
+    .callback-form p{
+        font-size: 16px;
+    }
+
+    .callback-image{
+        Flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+        margin: 0 30px;
+    }
+    .input-container p{
+        font-size: 24px;
+    }
+}
