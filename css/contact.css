@@ -332,9 +332,8 @@ section.image-section {
 .footer {
     background-color: #666666;
     color: #fff;
-    padding-top: 2rem ;
+    /* padding: 30px 120px 0 120px ; */
     font-size: 16px;
-
   }
 
   /*
@@ -349,7 +348,7 @@ section.image-section {
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 140px;
-    padding: 0px 0 4px 0;
+    padding: 30px 120px 0 120px ;
     max-width: auto;
     margin: 0 auto;
   }
@@ -506,7 +505,7 @@ section.image-section {
         /* Stack columns vertically */
         gap: 20px;
         /* Reduce gap between columns */
-        padding: 20px 0;
+        padding: 0px 20px;
         /* Adjust padding */
       }
 
@@ -622,7 +621,7 @@ section.image-section {
         display: grid;
         grid-template-columns: auto auto auto;
         column-gap: 0px;
-        padding: 50px 0 0 0;
+        padding: 50px 30px 0 30px;
         max-width: 98%;
         margin: 0;
       }
