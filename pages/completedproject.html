@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
+    <title>Building Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 120px;
+            background-color: #333;
+            color: white;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .building-image {
+            width: 100%;
+            display: block;
+        }
+        .section {
+            margin: 50px 120px;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            width: 45%;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .card-text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .card h3, .card p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .card p {
+            font-size: 16px;
+            color: #ddd;
+        }
+        
+        @media (max-width: 1024px) {
+            .navbar {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        
+            .section {
+                padding-left: 24px;
+                padding-right: 24px;
+                margin: 0; /* Remove any extra margins */
+            }
+        
+            .cards {
+                padding-left: 0; /* Ensure no padding on the left */
+                padding-right: 0; /* Ensure no padding on the right */
+                gap: 16px; /* Adjust the gap between cards if necessary */
+            }
+        
+            .card {
+                width: 100%; /* Full width for each card in mobile view */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="logo">MyLogo</div>
+    </nav>
+    <img src="./images/CompletedMain.png" alt="Building" class="building-image"><br>
+    
+    <div class="section">
+        <h2>Our Completed Projects</h2>
+        <h2>The Fortune Family</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="./images/FortuneHighway.png" alt="Fortune Highway">
+                <div class="card-text">
+                    <h3>Fortune Highway</h3>
+                    <p>Jainpete Moodbidri</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/FortuneHighway2.png" alt="Fortune Highway-2">
+                <div class="card-text">
+                    <h3>Fortune Highway-2</h3>
+                    <p>Jainpete Moodbidri</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/FortuneCenter.png" alt="Fortune Center">
+                <div class="card-text">
+                    <h3>Fortune Center</h3>
+                    <p>Bajagoli</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/FortuneLotus.png" alt="Fortune Lotus">
+                <div class="card-text">
+                    <h3>Fortune Lotus</h3>
+                    <p>Jodurasthe Karkala</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/FortuneNeethiHights.png" alt="Fortune Neethi Heights">
+                <div class="card-text">
+                    <h3>Fortune Neethi Heights</h3>
+                    <p>Opposite Government Hospital, Moodbidri</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

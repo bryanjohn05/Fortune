@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ongoing.css">
+    <title>Fortune Hillside</title>
+    <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
+    <style>
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        .gallery img:nth-child(3) {
+            grid-column: span 2;
+            width:50%;
+            justify-self: center; /* Center the image */
+          }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr; /* 1 column layout */
+            }
+            
+            .gallery img:nth-child(3) {
+                width:100%;
+                grid-column: span 1; /* Ensure the 3rd image takes only 1 column */
+            }
+        }
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: 1fr; /* 1 column layout */
+            }
+            
+            .gallery img:nth-child(3) {
+                width:100%;
+                grid-column: span 1; /* Ensure the 3rd image takes only 1 column */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="/assets/icons/fortunelogo.svg" alt="Fortune Promoters Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="/assets/images/HillSideMain.png" alt="Hillside" class="hero" width="1440px" height="940px">
+
+    <div class="container">
+        <h4>RESIDENTIAL & COMMERCIAL PROJECT</h4>
+        <h2 style="color: black;">Fortune Hillside </h2>
+        <section class="project-info">
+            <div class="project-details">
+                <div class="detail">
+                    <span class="label">LOCATION</span>
+                    <span class="value">Pachanady, Bondel</span>
+                </div>
+                <div class="detail">
+                    <span class="label">TYPE</span>
+                    <span class="value">Residential & Commercial</span>
+                </div>
+                <div class="detail">
+                    <span class="label">AREA</span>
+                    <span class="value">0.21 Acres</span>
+                </div>
+                <div class="detail">
+                    <span class="label">FLAT SIZE</span>
+                    <span class="value">1167 Sqft - 2290 Sqft</span>
+                </div>
+                <div class="detail">
+                    <span class="label">PRICE</span>
+                    <span class="value">51 Lakhs Onwards</span>
+                </div>
+                <div class="detail">
+                    <span class="label">STATUS</span>
+                    <span class="value">Just started</span>
+                </div>
+                <div class="detail">
+                    <span class="label">COMPLETION DATE</span>
+                    <span class="value">March 2026</span>
+                </div>
+                <div class="detail">
+                    <span class="label">APPROVED BY</span>
+                    <span class="value">PRM/KA/RERA/1257/334
+                        /PR/220622/005021</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="overview">
+            <h4>OVERVIEW</h4>
+            <h2>A new HEAVEN for your dream at <br>
+                Fortune Hillside</h2>
+            <p style="font-size: 18;">Discover the ultimate in convenience and comfort at Fortune Hillside, a unique
+                community that offers everything you need for a well-rounded and fulfilling lifestyle. Whether you're
+                looking for stylish and spacious 2BHK or 3BHK apartments, we have the perfect home for you. In addition,
+                Fortune Hillside features premium office spaces, vibrant retail outlets, delicious dining options, and
+                fully-equipped serviced apartments, ensuring you have everything you need within the comfort of your
+                community to live, work, play, and relax. All of this is set within a beautifully landscaped 0.51-acre
+                oasis, offering the ideal balance of privacy and a sense of community.
+                Welcome to Fortune Hillside, where every aspect of your life is thoughtfully designed and taken care of.
+            </p>
+            <div class="buttons">
+                <button><b>Brochure</b></button>
+                <button><b>Gallery</b></button>
+                <button><b>Floor Plan</b></button>
+                <button><b>Location</b></button>
+            </div>
+        </section>
+
+        <h4>AMENITY</h4>
+        <h2 id="amenities">Exceptional Facilities for a Well-Rounded Lifestyle</h2>
+        <section class="amenities">
+            <div class="amenity">
+                <div class="icon-circle">
+                    <img src="/assets/icons/ev-charging.svg" alt="EV Charging Points">
+                </div>
+                <p><b>EV Charging Points</b></p>
+            </div>
+            <div class="amenity">
+                <div class="icon-circle">
+                    <img src="/assets/icons/gym.svg" alt="Gym & Fitness Center">
+                </div>
+                <p><b>Gym & Fitness Center</b></p>
+            </div>
+            <div class="amenity">
+                <div class="icon-circle">
+                    <img src="/assets/icons/gas.svg" alt="Reticulated Gas">
+                </div>
+                <p><b>Reticulated Gas</b></p>
+            </div>
+        </section>
+
+        <h2 id="gallery" style="color: #2BA6DC; font-size:20px;padding-bottom:35px;">Gallery</h2>
+        <section class="gallery">
+            <img src="/assets/images/HillSideSub1.png" alt="Construction Image 1">
+            <img src="/assets/images/HillSideSub2.png" alt="Construction Image 2">
+            <img src="/assets/images/HillSideSub3.png" alt="Construction Image 3">
+            <!-- <img src="/images/GalaxySub4.png" alt="Construction Image 4"> -->
+        </section>
+    </div>
+
+    <footer>
+        <div>
+            <h3>Explore</h3>
+            <a href="#">Home</a><br>
+            <a href="#">About Us</a><br>
+            <a href="#">Projects</a><br>
+            <a href="#">Careers</a><br>
+            <a href="#">Contact Us</a>
+        </div>
+        <div>
+            <h3>Get in Touch</h3>
+            <p>FORTUNE PROMOTERS</p>
+            <p>123, Fortune Heights, Woods</p>
+            <p>Email: info@fortunepromoters.com</p>
+            <p>Phone: +91 12345 67890</p>
+        </div>
+        <div class="social-icons">
+            <img src="facebook.png" alt="Facebook">
+            <img src="twitter.png" alt="Twitter">
+            <img src="instagram.png" alt="Instagram">
+        </div>
+    </footer>
+</body>
+
+</html>
