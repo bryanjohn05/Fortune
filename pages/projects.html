@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortune Promoters</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/fortune logo original 2.svg">
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Libre Franklin", serif;
+      line-height: 1.6;
+      color: #333;
+
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: none;
+
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /*padding: 1.05rem 0;  */
+      height: 94px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+      /* Smooth transition */
+    }
+
+    .navbar.shrink {
+      /* padding: 0.1rem 0; /* Smaller padding when scrolled */
+      height: 54px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      /* Slightly larger shadow */
+      transition: all 0.2s linear;
+      /* Smooth transition */
+
+    }
+
+    .navbar.shrink .logo img {
+      height: 54px;
+      /* Adjust the height */
+      width: auto;
+      /* Maintain aspect ratio */
+      transition: all 0.2s linear;
+      /* Smooth transition */
+    }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-left: 50px;
+    }
+
+    .logo img {
+      height: 94px;
+      width: auto;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      margin-right: 120px;
+
+    }
+
+    .navbar-link {
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 0.5rem 0;
+      position: relative;
+      font-family: 'Libre Franklin';
+    }
+
+    .navbar-link:hover {
+      color: #2BA6DC;
+      font-size: 18px;
+      transition: all 0.2s linear;
+
+    }
+
+    .navbar-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #2BA6DC;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-link:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      margin-top: 60px;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    
+
+
+
+    .mid_btn {
+      background-color: #2BA6DC;
+      color: white;
+      padding: 1.5rem 6rem;
+      font-size: 1.5rem;
+      border: none;
+
+
+      display: block;
+      margin: 1rem auto;
+      text-align: center;
+      width: 100%;
+      /* Ensures it adapts to content */
+      /* Prevents it from becoming too large on bigger screens */
+      margin-bottom: 3%;
+
+    }
+
+    .mid_btn:hover {
+      background-color: #2BA6DC;
+    }
+
+
+
+    .footer {
+      background-color: #666666;
+      color: #fff;
+      padding-top: 2rem 0;
+      font-size: 16px;
+
+    }
+
+    /*
+    .footer .columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+    }
+*/
+    .footer .columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 140px;
+      padding: 50px 0 4px 0;
+      max-width: auto;
+      margin: 0 auto;
+    }
+
+    .foot {
+      width: auto;
+    }
+
+    .footer .container .columns .foot {
+      text-align: left;
+      font-size: 12px;
+
+    }
+
+    .footer .columns div {
+      flex: 1;
+      margin: 0 1rem;
+      min-width: 200px;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .bottom-bar {
+      background-color: #2BA6DC;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      padding: 1rem 0;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .get_in_touch {
+      font-size: 20px;
+      padding-bottom: none;
+    }
+
+    .get_in_touch p {
+      font-size: 14px;
+      padding-bottom: none;
+    }
+
+    .social-icons {
+      display: flex;
+      margin-top: 1rem;
+      justify-content: space-around;
+      padding-left: none;
+
+
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 0.5rem;
+      color: #fff;
+      font-size: 40px;
+      text-decoration: none;
+      justify-content: space-between;
+      
+
+
+    }
+
+
+    .email {
+      color: white;
+    }
+
+
+    /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
+    .chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2BA6DC;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .chat-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background: #2BA6DC;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      color: black;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .chat-input button {
+      padding: 10px;
+      background: #2BA6DC;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+/* Responsive Design */
+@media (max-width: 1024x) {
+      .navbar {
+        padding: 0.5rem 2rem;
+      }
+
+      .navbar-links {
+        display: none;
+      }
+
+      .hero {
+        margin-top: 100px;
+      }
+    }
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer .columns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/icons/fortune logo original 2.svg" alt="CompanyLogo" />
+    </div>
+    <div class="navbar-links">
+      <a href="/" class="navbar-link">Home</a>
+      <a href="/aboutUs" class="navbar-link">About Us</a>
+      <a href="/projects" class="navbar-link">Projects</a>
+      <a href="/contactUs" class="navbar-link">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="assets/images/Project1.png" alt="Hero Image">
+  </div>
+
+  <!-- Section 1 -->
+  <section class="section">
+    <div class="container">
+      <button class="mid_btn">Our Residential & Commercial Buildings</button>
+      <img src="assets/images/Project2.png" alt="Building Image">
+      <p>
+        When it comes to finding your perfect home, Fortune Promoters is your trusted partner. Our residential offerings
+        include a wide range of well-thought-out apartments designed to meet diverse lifestyles and budgets. Whether
+        you're searching for a cozy apartment, a spacious family home with room to grow, we provide living spaces that
+        prioritize comfort, style, and modern conveniences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div>
+          <img src="assets/icons/fortune logo original 2.svg" alt="Logo" style="width: 80px;">
+          <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their portfolio
+            includes
+            residential spaces, commercial properties, and plots, offering exceptional quality and value in every
+            project.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="get_in_touch">Explore</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="get_in_touch">
+          <h4>Get in Touch</h4>
+          <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> &nbsp;&nbsp;FORTUNE PROMOTERS<br>Fortune
+            Highway-II<br>Main Road, Moodbidri<br>-574227</p>
+          <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i>&nbsp;&nbsp; 08258 289555<br><i
+              class="fa-solid fa-phone" style="color: #ffffff;">&nbsp;&nbsp;</i>72595 14111</p>
+          <p><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>&nbsp;&nbsp; <a class="email"
+              href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> <i
+              class="fa-solid fa-envelope" style="color: #ffffff;"></i>&nbsp;&nbsp;<a class="email"
+              href="mailto:bedrafortune@gmail.com">bedrafortune@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-bar">
+      Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision Flow Technologies
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      Fortune Promoters
+      <button class="close-btn" onclick="toggleChat()">✖</button>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    let isChatOpened = false;
+    const apiKey = "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"; // Replace with your actual API key
+
+    function toggleChat() {
+      const chatContainer = document.getElementById("chat-container");
+      chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
+      if (!isChatOpened) {
+        appendMessage("Fortune: How may I help you?");
+        isChatOpened = true;
+      }
+    }
+
+    async function sendMessage() {
+      const userInput = document.getElementById("user-input"); // Ensure correct reference
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      appendMessage("You: " + message);
+      userInput.value = "";
+
+      try {
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            model: "llama3-70b-8192", // Ensure this model exists
+            messages: [
+              { role: "system", content: "You are a polite and professional AI assistant representing 'Fortune Promoters,' a real estate business located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers with their inquiries in a friendly yet concise manner. Provide answers only if you are certain of the information; otherwise, politely direct the customer to contact Fortune Promoters via phone (08258238555 / 7259514111) or email (sales@fortunepromoters.com, bedrafortune@gmail.com). Keep responses brief and to the point. strictly Avoid boring explanations, keep it straight to the point. Don't give too lengthy response it shouldnt bore the users" },
+              { role: "user", content: message }
+            ],
+            max_tokens: 100
+          })
+        });
+
+        const data = await response.json();
+
+        if (!data.choices || !data.choices.length) {
+          appendMessage("Fortune: Unexpected API response. Please try again.");
+          return;
+        }
+
+        const reply = data.choices[0].message.content || "I couldn't understand that.";
+        appendMessage("Fortune: " + reply);
+      } catch (error) {
+        console.error("Fetch Error:", error);
+        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.");
+      }
+    }
+
+    function appendMessage(message) {
+      const chatMessages = document.getElementById("chat-messages");
+      const msgElement = document.createElement("div");
+      msgElement.textContent = message;
+      chatMessages.appendChild(msgElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  </script>
+
+</body>
+
+</html>
