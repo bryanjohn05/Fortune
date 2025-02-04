@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Building Page</title>
     <style>
         * {
@@ -12,7 +15,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Libre Franklin", sans-serif;
             text-align: center;
         }
         .navbar {
@@ -41,11 +44,17 @@
             display: block;
         }
         .section {
-            margin: 50px 120px;
+            margin: 40px 120px;
         }
-        .section h2 {
-            font-size: 24px;
+        .black-heading {
+            font-size: 52px;
             margin-bottom: 20px;
+            color: #333;
+        }
+        .blue-heading{
+            color:#2BA6DC ;
+            font-size: 20px;
+            padding-bottom: 18px;
         }
         .cards {
             display: flex;
@@ -73,24 +82,37 @@
             padding: 10px 0;
             text-align: center;
         }
-        .card h3, .card p {
+        .card h3 {
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 32px;
+        }
+        .card p{
+            margin: 5px 0;
+            font-size: 24px;
         }
         .card p {
             font-size: 16px;
             color: #ddd;
         }
         
-        @media (max-width: 1024px) {
-            .navbar {
-                padding-left: 24px;
-                padding-right: 24px;
+        @media (max-width: 1224px) {
+            
+            .card h3 {
+                font-size: 40px;
+            }
+            .card p{
+                font-size: 30px;
+            }
+            
+            .blue-heading{
+                color:#2BA6DC ;
+                font-size: 28px;
+                padding: 18px 0 18px 0;
             }
         
             .section {
-                padding-left: 24px;
-                padding-right: 24px;
+                padding-left: 30px;
+                padding-right: 30px;
                 margin: 0; /* Remove any extra margins */
             }
         
@@ -102,6 +124,63 @@
         
             .card {
                 width: 100%; /* Full width for each card in mobile view */
+            }
+            
+        }
+        @media (max-width: 700px) {
+            /* Prevent horizontal overflow */
+            html, body {
+                overflow-x: hidden;
+                width: 100%;
+            }
+            
+            
+        
+            /* Fix Navbar Spacing */
+            .navbar {
+                padding: 10px 5%; /* Adjust padding for smaller screens */
+            }
+        
+            /* Fix Section Width */
+            .section {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 24; /* Add some padding to prevent edge touching */
+            }
+        
+            /* Fix Cards Layout */
+            .cards {
+                display: flex;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center;
+                justify-content: center;
+                padding: 0; /* Remove extra padding */
+                gap: 16px;
+            }
+        
+            /* Fix Individual Card */
+            .card {
+                width: 90%; /* Reduce width to prevent overflow */
+                margin: 0 auto; /* Center the cards */
+            }
+            .card h3 {
+                font-size: 24px;
+            }
+            .card p{
+                font-size: 14px;
+            }
+            .black-heading {
+                font-size: 32px;
+            }
+            .blue-heading{
+                font-size: 14px;
+            }
+        
+            /* Ensure Images Fit */
+            .card img {
+                width: 100%;
+                height: auto;
+                display: block;
             }
         }
     </style>
@@ -116,42 +195,42 @@
         </div>
         <div class="logo">MyLogo</div>
     </nav>
-    <img src="./images/CompletedMain.png" alt="Building" class="building-image"><br>
+    <img src="/assets/images/CompletedMain.png" alt="Building" class="building-image"><br>
     
     <div class="section">
-        <h2>Our Completed Projects</h2>
-        <h2>The Fortune Family</h2>
+        <h2 class="blue-heading">OUR COMPLETED PROJECTS</h2>
+        <h2 class="black-heading">The Fortune Family</h2>
         <div class="cards">
             <div class="card">
-                <img src="./images/FortuneHighway.png" alt="Fortune Highway">
+                <img src="/assets/images/FortuneHighway.png" alt="Fortune Highway">
                 <div class="card-text">
                     <h3>Fortune Highway</h3>
                     <p>Jainpete Moodbidri</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./images/FortuneHighway2.png" alt="Fortune Highway-2">
+                <img src="/assets/images/FortuneHighway2.png" alt="Fortune Highway-2">
                 <div class="card-text">
                     <h3>Fortune Highway-2</h3>
                     <p>Jainpete Moodbidri</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./images/FortuneCenter.png" alt="Fortune Center">
+                <img src="/assets/images/FortuneCenter.png" alt="Fortune Center">
                 <div class="card-text">
                     <h3>Fortune Center</h3>
                     <p>Bajagoli</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./images/FortuneLotus.png" alt="Fortune Lotus">
+                <img src="/assets/images/FortuneLotus.png" alt="Fortune Lotus">
                 <div class="card-text">
                     <h3>Fortune Lotus</h3>
                     <p>Jodurasthe Karkala</p>
                 </div>
             </div>
             <div class="card">
-                <img src="./images/FortuneNeethiHights.png" alt="Fortune Neethi Heights">
+                <img src="/assets/images/FortuneNeethiHights.png" alt="Fortune Neethi Heights">
                 <div class="card-text">
                     <h3>Fortune Neethi Heights</h3>
                     <p>Opposite Government Hospital, Moodbidri</p>
