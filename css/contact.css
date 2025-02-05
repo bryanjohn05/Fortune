@@ -129,6 +129,102 @@ section.image-section {
     color: #007bff;
 }
 
+
+.dropdown-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Style the select dropdown */
+.selection {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    appearance: none; /* Hide default dropdown arrow */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Custom dropdown arrow */
+.dropdown-wrapper::after {
+    content: "\f078"; /* FontAwesome down arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevents interference with select */
+}
+
+/* Expand effect when clicked */
+.selection:focus {
+    border-color: #ffffff;
+    outline: none;
+    margin-bottom: 1.8px;
+    
+    
+}
+select option[disabled] {
+    color: #a1a1a1; /* Change this to the desired placeholder color */
+}
+
+select {
+    color: gray; /* Default color */
+  }
+  
+  select:valid {
+    color: black; /* Color when a valid option is selected */
+  }
+  
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablet */
+    .selection {
+        font-size: 16px;
+        padding: 10px 14px;
+        white-space: normal; /* Allow wrapping */
+        overflow-wrap: break-word;
+        appearance: none; /* Removes the default dropdown arrow */
+        width: 50%; /* Ensures the select box takes full width */
+        padding-right: -2px;
+        margin-bottom: 2px;
+        
+    }
+    
+    .selection:focus {
+        
+        outline: none;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .selection {
+        font-size: 13px;
+        padding: 8px 12px;
+        
+    }
+    .dropdown-wrapper::after {
+        right: 8px;
+    }
+    .selection:focus {
+        
+        outline: none;
+        margin-bottom: 2px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .callback-form {
     background: #ffffff;
     padding: 20px;
@@ -178,8 +274,21 @@ section.image-section {
 /* Horizontal Line */
 .input-container .line {
     width: 100%;
-    height: 1px;
-    background: black;
+    height: 2px;
+    background: rgb(14, 14, 14);
+    margin-top: -2px;
+}
+
+.input-container .dropline{
+    width: 100%;
+    height: 2.1px;
+    background: rgb(14, 14, 14);
+    margin-top: -1px;
+}
+.input-container .mesline{
+    width: 100%;
+    height: 1.5px;
+    background: rgb(14, 14, 14);
     margin-top: -2px;
 }
 .required{
