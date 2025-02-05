@@ -8,14 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
     <title>Contact Us</title>
+    <script>
+      window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('shrink');
+        } else {
+          navbar.classList.remove('shrink');
+        }
+      });
+    </script>
 </head>
 
 <body>
-   
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/assets/icons/fortunelogo.svg" alt="Company Logo">
+    </div>
+    <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
+    <div class="navbar-links" id="navbar-links">
+      <a href="/pages/index.html" class="navbar-link">Home</a>
+      <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
+      <a href="/" class="navbar-link">Careers</a>
+      <div class="dropdown">
+        <p class="navbar-link">Projects</p>
+        <div class="dropdown-content">
+          <a href="/pages/completedproject.html" id="ongoing">Completed Projects</a>
+          <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
+          <div class="nested-dropdown" id="ongoing-options">
+            <a href="/pages/Hillside.html">Fortune Hillside</a>
+            <a href="/pages/Galaxy.html">Fortune Galaxy</a>
+            <a href="/pages/Orchid.html">Fortune Orchid</a>
+          </div>
+        </div>
+      </div>
+      <a href="/pages/contactUs" class="navbar-link">Contact Us</a>
+    </div>
+  </nav>
 
     <section class="image-section">
         <img src="/assets/images/ContactUsMain.png" alt="Sample Image">
-    </section>
+    </section>       
     <section class="callback-section">
         <div class="callback-container">
             <div class="callback-image">
@@ -25,7 +58,7 @@
                     <div class="details-box">
                         <p>Moodabidri</p>
                         <p class="color">Location</p>
-                        <p>FORTUNE PROMOTERS <br>Fortune Highway-II <br>Main Road,Moodabidri-5744227</p>
+                        <p>FORTUNE PROMOTERS <br>Fortune Highway-2 <br>Main Road,Moodabidri-5744227</p>
                         <p class="color">Contact</p>
                         <p>08258 238555 <br>72595 14111</p>
                         <p class="color">Email</p>
@@ -54,11 +87,23 @@
                         <input type="email" placeholder="Enter your email" required>
                         <div class="line"></div>
                     </div><br>
-                    <div class="input-container">
+                    <div class="input-container" id="dropdown">
                         <p>Project Interested</p>
-                        <input type="tel" placeholder="Write Your Project Interested Here..." required>
-                        <div class="line"></div>
-                    </div><br>
+                        <div class="dropdown-wrapper">
+                            <select required class="selection">
+                                <option value="" disabled selected hidden>Select Project</option>
+                                <option value="project1">Fortune Galaxy</option>
+                                <option value="project2">Fortune Orchid</option>
+                                <option value="project3">Fortune Hillside</option>
+                                <option value="project4">Furtune Highway-2</option>
+                                <option value="project4">Furtune Highway</option>
+                                <option value="project4">Furtune Center</option>
+                                <option value="project4">Furtune Lotus</option>
+                            </select>
+                        </div>
+                        <div class="dropline"></div>
+                    </div>
+                    
                     <div class="input-container">
                         <p>Message</span></p>
                         <input type="text" placeholder="Write Your Message Here..." required>
@@ -210,6 +255,42 @@
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar-links");
+      
+    let isHovered = false; // Track hover state
+
+    navbar.addEventListener("mousedown", () => {
+      if (window.innerWidth <=700) {
+      isHovered = true;
+      navbarLinks.style.display = "flex";
+      }
+      
+    });
+
+    navbar.addEventListener("mouseenter", () => {
+      if (window.innerWidth <=700) {
+      isHovered = true;
+      navbarLinks.style.display = "flex";
+      }
+      
+    });
+    
+    navbar.addEventListener("mouseleave", () => {
+      if (window.innerWidth <=700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
+    
+    // Hide navbar-links when scrolling, but allow it to reappear on hover
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth <=700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
     </script>
 
 </body>

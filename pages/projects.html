@@ -30,16 +30,17 @@
       color: #333;
     }
 
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
     .container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
       padding: none;
+    }
+
+    /*--------------------------------------------------------Header CSS------------------------------------------*/
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .navbar {
@@ -95,13 +96,12 @@
 
     .navbar-links {
       display: flex;
-      gap:15px;
+      gap: 15px;
       align-items: center;
       margin-right: 70px;
 
-
-
     }
+
 
     .navbar-link {
       text-decoration: none;
@@ -113,6 +113,7 @@
       font-family: 'Libre Franklin';
     }
 
+
     .navbar-links p {
       margin: 0;
     }
@@ -121,7 +122,6 @@
       color: #2BA6DC;
       font-size: 18px;
       transition: all 0.2s linear;
-
     }
 
     .navbar-link::after {
@@ -139,6 +139,70 @@
       width: 100%;
     }
 
+    /*dropdown*/
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2BA6DC;
+      color: white;
+    }
+
+    .nested-dropdown {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .dropdown-item:hover+.nested-dropdown,
+    .nested-dropdown:hover {
+      display: block;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #2BA6DC;
+      margin: 4px 0;
+    }
+
+    .dropdown-item {
+      position: relative;
+    }
+
+    .dropdown-item::after {
+      content: " >";
+      display: inline-block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .dropdown-item:hover::after {
+      content: " v";
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+
+    /*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
     .hero {
       margin-top: 60px;
       color: #fff;
@@ -161,10 +225,7 @@
       margin: 1rem auto;
       text-align: center;
       width: 100%;
-      /* Ensures it adapts to content */
-      /* Prevents it from becoming too large on bigger screens */
       margin-bottom: 3%;
-
     }
 
     .mid_btn:hover {
@@ -182,17 +243,8 @@
       color: #fff;
       padding-top: 2rem 0;
       font-size: 16px;
-
     }
 
-    /*
-.footer .columns {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-}
-*/
     .footer .columns {
       display: grid;
       grid-template-columns: auto auto auto;
@@ -287,7 +339,7 @@
     }
 
 
-    .email {
+    .email, .tel {
       color: white;
       text-decoration: none;
     }
@@ -409,72 +461,13 @@
       border: none;
     }
 
-    /*dropdown*/
-    .dropdown {
-      position: relative;
-    }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 200px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 10;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: black;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #2BA6DC;
-      color: white;
-    }
-
-    .nested-dropdown {
-      display: none;
-      padding-left: 20px;
-    }
-
-    .dropdown-item:hover+.nested-dropdown,
-    .nested-dropdown:hover {
-      display: block;
-    }
-
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #2BA6DC;
-      margin: 4px 0;
-    }
-
-    .dropdown-item {
-      position: relative;
-    }
-
-    .dropdown-item::after {
-      content: " >";
-      display: inline-block;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .dropdown-item:hover::after {
-      content: " v";
-      transform: rotate(360deg);
-      opacity: 1;
-    }
 
     /* Responsive Design */
     /* tablet view*/
     @media (max-width: 1400px) {
+
+      /*---------------------------Header CSS-------------------------------------*/
       .navbar {
         padding: 0 15px;
       }
@@ -499,16 +492,16 @@
         /* Further reduce logo size when shrunk */
       }
 
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-
-
       .navbar-links.active {
         display: flex;
         /* Show when toggled */
+      }
+
+      /*--------------------------------------------header css  ends----------------------------------------*/
+
+      img {
+        max-width: 100%;
+        height: auto;
       }
 
       .container p {
@@ -523,7 +516,7 @@
         bottom: 100px;
       }
 
-
+      /*Footer*/
       .footer .columns {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -571,6 +564,8 @@
 
     /*mobile view*/
     @media (max-width: 700px) {
+
+      /*---------------------------------------Header------------------------------------------------------- */
       .navbar-links {
         display: none;
         flex-direction: column;
@@ -591,11 +586,6 @@
         display: block;
       }
 
-      .hero {
-        margin-top: 70px;
-        /* Adjust margin-top for smaller screens */
-      }
-
       .navbar.shrink {
         height: 50px;
         /* Further reduce height when shrunk */
@@ -611,6 +601,11 @@
         /* Further reduce logo size */
       }
 
+      .navbar-link {
+        font-size: 16px;
+        /* Reduce navbar link font size */
+      }
+
       .mid_btn {
         margin-top: -2px;
         margin-bottom: 38px;
@@ -622,6 +617,12 @@
         /* Make button width responsive */
       }
 
+      /*----------------------------------------header css ends-------------------------------------------*/
+
+      .hero {
+        margin-top: 70px;
+        /* Adjust margin-top for smaller screens */
+      }
 
       img {
         max-width: 100%;
@@ -634,12 +635,9 @@
         text-align: justify;
       }
 
-      .navbar-link {
-        font-size: 16px;
-        /* Reduce navbar link font size */
-      }
 
-      /*---------------------------------------------------------------------------------------*/
+
+      /*--------------------------------------Footer-------------------------------------------------*/
       .footer .columns {
         grid-template-columns: 1fr;
         /* Stack columns vertically */
@@ -719,13 +717,13 @@
     </div>
     <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
     <div class="navbar-links" id="navbar-links">
-      <a href="/index.html" class="navbar-link">Home</a>
-      <a href="/aboutUs.html" class="navbar-link">About Us</a>
+      <a href="/pages/index.html" class="navbar-link">Home</a>
+      <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
       <a href="/" class="navbar-link">Careers</a>
       <div class="dropdown">
         <p class="navbar-link">Projects</p>
         <div class="dropdown-content">
-          <a href="/projects.html" id="ongoing">Completed Projects</a>
+          <a href="/pages/completedproject.html" id="ongoing">Completed Projects</a>
           <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
           <div class="nested-dropdown" id="ongoing-options">
             <a href="/pages/Hillside.html">Fortune Hillside</a>
@@ -734,7 +732,7 @@
           </div>
         </div>
       </div>
-      <a href="/contactUs" class="navbar-link">Contact Us</a>
+      <a href="/pages/contactus.html" class="navbar-link">Contact Us</a>
     </div>
   </nav>
 
@@ -781,9 +779,9 @@
           <div class="explore">
             <h4>Explore</h4>
             <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/aboutUs.html">About Us</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="/pages/index.html">Home</a></li>
+              <li><a href="/pages/aboutUs.html">About Us</a></li>
+              <li><a href="/pages/projects">Projects</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="/contactus.html">Contact Us</a></li>
             </ul>
@@ -798,13 +796,13 @@
               Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
               Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
           </p>
-          <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"></i>&nbsp;&nbsp; 08258 289555<br><i
-              class="fa-solid fa-phone" style="color: #2BA6DC;">&nbsp;&nbsp;</i>&nbsp;72595 14111</p>
+          <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel" href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
+             <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel" href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
+          </p>
           <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
-              href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> <i
-              class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
+              href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> 
+              <i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
               href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a></p>
-
         </div>
       </div>
 
@@ -832,7 +830,7 @@
   </div>
 
   <script>
-    /*Navi*/
+    /*Nav*/
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menu-toggle");
       const navbarLinks = document.getElementById("navbar-links");
@@ -908,6 +906,42 @@
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar-links");
+
+    let isHovered = false; // Track hover state
+
+    navbar.addEventListener("mousedown", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
+    navbar.addEventListener("mouseenter", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
+    navbar.addEventListener("mouseleave", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
+
+    // Hide navbar-links when scrolling, but allow it to reappear on hover
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
   </script>
 
 </body>
