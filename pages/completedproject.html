@@ -1027,6 +1027,41 @@
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar-links");
+
+    let isHovered = false; // Track hover state
+
+    navbar.addEventListener("mousedown", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
+    navbar.addEventListener("mouseenter", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
+    navbar.addEventListener("mouseleave", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
+
+    // Hide navbar-links when scrolling, but allow it to reappear on hover
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
   </script>
 
 </body>
