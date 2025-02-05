@@ -36,6 +36,7 @@
       margin: 0 auto;
       padding: none;
     }
+
     /*--------------------------------------------------------Header CSS------------------------------------------*/
     header {
       background-color: #fff;
@@ -98,9 +99,9 @@
       gap: 15px;
       align-items: center;
       margin-right: 70px;
-      
+
     }
-   
+
 
     .navbar-link {
       text-decoration: none;
@@ -111,7 +112,7 @@
       position: relative;
       font-family: 'Libre Franklin';
     }
-    
+
 
     .navbar-links p {
       margin: 0;
@@ -463,11 +464,12 @@
       border: none;
     }
 
-    
+
 
     /* Responsive Design */
     /* tablet view*/
     @media (max-width: 1400px) {
+
       /*---------------------------Header CSS-------------------------------------*/
       .navbar {
         padding: 0 15px;
@@ -493,7 +495,7 @@
         /* Further reduce logo size when shrunk */
       }
 
-      
+
 
 
 
@@ -501,6 +503,7 @@
         display: flex;
         /* Show when toggled */
       }
+
       /*--------------------------------------------header css  ends----------------------------------------*/
 
 
@@ -508,6 +511,7 @@
         max-width: 100%;
         height: auto;
       }
+
       .container p {
         text-align: justify;
       }
@@ -520,7 +524,7 @@
         bottom: 100px;
       }
 
-
+      /*Footer*/
       .footer .columns {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -568,6 +572,7 @@
 
     /*mobile view*/
     @media (max-width: 700px) {
+
       /*---------------------------------------Header------------------------------------------------------- */
       .navbar-links {
         display: none;
@@ -589,7 +594,7 @@
         display: block;
       }
 
-      
+
 
       .navbar.shrink {
         height: 50px;
@@ -640,9 +645,9 @@
         text-align: justify;
       }
 
-      
 
-      /*---------------------------------------------------------------------------------------*/
+
+      /*--------------------------------------Footer-------------------------------------------------*/
       .footer .columns {
         grid-template-columns: 1fr;
         /* Stack columns vertically */
@@ -722,13 +727,13 @@
     </div>
     <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
     <div class="navbar-links" id="navbar-links">
-      <a href="/index.html" class="navbar-link">Home</a>
-      <a href="/aboutUs.html" class="navbar-link">About Us</a>
+      <a href="/pages/index.html" class="navbar-link">Home</a>
+      <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
       <a href="/" class="navbar-link">Careers</a>
       <div class="dropdown">
         <p class="navbar-link">Projects</p>
         <div class="dropdown-content">
-          <a href="/projects.html" id="ongoing">Completed Projects</a>
+          <a href="/pages/completedproject.html" id="ongoing">Completed Projects</a>
           <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
           <div class="nested-dropdown" id="ongoing-options">
             <a href="/pages/Hillside.html">Fortune Hillside</a>
@@ -737,7 +742,7 @@
           </div>
         </div>
       </div>
-      <a href="/contactUs" class="navbar-link">Contact Us</a>
+      <a href="/pages/contactus.html" class="navbar-link">Contact Us</a>
     </div>
   </nav>
 
@@ -835,7 +840,7 @@
   </div>
 
   <script>
-    /Nav/
+    /*Nav*/
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menu-toggle");
       const navbarLinks = document.getElementById("navbar-links");
@@ -914,33 +919,39 @@
 
     const navbar = document.querySelector(".navbar");
     const navbarLinks = document.querySelector(".navbar-links");
-      
+
     let isHovered = false; // Track hover state
-      
+
+    navbar.addEventListener("mousedown", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
     navbar.addEventListener("mouseenter", () => {
-      isHovered = true;
-      navbarLinks.style.display = "flex";
-      
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
     });
-    
+
     navbar.addEventListener("mouseleave", () => {
-      isHovered = false;
-      navbarLinks.style.display = "none";
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
     });
-    
+
     // Hide navbar-links when scrolling, but allow it to reappear on hover
     window.addEventListener("scroll", () => {
-      isHovered=false;
-      navbarLinks.style.display = "none";
-      
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
     });
-
-
-
-
-
-
-    
   </script>
 
 </body>

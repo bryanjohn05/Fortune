@@ -2,116 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/ongoing.css">
-    <title>Fortune Galaxy</title>
-    <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/ongoing.css">
+  <title>Fortune Galaxy</title>
+  <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-   
-
-    <img src="/assets/images/GalaxyMain.png" alt="Fortune Galaxy" class="hero" style="padding: 0px;">
-
-    <div class="container">
-        <h4>RESIDENTIAL & COMMERCIAL PROJECT</h4>
-        <h2 style="color: black;">Fortune Galaxy </h2>
-        <section class="project-info">
-
-            <div class="project-details">
-                <div class="detail">
-                    <span class="label">LOCATION</span>
-                    <span class="value">Airport Road, Bajpe</span>
-                </div>
-                <div class="detail">
-                    <span class="label">TYPE</span>
-                    <span class="value">Residential & Commercial</span>
-                </div>
-                <div class="detail">
-                    <span class="label">AREA</span>
-                    <span class="value">0.51 Acres</span>
-                </div>
-                <div class="detail">
-                    <span class="label">FLAT SIZE</span>
-                    <span class="value">1052 Sqft - 1394 Sqft</span>
-                </div>
-                <div class="detail">
-                    <span class="label">PRICE</span>
-                    <span class="value">45 Lakhs Onwards</span>
-                </div>
-                <div class="detail">
-                    <span class="label">STATUS</span>
-                    <span class="value">Ongoing Structural Work</span>
-                </div>
-                <div class="detail">
-                    <span class="label">COMPLETION DATE</span>
-                    <span class="value">April 2026</span>
-                </div>
-                <div class="detail">
-                    <span class="label">APPROVED BY</span>
-                    <span class="value">PRM/KA/ RERA/1257/334
-                        /PR/280324/006767</span>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="overview">
-            <h4>OVERVIEW</h4>
-            <h2>A new landscape where MOON & STARS shine differently at <br> Fortune
-                Galaxy</h2>
-            <p style="font-size: 18;">Discover the ultimate in convenience and comfort at Fortune Galaxy, a unique
-                community that offers everything you need for a well-rounded and fulfilling lifestyle. Whether you're
-                looking for stylish and spacious 2BHK or 3BHK apartments, we have the perfect home for you. In addition,
-                Fortune Galaxy features premium office spaces, vibrant retail outlets, delicious dining options, and
-                fully-equipped serviced apartments, ensuring you have everything you need within the comfort of your
-                community to live, work, play, and relax. All of this is set within a beautifully landscaped 0.51-acre
-                oasis, offering the ideal balance of privacy and a sense of community.
-                Welcome to Fortune Galaxy, where every aspect of your life is thoughtfully designed and taken care of.
-            </p>
-            <div class="buttons">
-                <button><b>Brochure</b></button>
-                <button><b>Gallery</b></button>
-                <button><b>Floor Plan</b></button>
-                <button><b>Location</b></button>
-            </div>
-        </section>
-
-        <h4>AMENITY</h4>
-        <h2 id='amenities'>Exceptional Facilities for a Well-Rounded Lifestyle</h2>
-        <section class="amenities">
-            <div class="amenity">
-                <div class="icon-circle">
-                    <img src="/assets/icons/ev-charging.svg" alt="EV Charging Points">
-                </div>
-                <p><b>EV Charging Points</b></p>
-            </div>
-            <div class="amenity">
-                <div class="icon-circle">
-                    <img src="/assets/icons/gym.svg" alt="Gym & Fitness Center">
-                </div>
-                <p><b>Gym & Fitness Center</b></p>
-            </div>
-            <div class="amenity">
-                <div class="icon-circle">
-                    <img src="/assets/icons/gas.svg" alt="Reticulated Gas">
-                </div>
-                <p><b>Reticulated Gas</b></p>
-            </div>
-        </section>
-
-        <h2 id="gallery" style="color: #2BA6DC; font-size:20px;padding-bottom:35px;">Gallery</h2>
-        <section class="gallery">
-            <img src="/assets/images/GalaxySub1.png" alt="Construction Image 1">
-            <img src="/assets/images/GalaxySub2.png" alt="Construction Image 2">
-            <img src="/assets/images/GalaxySub3.png" alt="Construction Image 3">
-            <img src="/assets/images/GalaxySub4.png" alt="Construction Image 4">
-        </section>
+  <!-- Header Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/assets/icons/fortunelogo.svg" alt="Company Logo">
     </div>
- <!-- Footer Section -->
- <footer class="footer">
+    <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
+    <div class="navbar-links" id="navbar-links">
+      <a href="/pages/index.html" class="navbar-link">Home</a>
+      <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
+      <a href="/" class="navbar-link">Careers</a>
+      <div class="dropdown">
+        <p class="navbar-link">Projects</p>
+        <div class="dropdown-content">
+          <a href="/pages/projects.html" id="ongoing">Completed Projects</a>
+          <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
+          <div class="nested-dropdown" id="ongoing-options">
+            <a href="/pages/Hillside.html">Fortune Hillside</a>
+            <a href="/pages/Galaxy.html">Fortune Galaxy</a>
+            <a href="/pages/Orchid.html">Fortune Orchid</a>
+          </div>
+        </div>
+      </div>
+      <a href="/pages/contactUs.html" class="navbar-link">Contact Us</a>
+    </div>
+  </nav>
+
+  <img src="/assets/images/GalaxyMain.png" alt="Fortune Galaxy" class="hero" style="padding: 0px;">
+
+  <div class="container">
+    <h4>RESIDENTIAL & COMMERCIAL PROJECT</h4>
+    <h2 style="color: black;">Fortune Galaxy </h2>
+    <section class="project-info">
+
+      <div class="project-details">
+        <div class="detail">
+          <span class="label">LOCATION</span>
+          <span class="value">Airport Road, Bajpe</span>
+        </div>
+        <div class="detail">
+          <span class="label">TYPE</span>
+          <span class="value">Residential & Commercial</span>
+        </div>
+        <div class="detail">
+          <span class="label">AREA</span>
+          <span class="value">0.51 Acres</span>
+        </div>
+        <div class="detail">
+          <span class="label">FLAT SIZE</span>
+          <span class="value">1052 Sqft - 1394 Sqft</span>
+        </div>
+        <div class="detail">
+          <span class="label">PRICE</span>
+          <span class="value">45 Lakhs Onwards</span>
+        </div>
+        <div class="detail">
+          <span class="label">STATUS</span>
+          <span class="value">Ongoing Structural Work</span>
+        </div>
+        <div class="detail">
+          <span class="label">COMPLETION DATE</span>
+          <span class="value">April 2026</span>
+        </div>
+        <div class="detail">
+          <span class="label">APPROVED BY</span>
+          <span class="value">PRM/KA/ RERA/1257/334
+            /PR/280324/006767</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="overview">
+      <h4>OVERVIEW</h4>
+      <h2>A new landscape where MOON & STARS shine differently at <br> Fortune
+        Galaxy</h2>
+      <p style="font-size: 18;">Discover the ultimate in convenience and comfort at Fortune Galaxy, a unique
+        community that offers everything you need for a well-rounded and fulfilling lifestyle. Whether you're
+        looking for stylish and spacious 2BHK or 3BHK apartments, we have the perfect home for you. In addition,
+        Fortune Galaxy features premium office spaces, vibrant retail outlets, delicious dining options, and
+        fully-equipped serviced apartments, ensuring you have everything you need within the comfort of your
+        community to live, work, play, and relax. All of this is set within a beautifully landscaped 0.51-acre
+        oasis, offering the ideal balance of privacy and a sense of community.
+        Welcome to Fortune Galaxy, where every aspect of your life is thoughtfully designed and taken care of.
+      </p>
+      <div class="buttons">
+        <button><b>Brochure</b></button>
+        <button><b>Gallery</b></button>
+        <button><b>Floor Plan</b></button>
+        <button><b>Location</b></button>
+      </div>
+    </section>
+
+    <h4>AMENITY</h4>
+    <h2 id='amenities'>Exceptional Facilities for a Well-Rounded Lifestyle</h2>
+    <section class="amenities">
+      <div class="amenity">
+        <div class="icon-circle">
+          <img src="/assets/icons/ev-charging.svg" alt="EV Charging Points">
+        </div>
+        <p><b>EV Charging Points</b></p>
+      </div>
+      <div class="amenity">
+        <div class="icon-circle">
+          <img src="/assets/icons/gym.svg" alt="Gym & Fitness Center">
+        </div>
+        <p><b>Gym & Fitness Center</b></p>
+      </div>
+      <div class="amenity">
+        <div class="icon-circle">
+          <img src="/assets/icons/gas.svg" alt="Reticulated Gas">
+        </div>
+        <p><b>Reticulated Gas</b></p>
+      </div>
+    </section>
+
+    <h2 id="gallery" style="color: #2BA6DC; font-size:20px;padding-bottom:35px;">Gallery</h2>
+    <section class="gallery">
+      <img src="/assets/images/GalaxySub1.png" alt="Construction Image 1">
+      <img src="/assets/images/GalaxySub2.png" alt="Construction Image 2">
+      <img src="/assets/images/GalaxySub3.png" alt="Construction Image 3">
+      <img src="/assets/images/GalaxySub4.png" alt="Construction Image 4">
+    </section>
+  </div>
+  <!-- Footer Section -->
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div>
@@ -145,10 +169,12 @@
         <div class="get_in_touch">
           <h4 id="footer_heading">Get in Touch</h4>
           <p><i class="fa-solid fa-location-dot" style="color: #2BA6DC;"></i>
-            <a href="https://maps.app.goo.gl/XZfxsvv3sSvp9u8t9" style="color: white; text-decoration:none"> &nbsp;&nbsp;FORTUNE
+            <a href="https://maps.app.goo.gl/XZfxsvv3sSvp9u8t9" style="color: white; text-decoration:none">
+              &nbsp;&nbsp;FORTUNE
               PROMOTERS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortune
               Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
-              Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a></p>
+              Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
+          </p>
           <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"></i>&nbsp;&nbsp; 08258 289555<br><i
               class="fa-solid fa-phone" style="color: #2BA6DC;">&nbsp;&nbsp;</i>&nbsp;72595 14111</p>
           <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
@@ -164,26 +190,26 @@
       Flow Technologies</div>
   </footer>
 
-    <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+  <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+  </div>
+
+
+  <!-- Chatbot -->
+  <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      Fortune Promoters
+      <button class="close-btn" onclick="toggleChat()">✖</button>
     </div>
-
-
-    <!-- Chatbot -->
-    <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
-    <div class="chat-container" id="chat-container">
-        <div class="chat-header">
-            Fortune Promoters
-            <button class="close-btn" onclick="toggleChat()">✖</button>
-        </div>
-        <div class="chat-messages" id="chat-messages"></div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
-        </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
     </div>
+  </div>
 
-    <script>
-        let isChatOpened = false;
+  <script>
+    let isChatOpened = false;
     const apiKey = "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"; // Replace with your actual API key
 
     function whatsapp_link() {
@@ -235,11 +261,11 @@
         appendMessage("Fortune: " + reply, "bot");
       } catch (error) {
         console.error("Fetch Error:", error);
-        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.","bot");
+        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.", "bot");
       }
     }
 
-    function appendMessage(message,user) {
+    function appendMessage(message, user) {
       const chatMessages = document.getElementById("chat-messages");
       const msgElement = document.createElement("div");
       msgElement.classList.add(user);
@@ -247,7 +273,43 @@
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
-    </script>
+
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar-links");
+
+    let isHovered = false; // Track hover state
+
+    navbar.addEventListener("mousedown", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
+    navbar.addEventListener("mouseenter", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
+      }
+
+    });
+
+    navbar.addEventListener("mouseleave", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
+
+    // Hide navbar-links when scrolling, but allow it to reappear on hover
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth <= 700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
+  </script>
 </body>
 
 </html>

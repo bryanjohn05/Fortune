@@ -8,11 +8,44 @@
     <title>Fortune Orchid</title>
     <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <script>
+      window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('shrink');
+        } else {
+          navbar.classList.remove('shrink');
+        }
+      });
+    </script>
 </head>
 
 <body>
-
+<!-- Header Section -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="/assets/icons/fortunelogo.svg" alt="Company Logo">
+  </div>
+  <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
+  <div class="navbar-links" id="navbar-links">
+    <a href="/pages/index.html" class="navbar-link">Home</a>
+    <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
+    <a href="/" class="navbar-link">Careers</a>
+    <div class="dropdown">
+      <p class="navbar-link">Projects</p>
+      <div class="dropdown-content">
+        <a href="/pages/projects.html" id="ongoing">Completed Projects</a>
+        <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
+        <div class="nested-dropdown" id="ongoing-options">
+          <a href="/pages/Hillside.html">Fortune Hillside</a>
+          <a href="/pages/Galaxy.html">Fortune Galaxy</a>
+          <a href="/pages/Orchid.html">Fortune Orchid</a>
+        </div>
+      </div>
+    </div>
+    <a href="/pages/contactUs.html" class="navbar-link">Contact Us</a>
+  </div>
+</nav>
 
     <img src="/assets/images/OrchidMain.png" alt="Fortune Orchid" class="hero" width="1440px" height="940px">
 
@@ -248,6 +281,42 @@
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar-links");
+      
+    let isHovered = false; // Track hover state
+
+    navbar.addEventListener("mousedown", () => {
+      if (window.innerWidth <=700) {
+      isHovered = true;
+      navbarLinks.style.display = "flex";
+      }
+      
+    });
+
+    navbar.addEventListener("mouseenter", () => {
+      if (window.innerWidth <=700) {
+      isHovered = true;
+      navbarLinks.style.display = "flex";
+      }
+      
+    });
+    
+    navbar.addEventListener("mouseleave", () => {
+      if (window.innerWidth <=700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
+    
+    // Hide navbar-links when scrolling, but allow it to reappear on hover
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth <=700) {
+        isHovered = false;
+        navbarLinks.style.display = "none";
+      }
+    });
     </script>
 
 
