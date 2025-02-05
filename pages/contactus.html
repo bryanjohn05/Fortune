@@ -30,7 +30,7 @@
 
     <section class="image-section">
         <img src="/assets/images/ContactUsMain.png" alt="Sample Image">
-    </section>
+    </section>       
     <section class="callback-section">
         <div class="callback-container">
             <div class="callback-image">
@@ -40,7 +40,7 @@
                     <div class="details-box">
                         <p>Moodabidri</p>
                         <p class="color">Location</p>
-                        <p>FORTUNE PROMOTERS <br>Fortune Highway-II <br>Main Road,Moodabidri-5744227</p>
+                        <p>FORTUNE PROMOTERS <br>Fortune Highway-2 <br>Main Road,Moodabidri-5744227</p>
                         <p class="color">Contact</p>
                         <p>08258 238555 <br>72595 14111</p>
                         <p class="color">Email</p>
@@ -69,15 +69,27 @@
                         <input type="email" placeholder="Enter your email" required>
                         <div class="line"></div>
                     </div><br>
-                    <div class="input-container">
+                    <div class="input-container" id="dropdown">
                         <p>Project Interested</p>
-                        <input type="tel" placeholder="Write Your Project Interested Here..." required>
-                        <div class="line"></div>
-                    </div><br>
+                        <div class="dropdown-wrapper">
+                            <select required class="selection">
+                                <option value="" disabled selected hidden>Select Project</option>
+                                <option value="project1">Fortune Galaxy</option>
+                                <option value="project2">Fortune Orchid</option>
+                                <option value="project3">Fortune Hillside</option>
+                                <option value="project4">Furtune Highway-2</option>
+                                <option value="project4">Furtune Highway</option>
+                                <option value="project4">Furtune Center</option>
+                                <option value="project4">Furtune Lotus</option>
+                            </select>
+                        </div>
+                        <div class="dropline"></div>
+                    </div>
+                    
                     <div class="input-container">
                         <p>Message</span></p>
                         <input type="text" placeholder="Write Your Message Here..." required>
-                        <div class="line"></div>
+                        <div class="mesline"></div>
                         </div>
                         <button type="submit">Submit</button>
                 </form>

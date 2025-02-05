@@ -31,7 +31,7 @@ nav ul li a {
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap");
 
 .hero {
-  background-image: url("assets/images/aboutus.png");
+  background-image: url("/assets/images/AboutUs.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,6 +49,7 @@ nav ul li a {
 .hero p {
   font-family: "Libre Franklin", sans-serif;
   font-weight: 600;
+  padding: 0px 120px;
   font-size: 50px; /* Set the font size for both h1 and p */
   line-height: 72.72px; /* Line height to match the specified value */
   color: white;
@@ -82,15 +83,19 @@ nav ul li a {
 .about {
   background-color: #2ba6dc; /* New background color for the about section */
   width: 100%; /* Set fixed width */
-  height: 384px; /* Set fixed height */
-  padding: 2rem;
+  height: auto; /* Set fixed height */
   color: white; /* Changed text color to white for better contrast */
   display: flex;
+  position: relative;
   flex-direction: column; /* Stack content vertically */
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
   text-align: center; /* Center the text */
   margin: 0 auto; /* Center the section horizontally on the page */
+}
+
+.aboutpara{
+  padding: 0 120px;
 }
 
 .our {
@@ -237,4 +242,46 @@ footer {
 
 .navbar-link.active::after {
   width: 100%;
+}
+.hero h1{
+  padding: 0 24px;
+  font-size: 32px;
+}
+.hero p{
+  padding: 0 24px;
+  font-size: 32px;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+
+  .navbar-links {
+    display: none; /* Hide links on mobile - you'll need to implement a mobile menu */
+  }
+}
+
+/* Active link style */
+.navbar-link.active {
+  color: #007bff;
+}
+
+.navbar-link.active::after {
+  width: 100%;
+}
+.hero h1{
+  padding: 0 24px;
+  font-size: 32px;
+}
+.hero p{
+  padding: 0 24px;
+  font-size: 32px;
+}
+.about{
+  padding: 24px;
+}
+.aboutpara p{
+  padding-right: 24px;
+  text-align: justify;
 }
