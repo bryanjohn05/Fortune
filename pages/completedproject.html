@@ -20,7 +20,12 @@
       padding: 0;
 
     }
-
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: none;
+    }
     .building-image {
       width: 100%;
       display: block;
@@ -252,8 +257,8 @@
       transform: rotate(360deg);
       opacity: 1;
     }
-
     /*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
+    
     /*FOOTER*/
     /*----------------------------------------------------------------------------------------------------------------------------------*/
     .footer {
@@ -280,6 +285,12 @@
       text-align: left;
       font-size: 12px;
     }
+    .blogo{
+      align-items: left;
+      text-align: left;
+    
+    height: 80px;
+    }
 
     #footer_heading {
       text-align: left;
@@ -294,12 +305,14 @@
     }
 
     .footer .explore h4 {
+      text-align: left;
       font-size: 20px;
       padding-bottom: none;
       color: #2BA6DC;
     }
 
     .footer .explore ul {
+      text-align: left;
       list-style: none;
       padding: 0;
     }
@@ -329,6 +342,7 @@
     }
 
     .get_in_touch {
+      text-align: left;
       font-size: 20px;
       padding-bottom: none;
       color: #2BA6DC;
@@ -434,6 +448,9 @@
 
 
       /*Footer*/
+      .footer{
+        margin-top: 40px;
+      }
       .footer .columns {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -451,7 +468,12 @@
         text-align: justify;
         font-size: 12px;
       }
-
+      .footer .explore h4{
+        text-align: center;
+      }
+      .footer .explore ul{
+        text-align: center;
+      }
       .footer .explore ul li a:hover {
         color: #2dbcf5
       }
@@ -606,9 +628,14 @@
         gap: 20px;
         /* Reduce gap between columns */
         padding: 20px 0;
+        margin-top: 20px;
         /* Adjust padding */
       }
 
+      
+      .footer .explore  h4{
+        padding-top: 180px;
+      }
       .footer .columns div {
         text-align: center;
         /* Center align text */
@@ -630,6 +657,7 @@
       .footer .get_in_touch p {
         text-align: justify;
         padding-left: 65px;
+      
       }
 
       #footer_heading {
@@ -874,8 +902,8 @@
   <footer class="footer">
     <div class="container">
       <div class="columns">
-        <div>
-          <img src="/assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
+        <div class="blogo">
+          <img  src="/assets/icons/fortunelogo.svg" alt="Logo" >
           <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their portfolio
             includes residential spaces, commercial properties, and plots, offering exceptional quality and value in
             every
@@ -925,6 +953,7 @@
     <div class="bottom-bar"> Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
       Flow Technologies</div>
   </footer>
+
   <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
   </div>
 
