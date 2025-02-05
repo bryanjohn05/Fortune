@@ -81,13 +81,7 @@ section.image-section {
     transition: all 0.3s ease;  /* Add a smooth transition for resizing */
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 700px) {
-    .image-section img {
-        width: 100%;  /* Make the image take the full width on mobile */
-        max-width: 100%;  /* Ensure the image doesn't exceed its container */
-    }
-}
+
 
 .callback-section {
     display: flex;
@@ -103,6 +97,7 @@ section.image-section {
     gap: 20px;
     max-width: 1100px;
     width: 100%;
+    padding: 25px;
 }
 
 .callback-image img {
@@ -133,6 +128,102 @@ section.image-section {
 .details-box .color{
     color: #007bff;
 }
+
+
+.dropdown-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Style the select dropdown */
+.selection {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    appearance: none; /* Hide default dropdown arrow */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Custom dropdown arrow */
+.dropdown-wrapper::after {
+    content: "\f078"; /* FontAwesome down arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevents interference with select */
+}
+
+/* Expand effect when clicked */
+.selection:focus {
+    border-color: #ffffff;
+    outline: none;
+    margin-bottom: 1.8px;
+    
+    
+}
+select option[disabled] {
+    color: #a1a1a1; /* Change this to the desired placeholder color */
+}
+
+select {
+    color: gray; /* Default color */
+  }
+  
+  select:valid {
+    color: black; /* Color when a valid option is selected */
+  }
+  
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablet */
+    .selection {
+        font-size: 16px;
+        padding: 10px 14px;
+        white-space: normal; /* Allow wrapping */
+        overflow-wrap: break-word;
+        appearance: none; /* Removes the default dropdown arrow */
+        width: 50%; /* Ensures the select box takes full width */
+        padding-right: -2px;
+        margin-bottom: 2px;
+        
+    }
+    
+    .selection:focus {
+        
+        outline: none;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .selection {
+        font-size: 13px;
+        padding: 8px 12px;
+        
+    }
+    .dropdown-wrapper::after {
+        right: 8px;
+    }
+    .selection:focus {
+        
+        outline: none;
+        margin-bottom: 2px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .callback-form {
     background: #ffffff;
@@ -230,100 +321,244 @@ section.image-section {
     background: #007bff;
     padding-right: 20px; /* Expands button on hover */
 }
-/* Default styling for the dropdown */
-/* Style the dropdown wrapper */
-.dropdown-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-/* Style the select dropdown */
-.selection {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    appearance: none; /* Hide default dropdown arrow */
-    font-size: 16px;
+  /* whatsapp Bot icons*/
+        
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #05ae3d;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    background-color: white;
-}
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
 
-/* Custom dropdown arrow */
-.dropdown-wrapper::after {
-    content: "\f078"; /* FontAwesome down arrow */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    pointer-events: none; /* Prevents interference with select */
-}
+  /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
+  .chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2BA6DC;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
 
-/* Expand effect when clicked */
-.selection:focus {
-    border-color: #ffffff;
+  .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; 
+    flex-direction: column;
+  }
+
+  .chat-header {
+    background: #2BA6DC;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius:12px ;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    
+  }
+
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    color: black;
+  }
+
+  .bot{
+    background-color: #2ba6dc;
+    color: black;
+    padding-left: 5px;
+
+    border-radius: 8px;
+  }
+  .user{
+  background-color: white;
+    color: black;
+    text-align: right;
+    padding : 10px;
+    
+    
+  }
+
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 12px;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
     outline: none;
-    margin-bottom: 1.8px;
-    
-    
-}
-select option[disabled] {
-    color: #a1a1a1; /* Change this to the desired placeholder color */
-}
-
-select {
-    color: gray; /* Default color */
+    border-bottom-left-radius: 12px;
   }
-  
-  select:valid {
-    color: black; /* Color when a valid option is selected */
+
+  .chat-input button {
+    padding: 10px;
+    background: #ffffff;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
   }
-  
-/* Responsive Styles */
-@media (max-width: 768px) { /* Tablet */
-    .selection {
-        font-size: 16px;
-        padding: 10px 14px;
-        white-space: normal; /* Allow wrapping */
-        overflow-wrap: break-word;
-        appearance: none; /* Removes the default dropdown arrow */
-        width: 50%; /* Ensures the select box takes full width */
-        padding-right: -2px;
-        margin-bottom: 2px;
-        
-    }
-    
-    .selection:focus {
-        
-        outline: none;
-        margin-bottom: 10px;
-    }
-}
+/*FOOTER*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    background-color: #666666;
+    color: #fff;
+    /* padding: 30px 120px 0 120px ; */
+    font-size: 16px;
+  }
 
-@media (max-width: 480px) { /* Mobile */
-    .selection {
-        font-size: 13px;
-        padding: 8px 12px;
-        
-    }
-    .dropdown-wrapper::after {
-        right: 8px;
-    }
-    .selection:focus {
-        
-        outline: none;
-        margin-bottom: 2px;
-    }
-}
+  /*
+  .footer .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+*/
+  .footer .columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 140px;
+    padding: 30px 120px 0 120px ;
+    max-width: auto;
+    margin: 0 auto;
+  }
+
+  .foot {
+    width: auto;
+  }
+
+  .footer .container .columns .foot {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  #footer_heading{
+    text-align: left;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+  .footer .columns div {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px;
+  }
+
+  .footer .explore h4 {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .footer .explore ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer .explore ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer .explore li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+  .footer .bottom-bar {
+    background-color: #2BA6DC;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .get_in_touch {
+    font-size: 20px;
+    padding-bottom: none;
+    color: #2BA6DC;
+  }
+
+  .get_in_touch p {
+    font-size: 14px;
+    padding-bottom: none;
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    padding-left: none;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: #2dbcf5;
+    font-size: 40px;
+    text-decoration: none;
+    justify-content: space-between;
+  }
 
 
+  .email {
+    color: white;
+    text-decoration: none;
+  }
 
-
+  /*-------------------------------------------------------------------------------------------------------------------*/
 
 
 @media screen and (max-width: 700px) {
+    .image-section img {
+        width: 100%;  /* Make the image take the full width on mobile */
+        max-width: 100%;  /* Ensure the image doesn't exceed its container */
+    }
     .callback-section {
         padding: 0px 24px;  /* Reduced padding for mobile */
         flex-direction: column;  /* Stack items vertically */
@@ -339,7 +574,7 @@ select {
         left: 0px; /* Smaller width for mobile */
         padding: 10px;  /* Reduced padding */
         font-size: 10px;  
-        margin-bottom: 5px;
+        margin-bottom: 6px;
         
         /* Smaller font size */
          /* Ensure it's not too far left */
@@ -347,7 +582,7 @@ select {
 
     .callback-container {
         display: flex;
-        padding: 0px 24px;
+        padding: 24px 24px;
         flex-direction: column;  /* Stack the content vertically on mobile */
         align-items: center;  /* Center the content */
         gap: 20px;  /* Gap between image and form */
@@ -372,73 +607,164 @@ select {
         display: block; /* Ensures it respects margin auto */
         margin: 0 auto; /* Ensure button takes full width */
         padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        background: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-radius: 5px;
     }
-    .callback-form button:hover {
-        background: #007bff;
-        padding-right: 20px; /* Expands button on hover */
-    }
-    .callback-form button:hover::after {
-        content: " >";
-        transition: all 0.3s ease;
-    }
-    
-    
-    
+     /*---------------------------------------------------------------------------------------*/
+     .footer .columns {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        gap: 20px;
+        /* Reduce gap between columns */
+        padding: 0px 20px;
+        /* Adjust padding */
+      }
+
+      .footer .columns div {
+        text-align: center;
+        /* Center align text */
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a {
+        color: #ffffff;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+
+      .social-icons {
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+
+      .social-icons i {
+        font-size: 28px;
+
+      }
+
+      .footer {
+        font-size: 14px;
+        /* Reduce footer font size */
+        text-align: justify;
+
+      }
+
+      .footer .bottom-bar {
+        font-size: 9px;
+      }
+
+      /*---------------------------------------------------------------------------------------*/
 }
 
-@media screen and (min-width: 700px) and (max-width: 1400px) {
+@media (min-width:700px) and (max-width: 1200px) {
     header {
         padding: 10px 40px;
     }
-
-    .callback-container {
-        flex-direction: column;
-        padding: 0 30px;
-        gap: 30px;
-    }
-
-    .callback-form {
-        width: 80%;
-    }
-
-    .callback-form h2 {
-        font-size: 28px;
-        padding: 0;
-    }
-
-    .callback-image {
-        flex-direction: column;
-        padding: 0 20px;
-        gap: 30px;
-        margin: 0 30px;
-    }
-    .callback-form button:hover {
-        background: #0056b3; /* Change to a darker blue on hover */
-        padding-right: 30px; /* Expands button on hover */
-    }
-    .callback-form button:hover::after {
-        content: " >";
-        transition: all 0.3s ease;
-    }
-
-    .input-container p {
-        font-size: 24px;
+    .callback-image img {
+        max-width: 100%;
+        margin-left: 10px;
+        opacity: 0.8;
     }
     .details-box {
-        width: 60%;
-        padding: 15px;  /* Reduced padding */
-        font-size: 16px;  
-        margin-bottom: 12px;
+        width: 350px;
+        height: 400px;;
+        left: 0px; /* Smaller width for mobile */
+        padding: 5px;  /* Reduced padding */
+        font-size: 10px;  
+        margin-bottom: 2px;
+        left: -2px;
+        box-shadow: 3px 3px 10px rgba(0, 86, 179, 0.5);
         
         /* Smaller font size */
          /* Ensure it's not too far left */
     }
+    .details-box p {
+        font-size: 20px;
+        
+        /* Smaller font size */
+         /* Ensure it's not too far left */
+    }
+    .callback-container {
+        flex-direction: column;
+        padding: 30px 30px;
+        gap: 30px;
+    }
+    .callback-form{
+        width: 80%;
+    }
+    .callback-form h2{
+        font-size: 28px;
+        padding: 0;
+    }
+    .callback-form p{
+        font-size: 16px;
+    }
+
+    .callback-image{
+        Flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+        margin: 0 30px;
+    }
+    .input-container p{
+        font-size: 24px;
+    }
+    /*-------------------------------------------------------------------------------------------------------------------*/
+    .footer .columns {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 0px;
+        padding: 50px 30px 0 30px;
+        max-width: 98%;
+        margin: 0;
+      }
+
+      .footer .columns div {
+        text-align: center;
+      }
+
+      .footer .container .columns .foot {
+        text-align: justify;
+        font-size: 12px;
+      }
+
+      .footer .explore ul li a:hover {
+        color: #2dbcf5
+      }
+
+     
+
+      .footer .get_in_touch p {
+        text-align: justify;
+        padding-left: 65px;
+      }
+
+      .social-icons {
+
+        justify-content: center;
+        gap: 20px;
+        /* Center align social icons */
+      }
+      #footer_heading{
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 10px;
+      }
+      /*-------------------------------------------------------------------------------------------------------------------*/
 }
