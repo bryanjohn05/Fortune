@@ -24,8 +24,20 @@
       margin-top: none;
       padding-top: 90px;
     }
-
-    /* ==================Header*================*/
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover{
+        text-decoration: none;
+        color: white;
+    }
+    
+    a::after {
+      text-decoration: none;
+      color: white;
+    }
+    /*--------------------------------------------------------Header CSS------------------------------------------*/
     header {
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -86,9 +98,7 @@
       display: flex;
       gap: 15px;
       align-items: center;
-      margin-right: 30px;
-      width: fit-content;
-
+      margin-right: 70px;
 
     }
 
@@ -192,6 +202,9 @@
       opacity: 1;
     }
 
+    /*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
+
+
 
     .hero {
       display: flex;
@@ -291,7 +304,7 @@
       margin-top: 5px;
     }
 
-    
+
     .whatsapp-icon {
       position: fixed;
       bottom: 80px;
@@ -415,6 +428,7 @@
       margin: 0 auto;
       padding: none;
     }
+
     .footer {
       background-color: #666666;
       color: #fff;
@@ -451,7 +465,8 @@
       margin: 0 10px;
       min-width: 200px;
     }
-    .footer .columns div p{
+
+    .footer .columns div p {
       padding-bottom: 20px;
     }
 
@@ -497,7 +512,8 @@
       padding-bottom: 10px;
       color: #2BA6DC;
     }
-    .get_in_touch h4{
+
+    .get_in_touch h4 {
       padding-bottom: 10px;
     }
 
@@ -565,6 +581,7 @@
         display: flex;
         /* Show when toggled */
       }
+
       /*---------------------------------------------------------*/
       .custom-team-container {
         display: flex;
@@ -572,28 +589,34 @@
         justify-content: start;
         padding: 50px 100px;
       }
+
       .custom-circle {
         width: 107px;
         height: 107px;
         border-radius: 50%;
         position: absolute;
       }
+
       .custom-blue {
         top: 0x;
         left: 40px;
       }
+
       .custom-grey {
         top: 40px;
         left: 80px;
       }
+
       .custom-h3 {
         margin-top: 80px;
         margin-left: 35px;
       }
+
       .custom-p {
         margin-top: 5px;
         margin-left: 35px;
       }
+
       /*-----------------------------Footer----------------------*/
       .footer .columns {
         display: grid;
@@ -638,13 +661,14 @@
         padding-top: 0%;
         padding-bottom: 10px;
       }
-      
+
     }
 
-    
+
 
     /*mobile view*/
     @media (max-width: 700px) {
+
       /*---------------------------------------Header------------------------------------------------------- */
       .navbar-links {
         display: none;
@@ -685,12 +709,14 @@
         font-size: 16px;
         /* Reduce navbar link font size */
       }
+
       /*----------------------------------------header css ends-------------------------------------------*/
       .hero h1 {
         padding: 90px 24px;
         font-size: 20px;
         line-height: 25px;
       }
+
       .team-text {
         padding-top: 20px;
         font-size: 20px;
@@ -701,40 +727,47 @@
         font-size: 16px;
         text-align: justify;
       }
+
       /*  Circle  */
       .custom-team-member {
         width: 100%;
         padding: 20px;
       }
+
       .custom-team-container {
         padding: 10px 60px;
         display: block;
 
       }
+
       .custom-circle {
-       
+
         width: 120px;
         height: 120px;
       }
+
       .custom-blue {
         top: 0x;
         left: 30px;
       }
+
       .custom-grey {
         top: 40px;
         left: 70px;
       }
+
       .custom-h3 {
         margin-top: 80px;
         margin-left: 0;
         text-align: center;
       }
+
       .custom-p {
         margin-top: 5px;
         margin-left: 0;
         text-align: center;
       }
-      
+
       /*--------------------------------------Footer-------------------------------------------------*/
       .footer .columns {
         grid-template-columns: 1fr;
@@ -988,9 +1021,9 @@
             <ul>
               <li><a href="/pages/index.html">Home</a></li>
               <li><a href="/pages/aboutUs.html">About Us</a></li>
-              <li><a href="/pages/projects.html">Projects</a></li>
+              <li><a href="/pages/projects">Projects</a></li>
               <li><a href="#">Careers</a></li>
-              <li><a href="/contactus.html">Contact Us</a></li>
+              <li><a href="/pages/contactus.html">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -1003,36 +1036,41 @@
               Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
               Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
           </p>
-          <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"></i>&nbsp;&nbsp; 08258 289555<br><i
-              class="fa-solid fa-phone" style="color: #2BA6DC;">&nbsp;&nbsp;</i>&nbsp;72595 14111</p>
-          <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
-              href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> <i
-              class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
-              href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a></p>
+          <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel" href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
+            <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel" href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
+         </p>
+         <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
+             href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> 
+             <i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
+             href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a>
+          </p>
 
         </div>
       </div>
 
     </div>
-    <div class="bottom-bar"> Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
+    <div class="bottom-bar"> Copyright @2025 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
       Flow Technologies</div>
+    
+    <!--Whatsapp-->
       <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+    </div>
+
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
+
+    <div class="chat-container" id="chat-container">
+      <div class="chat-header">
+        Fortune Promoters
+        <button class="close-btn" onclick="toggleChat()">✖</button>
       </div>
-    
-    
-      <!-- Chatbot -->
-      <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
-      <div class="chat-container" id="chat-container">
-        <div class="chat-header">
-          Fortune Promoters
-          <button class="close-btn" onclick="toggleChat()">✖</button>
-        </div>
-        <div class="chat-messages" id="chat-messages"></div>
-        <div class="chat-input">
-          <input type="text" id="user-input" placeholder="Type a message...">
-          <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
-        </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
       </div>
+    </div>
   </footer>
 
   <script>
@@ -1106,6 +1144,15 @@
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
+    /*Enter to send*/
+    document.getElementById("user-input").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent default form submission (if applicable)
+        sendMessage();
+      }
+    });
+
+    /*Menu-toggle dropdown*/
     const navbar = document.querySelector(".navbar");
     const navbarLinks = document.querySelector(".navbar-links");
 
@@ -1141,7 +1188,7 @@
         navbarLinks.style.display = "none";
       }
     });
-  
+
   </script>
 </body>
 
