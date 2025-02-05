@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>SanWILSan</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/fortunelogo.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/fortunelogo.svg">
 
   <script>
     window.addEventListener('scroll', function () {
@@ -28,6 +28,7 @@
       font-family: "Libre Franklin", serif;
       line-height: 1.6;
       color: #333;
+
     }
 
     header {
@@ -40,35 +41,33 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: none;
+
     }
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      /*padding: 1.05rem 0;  */
       height: 94px;
       background-color: white;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: fixed;
+      position:fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1000;
       transition: padding 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      text-align: center;
-      align-items: center;
+      /* Smooth transition */
     }
 
     .navbar.shrink {
+      /* padding: 0.1rem 0; /* Smaller padding when scrolled */
       height: 54px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      /* Slightly larger shadow */
       transition: all 0.2s linear;
+      /* Smooth transition */
 
     }
 
@@ -95,26 +94,71 @@
 
     .navbar-links {
       display: flex;
-      gap:15px;
-      align-items: center;
-      margin-right: 70px;
-
-
-
-    }
-
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%; /* Start off-screen */
+      width: 70%;
+      height: 100vh;
+      background-color: white;
+      text-align: center;
+      box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease-in-out;
+      padding-top: 100px;
+      z-index: 999;
+  }
+  
+  .navbar-links.active {
+      right: 0; /* Slide in */
+  }
+  
+  /* Adjust links for better spacing */
+  .navbar-links a {
+      padding: 15px;
+      font-size: 18px;
+      display: block;
+      color: #333;
+  }
+  
+  /* Hamburger menu styling */
+  .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin-right: 20px;
+      z-index: 1000;
+  }
+  
+  .bar {
+      width: 30px;
+      height: 3px;
+      background-color: #2BA6DC;
+      margin: 5px 0;
+      transition: all 0.3s ease-in-out;
+  }
+  
+  /* Animate hamburger icon to close */
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  
     .navbar-link {
       text-decoration: none;
       color: #333;
       font-size: 20px;
       font-weight: 500;
       transition: color 0.3s ease;
+      padding: 1px 0;
       position: relative;
       font-family: 'Libre Franklin';
-    }
-
-    .navbar-links p {
-      margin: 0;
     }
 
     .navbar-link:hover {
@@ -147,9 +191,13 @@
     }
 
     .hero img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
+
+
+
+
 
     .mid_btn {
       background-color: #34aede;
@@ -171,12 +219,8 @@
       background-color: #2BA6DC;
     }
 
-    .container p {
-      text-align: justify;
-    }
 
-    /*FOOTER*/
-    /*----------------------------------------------------------------------------------------------------------------------------------*/
+
     .footer {
       background-color: #666666;
       color: #fff;
@@ -185,12 +229,19 @@
 
     }
 
-    
+    /*
+    .footer .columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+    }
+*/
     .footer .columns {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: repeat(3, 1fr);
       column-gap: 140px;
-      padding: 40px 0 0px 0;
+      padding: 50px 0 4px 0;
       max-width: auto;
       margin: 0 auto;
     }
@@ -202,42 +253,31 @@
     .footer .container .columns .foot {
       text-align: left;
       font-size: 12px;
-    }
 
-    #footer_heading {
-      text-align: left;
-      padding-top: 0%;
-      padding-bottom: 10px;
     }
 
     .footer .columns div {
       flex: 1;
-      margin: 0 10px;
+      margin: 0 1rem;
       min-width: 200px;
     }
 
-    .footer .explore h4 {
-      font-size: 20px;
-      padding-bottom: none;
-      color: #2BA6DC;
-    }
-
-    .footer .explore ul {
+    .footer ul {
       list-style: none;
       padding: 0;
     }
 
-    .footer .explore ul li {
+    .footer ul li {
       margin-bottom: 0.5rem;
     }
 
-    .footer .explore li a {
+    .footer ul li a {
       color: #fff;
       text-decoration: none;
     }
 
-    .footer .explore ul li a:hover {
-      color: #2dbcf5
+    .footer ul li a:hover {
+      color:#2dbcf5
     }
 
     .footer .bottom-bar {
@@ -255,7 +295,9 @@
       font-size: 20px;
       padding-bottom: none;
       color: #2BA6DC;
+      
     }
+    
 
     .get_in_touch p {
       font-size: 14px;
@@ -282,10 +324,7 @@
 
     .email {
       color: white;
-      text-decoration: none;
     }
-
-    /*-------------------------------------------------------------------------------------------------------------------*/
 
     .whatsapp-icon {
       position: fixed;
@@ -327,8 +366,7 @@
       width: 300px;
       height: 400px;
       background: white;
-      border-radius: 12px;
-      border-bottom-left-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: none;
       flex-direction: column;
@@ -336,23 +374,20 @@
 
     .chat-header {
       background: #2BA6DC;
-      color: rgb(0, 0, 0);
+      color: white;
       padding: 10px;
       text-align: center;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
     }
 
     .close-btn {
       background: none;
       border: none;
       color: white;
-      font-size: 12px;
+      font-size: 16px;
       cursor: pointer;
-
     }
 
     .chat-messages {
@@ -362,27 +397,9 @@
       color: black;
     }
 
-    .bot {
-      background-color: #2ba6dc;
-      color: black;
-      padding-left: 5px;
-
-      border-radius: 8px;
-    }
-
-    .user {
-      background-color: white;
-      color: black;
-      text-align: right;
-      padding: 10px;
-
-
-    }
-
     .chat-input {
       display: flex;
       border-top: 1px solid #ddd;
-      border-bottom-left-radius: 12px;
     }
 
     .chat-input input {
@@ -390,317 +407,194 @@
       padding: 10px;
       border: none;
       outline: none;
-      border-bottom-left-radius: 12px;
     }
 
     .chat-input button {
       padding: 10px;
-      background: #ffffff;
+      background: #2BA6DC;
       color: white;
-      border-radius: 12px;
-      cursor: pointer;
       border: none;
+      cursor: pointer;
     }
-
+    
     /*dropdown*/
     .dropdown {
-      position: relative;
+        position: relative;
     }
-
     .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 200px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 10;
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 200px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
     }
-
     .dropdown:hover .dropdown-content {
-      display: block;
+        display: block;
     }
-
     .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: black;
-      text-decoration: none;
+        display: block;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
     }
-
     .dropdown-content a:hover {
-      background-color: #2BA6DC;
-      color: white;
+        background-color: #ddd;
     }
-
     .nested-dropdown {
-      display: none;
-      padding-left: 20px;
+        display: none;
+        padding-left: 20px;
     }
-
-    .dropdown-item:hover+.nested-dropdown,
+    .dropdown-item:hover + .nested-dropdown,
     .nested-dropdown:hover {
-      display: block;
+        display: block;
     }
-
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-right: 20px;
+      transition: all 0.2s linear;
+    }
+    
     .bar {
       width: 25px;
       height: 3px;
-      background-color: #2BA6DC;
+      background-color:#2BA6DC ;
       margin: 4px 0;
     }
 
-    .dropdown-item {
-      position: relative;
+    
+    
+
+
+
+    @media (max-width: 1024px) {
+      .whatsapp-icon{
+        bottom:160px ;
+      }
+      .chatbot-icon{
+        bottom:100px;
+      }
+      .navbar {
+        padding: 0 24px;
+      }
+    
+      .navbar-links {
+        display: none; /* Hide the links on smaller screens */
+      }
+    
+      .logo img {
+        height: 60px; /* Reduce logo size */
+      }
+    
+      .navbar.shrink .logo img {
+        height: 40px; /* Further reduce logo size when shrunk */
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navbar-links {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 94px;
+        left: 125px;
+        width: 70%;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        
     }
 
-    .dropdown-item::after {
-      content: " >";
-      display: inline-block;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+    .navbar-links.active {
+        display: flex; /* Show when toggled */
     }
 
-    .dropdown-item:hover::after {
-      content: " v";
-      transform: rotate(360deg);
-      opacity: 1;
+    .hamburger {
+        display: flex; /* Show on small screens */
+    }
+    
+    
+ 
+}
+    
+    @media (max-width: 768px) {
+      
+      .navbar {
+        padding: 0 24px;
+        height: 70px; /* Reduce navbar height */
+      }
+      .hero {
+        margin-top: 70px; /* Adjust margin-top for smaller screens */
+      }
+    
+      .navbar.shrink {
+        height: 50px; /* Further reduce height when shrunk */
+      }
+    
+      .logo {
+        margin-left: 20px; /* Reduce margin */
+      }
+    
+      .logo img {
+        height: 50px; /* Further reduce logo size */
+      }
+      .mid_btn {
+        margin-top:-2px;
+        margin-bottom: 38px;
+        padding: 1rem 2rem; /* Reduce padding */
+        font-size: 20px; /* Reduce font size */
+        width: 100%; /* Make button width responsive */
+      }
+      .footer .columns {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        gap: 20px; /* Reduce gap between columns */
+        padding: 20px 0; /* Adjust padding */
+      }
+    
+      .footer .columns div {
+        text-align: center; /* Center align text */
+      }
+      .foot{
+        text-align: center;
+      }
+      .social-icons {
+        justify-content: center; 
+        gap: 20px;/* Center align social icons */
+      }
+      .social-icons i{
+        font-size: 28px;
+        
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      body {
+        font-size: 14px; /* Reduce base font size */
+      }
+    
+      .navbar-link {
+        font-size: 16px; /* Reduce navbar link font size */
+      }
+    
+      .footer {
+        font-size: 14px; /* Reduce footer font size */
+
+      }
+      .bottom-bar{
+        font-size: 9px;
+        padding: 0 24px;
+      }
+      
     }
 
     /* Responsive Design */
-    /* tablet view*/
-    @media (max-width: 1400px) {
-      .navbar {
-        padding: 0 15px;
-      }
-
-      .navbar-links {
-        gap: 20px;
-      }
-
-      .menu-toggle {
-        display: none;
-        font-size: 28px;
-        cursor: pointer;
-      }
-
-      .logo img {
-        height: 60px;
-        /* Reduce logo size */
-      }
-
-      .navbar.shrink .logo img {
-        height: 40px;
-        /* Further reduce logo size when shrunk */
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-
-
-      .navbar-links.active {
-        display: flex;
-        /* Show when toggled */
-      }
-
-      .container p {
-        text-align: justify;
-      }
-
-      .whatsapp-icon {
-        bottom: 160px;
-      }
-
-      .chatbot-icon {
-        bottom: 100px;
-      }
-
-
-      .footer .columns {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        column-gap: 0px;
-        padding: 50px 0 0 0;
-        max-width: 98%;
-        margin: 0;
-      }
-
-      .footer .columns div {
-        text-align: center;
-      }
-
-      .footer .container .columns .foot {
-        text-align: justify;
-        font-size: 12px;
-      }
-
-      .footer .explore ul li a:hover {
-        color: #2dbcf5
-      }
-
-      .footer .get_in_touch h4 {
-        padding-left: 40px;
-      }
-
-      .footer .get_in_touch p {
-        text-align: justify;
-        padding-left: 65px;
-      }
-
-      .social-icons {
-
-        justify-content: center;
-        gap: 20px;
-        /* Center align social icons */
-      }
-
-      #footer_heading {
-        text-align: center;
-        padding-top: 0%;
-        padding-bottom: 10px;
-      }
-    }
-
-    /*mobile view*/
-    @media (max-width: 700px) {
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        background-color: white;
-        position: absolute;
-        top: 40px;
-        left: 0;
-        width: 100%;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-      }
-
-      .navbar-links.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .hero {
-        margin-top: 70px;
-        /* Adjust margin-top for smaller screens */
-      }
-
-      .navbar.shrink {
-        height: 50px;
-        /* Further reduce height when shrunk */
-      }
-
-      .logo {
-        margin-left: 20px;
-        /* Reduce margin */
-      }
-
-      .logo img {
-        height: 50px;
-        /* Further reduce logo size */
-      }
-
-      .mid_btn {
-        margin-top: -2px;
-        margin-bottom: 38px;
-        padding: 1rem 2rem;
-        /* Reduce padding */
-        font-size: 20px;
-        /* Reduce font size */
-        width: 100%;
-        /* Make button width responsive */
-      }
-
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      body {
-        font-size: 14px;
-        /* Reduce base font size */
-        text-align: justify;
-      }
-
-      .navbar-link {
-        font-size: 16px;
-        /* Reduce navbar link font size */
-      }
-
-      /*---------------------------------------------------------------------------------------*/
-      .footer .columns {
-        grid-template-columns: 1fr;
-        /* Stack columns vertically */
-        gap: 20px;
-        /* Reduce gap between columns */
-        padding: 20px 0;
-        /* Adjust padding */
-      }
-
-      .footer .columns div {
-        text-align: center;
-        /* Center align text */
-      }
-
-      .footer .container .columns .foot {
-        text-align: justify;
-        font-size: 12px;
-      }
-
-      .footer .explore ul li a {
-        color: #ffffff;
-      }
-
-      .footer .explore ul li a:hover {
-        color: #2dbcf5
-      }
-
-      .footer .get_in_touch p {
-        text-align: justify;
-        padding-left: 65px;
-      }
-
-      #footer_heading {
-        text-align: center;
-        padding-top: 0%;
-        padding-bottom: 10px;
-      }
-
-      .social-icons {
-        justify-content: center;
-        gap: 20px;
-        /* Center align social icons */
-      }
-
-      .social-icons i {
-        font-size: 28px;
-
-      }
-
-      .footer {
-        font-size: 14px;
-        /* Reduce footer font size */
-        text-align: justify;
-
-      }
-
-      .footer .bottom-bar {
-        font-size: 9px;
-      }
-
-      .footer .get_in_touch h4 {
-        padding-left: 0px;
-        margin-left: 0px;
-      }
-
-      /*---------------------------------------------------------------------------------------*/
-    }
+    
   </style>
+
 </head>
 
 <body>
@@ -708,28 +602,36 @@
   <!-- Header Section -->
   <nav class="navbar">
     <div class="logo">
-      <img src="/assets/icons/fortunelogo.svg" alt="Company Logo">
+        <img src="/assets/icons/fortunelogo.svg" alt="CompanyLogo" />
     </div>
-    <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
-    <div class="navbar-links" id="navbar-links">
-      <a href="/index.html" class="navbar-link">Home</a>
-      <a href="/aboutUs.html" class="navbar-link">About Us</a>
-      <a href="/" class="navbar-link">Careers</a>
-      <div class="dropdown">
-        <p class="navbar-link">Projects</p>
-        <div class="dropdown-content">
-          <a href="/projects.html" id="ongoing">Completed Projects</a>
-          <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
-          <div class="nested-dropdown" id="ongoing-options">
-            <a href="/pages/Hillside.html">Fortune Hillside</a>
-            <a href="/pages/Galaxy.html">Fortune Galaxy</a>
-            <a href="/pages/Orchid.html">Fortune Orchid</a>
-          </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+    <div class="navbar-links">
+        <a href="/index.html" class="navbar-link">Home</a>
+        <a href="/aboutUs" class="navbar-link">About Us</a>
+        <a href="/" class="navbar-link">Careers</a>
+        <div class="dropdown">
+            <a href="/projects" class="navbar-link">Projects</a>
+            <div class="dropdown-content">
+                <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects</a>
+                <div class="nested-dropdown" id="ongoing-options">
+                    <a href="/pages/">Fortune Hillside</a>
+                    <a href="/pages/Galaxy.html">Fortune Galaxy</a>
+                    <a href="/pages/Orchid.html">Fortune Orchid</a>
+                </div>
+                <a href="#" class="dropdown-item" id="completed">Completed Projects</a>
+                <div class="nested-dropdown" id="completed-options">
+                    <a href="/projects/completed/project1">Project 1</a>
+                    <a href="/projects/completed/project2">Project 2</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <a href="/contactUs" class="navbar-link">Contact Us</a>
+        <a href="/contactUs" class="navbar-link">Contact Us</a>
     </div>
-  </nav>
+</nav>
 
   <!-- Hero Section -->
   <div class="hero">
@@ -740,7 +642,7 @@
   <section class="section">
     <div class="container">
       <button class="mid_btn">Our Residential & Commercial Buildings</button>
-      <img src="/assets/images/Project2.png" alt="Building Image">
+      <img src="/assets/images/Project2.png" alt="Building Image" style="max-width: 100%;">
       <p>
         When it comes to finding your perfect home, Fortune Promoters is your trusted partner. Our residential offerings
         include a wide range of well-thought-out apartments designed to meet diverse lifestyles and budgets. Whether
@@ -757,61 +659,47 @@
         <div>
           <img src="/assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
           <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their portfolio
-            includes residential spaces, commercial properties, and plots, offering exceptional quality and value in
-            every
+            includes residential spaces, commercial properties, and plots, offering exceptional quality and value in every
             project.</p>
           <div class="social-icons">
-            <a href="https://www.instagram.com/fortunepromoters?igsh=MWVmeGNkM3VqY3Bx"><i class="fa-brands fa-instagram"
-                style="color: 2BA6DC;"></i></a>
+            <a href="https://www.instagram.com/fortunepromoters?igsh=MWVmeGNkM3VqY3Bx"><i class="fa-brands fa-instagram" style="color: 2BA6DC;"></i></a>
             <a href="#"><i class="fa-brands fa-whatsapp" style="color: 2BA6DC;"></i></a>
-            <a href="https://www.facebook.com/share/1CFbtrmd56/"><i class="fa-brands fa-facebook-f"
-                style="color: 2BA6DC;"></i></a>
-            <a href="https://youtube.com/@fortunepromoters1948?si=JfFI0rc6S5JbvoiC"><i class="fa-brands fa-youtube"
-                style="color: 2BA6DC;"></i></a>
+            <a href="https://www.facebook.com/share/1CFbtrmd56/"><i class="fa-brands fa-facebook-f" style="color: 2BA6DC;"></i></a>
+            <a href="https://youtube.com/@fortunepromoters1948?si=JfFI0rc6S5JbvoiC"><i class="fa-brands fa-youtube" style="color: 2BA6DC;"></i></a>
           </div>
         </div>
         <div>
-          <div class="explore">
-            <h4>Explore</h4>
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/aboutUs.html">About Us</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="/contactus.html">Contact Us</a></li>
-            </ul>
-          </div>
+          <h4 class="get_in_touch" >Explore</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
         </div>
         <div class="get_in_touch">
           <h4>Get in Touch</h4>
-          <p><i class="fa-solid fa-location-dot" style="color: #2BA6DC;"></i>
-            <a href="https://maps.app.goo.gl/XZfxsvv3sSvp9u8t9" style="color: white; text-decoration:none">
-              &nbsp;&nbsp;FORTUNE
-              PROMOTERS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortune
-              Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
-              Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
-          </p>
+          <p><i class="fa-solid fa-location-dot" style="color: #2BA6DC;"></i> &nbsp;&nbsp;FORTUNE PROMOTERS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortune
+            Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road, Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</p>
           <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"></i>&nbsp;&nbsp; 08258 289555<br><i
-              class="fa-solid fa-phone" style="color: #2BA6DC;">&nbsp;&nbsp;</i>&nbsp;72595 14111</p>
+              class="fa-solid fa-phone" style="color: #2BA6DC;">&nbsp;&nbsp;</i>72595 14111</p>
           <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
               href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> <i
               class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
-              href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a></p>
-
+              href="mailto:bedrafortune@gmail.com">bedrafortune@gmail.com</a></p>
         </div>
       </div>
-
+     
     </div>
-    <div class="bottom-bar"> Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
-      Flow Technologies</div>
+    <div class="bottom-bar"> Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision Flow Technologies</div>
   </footer>
-
   <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
   </div>
 
 
   <!-- Chatbot -->
-  <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
+  <div class="chatbot-icon" onclick="toggleChat()">💬</div>
   <div class="chat-container" id="chat-container">
     <div class="chat-header">
       Fortune Promoters
@@ -820,23 +708,11 @@
     <div class="chat-messages" id="chat-messages"></div>
     <div class="chat-input">
       <input type="text" id="user-input" placeholder="Type a message...">
-      <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
   <script>
-    /Navi/
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuToggle = document.getElementById("menu-toggle");
-      const navbarLinks = document.getElementById("navbar-links");
-
-      menuToggle.addEventListener("click", function () {
-        navbarLinks.classList.toggle("show");
-      });
-    });
-
-
-    /Chat Bot/
     let isChatOpened = false;
     const apiKey = "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"; // Replace with your actual API key
 
@@ -848,7 +724,7 @@
       const chatContainer = document.getElementById("chat-container");
       chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
       if (!isChatOpened) {
-        appendMessage("Fortune: How may I help you?", "bot");
+        appendMessage("Fortune: How may I help you?");
         isChatOpened = true;
       }
     }
@@ -858,7 +734,7 @@
       const message = userInput.value.trim();
       if (!message) return;
 
-      appendMessage("You: " + message, 'user');
+      appendMessage("You: " + message);
       userInput.value = "";
 
       try {
@@ -881,26 +757,46 @@
         const data = await response.json();
 
         if (!data.choices || !data.choices.length) {
-          appendMessage("Fortune: Unexpected API response. Please try again.", "bot");
+          appendMessage("Fortune: Unexpected API response. Please try again.");
           return;
         }
 
         const reply = data.choices[0].message.content || "I couldn't understand that.";
-        appendMessage("Fortune: " + reply, "bot");
+        appendMessage("Fortune: " + reply);
       } catch (error) {
         console.error("Fetch Error:", error);
-        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.", "bot");
+        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.");
       }
     }
 
-    function appendMessage(message, user) {
+    function appendMessage(message) {
       const chatMessages = document.getElementById("chat-messages");
       const msgElement = document.createElement("div");
-      msgElement.classList.add(user);
       msgElement.textContent = message;
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+    function toggleMenu() {
+      const navbarLinks = document.querySelector('.navbar-links');
+      const hamburger = document.querySelector('.hamburger');
+      
+      navbarLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+  }
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function (event) {
+      const navbar = document.querySelector('.navbar-links');
+      const hamburger = document.querySelector('.hamburger');
+  
+      if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+          navbar.classList.remove('active');
+          hamburger.classList.remove('active');
+      }
+  });
+  
+    
+  
   </script>
 
 </body>
