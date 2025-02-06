@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* General Styles */
 * {
   margin: 0;
@@ -13,6 +14,21 @@ body {
   background-color: white;
   color: #333;
   line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a::after {
+  text-decoration: none;
+  color: white;
 }
 
 /*--------------------------------------------------------Header CSS------------------------------------------*/
@@ -177,6 +193,7 @@ header {
   transform: rotate(360deg);
   opacity: 1;
 }
+
 /*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
 
 header img {
@@ -302,6 +319,9 @@ h2 {
   border-radius: 16px;
 }
 
+.buttons button:hover {
+  background-color: #2798c9;
+}
 
 .amenities {
   display: flex;
@@ -591,37 +611,38 @@ h2 {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
-/*---------------------------Header CSS-------------------------------------*/
-.navbar {
-  padding: 0 15px;
-}
 
-.navbar-links {
-  gap: 20px;
-}
+  /*---------------------------Header CSS-------------------------------------*/
+  .navbar {
+    padding: 0 15px;
+  }
 
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
+  .navbar-links {
+    gap: 20px;
+  }
 
-.logo img {
-  height: 60px;
-  /* Reduce logo size */
-}
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
 
-.navbar.shrink .logo img {
-  height: 40px;
-  /* Further reduce logo size when shrunk */
-}
+  .logo img {
+    height: 60px;
+    /* Reduce logo size */
+  }
 
-.navbar-links.active {
-  display: flex;
-  /* Show when toggled */
-}
+  .navbar.shrink .logo img {
+    height: 40px;
+    /* Further reduce logo size when shrunk */
+  }
 
-/*--------------------------------------------header css  ends----------------------------------------*/
+  .navbar-links.active {
+    display: flex;
+    /* Show when toggled */
+  }
+
+  /*--------------------------------------------header css  ends----------------------------------------*/
   /* Adjust grid for tablets */
   .project-details {
     grid-template-columns: repeat(4, 1fr);
@@ -700,6 +721,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
   /*---------------------------------------Header------------------------------------------------------- */
   .navbar-links {
     display: none;

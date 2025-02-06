@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
-    <title>Contact Us</title>
-    <script>
-      window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-          navbar.classList.add('shrink');
-        } else {
-          navbar.classList.remove('shrink');
-        }
-      });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
+  <title>Contact Us</title>
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -42,156 +42,162 @@
           </div>
         </div>
       </div>
-      <a href="/pages/contactUs" class="navbar-link">Contact Us</a>
+      <a href="/pages/contactus.html" class="navbar-link">Contact Us</a>
     </div>
   </nav>
 
-    <section class="image-section">
-        <img src="/assets/images/ContactUsMain.png" alt="Sample Image">
-    </section>       
-    <section class="callback-section">
-        <div class="callback-container">
-            <div class="callback-image">
-                <p class="office">Our Office</p>
-                <div class="image-container">
-                    <img src="/assets/images/ContactUsSub.png" alt="Request Callback">
-                    <div class="details-box">
-                        <p>Moodabidri</p>
-                        <p class="color">Location</p>
-                        <p>FORTUNE PROMOTERS <br>Fortune Highway-2 <br>Main Road,Moodabidri-5744227</p>
-                        <p class="color">Contact</p>
-                        <p>08258 238555 <br>72595 14111</p>
-                        <p class="color">Email</p>
-                        <p>sales@fortunepromoters.com <br>bedrafortune@gmail.com</p>
+  <section class="image-section">
+    <img src="/assets/images/ContactUsMain.png" alt="Sample Image">
+  </section>
+  <section class="callback-section">
+    <div class="callback-container">
+      <div class="callback-image">
+        <p class="office">Our Office</p>
+        <div class="image-container">
+          <img src="/assets/images/ContactUsSub.png" alt="Request Callback">
+          <div class="details-box">
+            <p>Moodabidri</p>
+            <p class="color">Location</p>
+            <p>FORTUNE PROMOTERS <br>Fortune Highway-2 <br>Main Road,Moodabidri-5744227</p>
+            <p class="color">Contact</p>
+            <p>08258 238555 <br>72595 14111</p>
+            <p class="color">Email</p>
+            <p>sales@fortunepromoters.com <br>bedrafortune@gmail.com</p>
 
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callback-form">
+        <h2>Request a Callback</h2>
+        <p>Fill in your details, and we will get back to you as soon as possible.</p><br>
+        <form>
+          <div class="input-container">
+            <p>Your Name <span class="required">*</span></p>
+            <input type="text" placeholder="Enter your name" required>
+            <div class="line"></div>
+          </div><br>
+          <div class="input-container">
+            <p>Your Phone Number <span class="required">*</span></p>
+            <input type="email" placeholder="Enter your phone number" required>
+            <div class="line"></div>
+          </div><br>
+          <div class="input-container">
+            <p>Your Email <span class="required">*</span></p>
+            <input type="email" placeholder="Enter your email" required>
+            <div class="line"></div>
+          </div><br>
+          <div class="input-container" id="dropdown">
+            <p>Project Interested</p>
+            <div class="dropdown-wrapper">
+              <select required class="selection">
+                <option value="" disabled selected hidden>Select Project</option>
+                <option value="project1">Fortune Galaxy</option>
+                <option value="project2">Fortune Orchid</option>
+                <option value="project3">Fortune Hillside</option>
+                <option value="project4">Furtune Highway-2</option>
+                <option value="project4">Furtune Highway</option>
+                <option value="project4">Furtune Center</option>
+                <option value="project4">Furtune Lotus</option>
+              </select>
             </div>
+            <div class="dropline"></div>
+          </div>
 
-            <div class="callback-form">
-                <h2>Request a Callback</h2>
-                <p>Fill in your details, and we will get back to you as soon as possible.</p><br>
-                <form>
-                    <div class="input-container">
-                        <p>Your Name <span class="required">*</span></p>
-                        <input type="text" placeholder="Enter your name" required>
-                        <div class="line"></div>
-                    </div><br>
-                    <div class="input-container">
-                        <p>Your Phone Number <span class="required">*</span></p>
-                        <input type="email" placeholder="Enter your phone number" required>
-                        <div class="line"></div>
-                    </div><br>
-                    <div class="input-container">
-                        <p>Your Email <span class="required">*</span></p>
-                        <input type="email" placeholder="Enter your email" required>
-                        <div class="line"></div>
-                    </div><br>
-                    <div class="input-container" id="dropdown">
-                        <p>Project Interested</p>
-                        <div class="dropdown-wrapper">
-                            <select required class="selection">
-                                <option value="" disabled selected hidden>Select Project</option>
-                                <option value="project1">Fortune Galaxy</option>
-                                <option value="project2">Fortune Orchid</option>
-                                <option value="project3">Fortune Hillside</option>
-                                <option value="project4">Furtune Highway-2</option>
-                                <option value="project4">Furtune Highway</option>
-                                <option value="project4">Furtune Center</option>
-                                <option value="project4">Furtune Lotus</option>
-                            </select>
-                        </div>
-                        <div class="dropline"></div>
-                    </div>
-                    
-                    <div class="input-container">
-                        <p>Message</span></p>
-                        <input type="text" placeholder="Write Your Message Here..." required>
-                        <div class="line"></div>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
-    </div>
-  
-  
-    <!-- Chatbot -->
-    <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
-    <div class="chat-container" id="chat-container">
-      <div class="chat-header">
-        Fortune Promoters
-        <button class="close-btn" onclick="toggleChat()">✖</button>
-      </div>
-      <div class="chat-messages" id="chat-messages"></div>
-      <div class="chat-input">
-        <input type="text" id="user-input" placeholder="Type a message...">
-        <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
+          <div class="input-container">
+            <p>Message</span></p>
+            <input type="text" placeholder="Write Your Message Here..." required>
+            <div class="line"></div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
-   <!-- Footer Section -->
- <footer class="footer">
-  <div class="container">
-    <div class="columns">
-      <div>
-        <img src="/assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
-        <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their portfolio
-          includes residential spaces, commercial properties, and plots, offering exceptional quality and value in
-          every
-          project.</p>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/fortunepromoters?igsh=MWVmeGNkM3VqY3Bx"><i class="fa-brands fa-instagram"
-              style="color: 2BA6DC;"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp" style="color: 2BA6DC;"></i></a>
-          <a href="https://www.facebook.com/share/1CFbtrmd56/"><i class="fa-brands fa-facebook-f"
-              style="color: 2BA6DC;"></i></a>
-          <a href="https://youtube.com/@fortunepromoters1948?si=JfFI0rc6S5JbvoiC"><i class="fa-brands fa-youtube"
-              style="color: 2BA6DC;"></i></a>
-        </div>
-      </div>
-      <div>
-        <div class="explore">
-          <h4 id="footer_heading">Explore</h4>
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/aboutUs.html">About Us</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="/contactus.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="get_in_touch">
-        <h4 id="footer_heading">Get in Touch</h4>
-        <p><i class="fa-solid fa-location-dot" style="color: #2BA6DC;"></i>
-          <a href="https://maps.app.goo.gl/XZfxsvv3sSvp9u8t9" style="color: white; text-decoration:none"> &nbsp;&nbsp;FORTUNE
-            PROMOTERS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortune
-            Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
-            Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a></p>
-        <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"></i>&nbsp;&nbsp; 08258 289555<br><i
-            class="fa-solid fa-phone" style="color: #2BA6DC;">&nbsp;&nbsp;</i>&nbsp;72595 14111</p>
-        <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
-            href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br> <i
-            class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
-            href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a></p>
-
-      </div>
-    </div>
-
+  </section>
+  <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
   </div>
-  <div class="bottom-bar"> Copyright @2024 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
-    Flow Technologies</div>
-</footer>
 
-    <script>
-        // Toggle navigation menu in mobile view
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
 
-        let isChatOpened = false;
+  <!-- Chatbot -->
+  <div class="chatbot-icon" onclick="toggleChat()"><i class="fa-solid fa-robot" style="color: #ffffff;"></i></div>
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      Fortune Promoters
+      <button class="close-btn" onclick="toggleChat()">✖</button>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #2ba6dc;"></i></button>
+    </div>
+  </div>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div>
+          <img src="/assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
+          <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their portfolio
+            includes residential spaces, commercial properties, and plots, offering exceptional quality and value in
+            every
+            project.</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/fortunepromoters?igsh=MWVmeGNkM3VqY3Bx"><i class="fa-brands fa-instagram"
+                style="color: 2BA6DC;"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp" style="color: 2BA6DC;"></i></a>
+            <a href="https://www.facebook.com/share/1CFbtrmd56/"><i class="fa-brands fa-facebook-f"
+                style="color: 2BA6DC;"></i></a>
+            <a href="https://youtube.com/@fortunepromoters1948?si=JfFI0rc6S5JbvoiC"><i class="fa-brands fa-youtube"
+                style="color: 2BA6DC;"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="explore">
+            <h4 id="footer_heading">Explore</h4>
+            <ul>
+              <li><a href="/pages/index.html">Home</a></li>
+              <li><a href="/pages/aboutUs.html">About Us</a></li>
+              <li><a href="/pages/projects.html">Projects</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="/pages/contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="get_in_touch">
+          <h4 id="footer_heading">Get in Touch</h4>
+          <p><i class="fa-solid fa-location-dot" style="color: #2BA6DC;"></i>
+            <a href="https://maps.app.goo.gl/XZfxsvv3sSvp9u8t9" style="color: white; text-decoration:none">
+              &nbsp;&nbsp;FORTUNE
+              PROMOTERS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortune
+              Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
+              Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
+          </p>
+          <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
+                href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
+            <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
+                href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
+          </p>
+          <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
+              href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br>
+            <i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
+              href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-bar"> Copyright @2025 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
+      Flow Technologies</div>
+  </footer>
+
+  <script>
+    // Toggle navigation menu in mobile view
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+
+    let isChatOpened = false;
     const apiKey = "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"; // Replace with your actual API key
 
     function whatsapp_link() {
@@ -243,11 +249,11 @@
         appendMessage("Fortune: " + reply, "bot");
       } catch (error) {
         console.error("Fetch Error:", error);
-        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.","bot");
+        appendMessage("Fortune: Error fetching response. Please check your API key and network connection.", "bot");
       }
     }
 
-    function appendMessage(message,user) {
+    function appendMessage(message, user) {
       const chatMessages = document.getElementById("chat-messages");
       const msgElement = document.createElement("div");
       msgElement.classList.add(user);
@@ -255,43 +261,51 @@
       chatMessages.appendChild(msgElement);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+    /*Enter to send*/
+    document.getElementById("user-input").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent default form submission (if applicable)
+        sendMessage();
+      }
+    });
 
+    /*Menu-toggle dropdown*/
     const navbar = document.querySelector(".navbar");
     const navbarLinks = document.querySelector(".navbar-links");
-      
+
     let isHovered = false; // Track hover state
 
     navbar.addEventListener("mousedown", () => {
-      if (window.innerWidth <=700) {
-      isHovered = true;
-      navbarLinks.style.display = "flex";
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
       }
-      
+
     });
 
     navbar.addEventListener("mouseenter", () => {
-      if (window.innerWidth <=700) {
-      isHovered = true;
-      navbarLinks.style.display = "flex";
+      if (window.innerWidth <= 700) {
+        isHovered = true;
+        navbarLinks.style.display = "flex";
       }
-      
+
     });
-    
+
     navbar.addEventListener("mouseleave", () => {
-      if (window.innerWidth <=700) {
+      if (window.innerWidth <= 700) {
         isHovered = false;
         navbarLinks.style.display = "none";
       }
     });
-    
+
     // Hide navbar-links when scrolling, but allow it to reappear on hover
     window.addEventListener("scroll", () => {
-      if (window.innerWidth <=700) {
+      if (window.innerWidth <= 700) {
         isHovered = false;
         navbarLinks.style.display = "none";
       }
     });
-    </script>
+  </script>
 
 </body>
 

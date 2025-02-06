@@ -8,6 +8,21 @@ body {
   background: #f9f9f9;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a::after {
+  text-decoration: none;
+  color: white;
+}
+
 /*--------------------------------------------------------Header CSS------------------------------------------*/
 header {
   background-color: #fff;
@@ -170,6 +185,7 @@ header {
   transform: rotate(360deg);
   opacity: 1;
 }
+
 /*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
 
 /* New section for image */
@@ -624,6 +640,7 @@ select:valid {
   color: white;
   text-decoration: none;
 }
+
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 
