@@ -867,7 +867,8 @@
       <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
       <a href="#" class="navbar-link">Careers</a>
       <div class="dropdown">
-        <p class="navbar-link">Projects</p>
+        <p class="navbar-link"><a class="lap" href="/pages/projects.html" >Projects</a>
+          <a class="mob" >Projects</a></p>
         <div class="dropdown-content">
           <a href="/pages/completedproject.html" id="ongoing">Completed Projects</a>
           <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
@@ -1016,6 +1017,22 @@
       menuToggle.addEventListener("click", function () {
         navbarLinks.classList.toggle("show");
       });
+
+      /* projects dropdown */
+      if (window.innerWidth > 700) {
+      document.querySelector('.lap').style.display = 'block';
+      document.querySelector('.mob').style.display = 'none';
+      document.querySelector('.lap').style.color = 'black';
+      document.querySelector('.mob').style.color = 'black';
+    }
+    else {
+      document.querySelector('.lap').style.display = 'none';
+      document.querySelector('.mob').style.display = 'block';
+      document.querySelector('.lap').style.color = 'black';
+      document.querySelector('.mob').style.color = 'black';
+    }
+    /* -=-=-=-=-=-=-=-=-=projects dropdown-=-=-=-=-=-=-=- */
+    
     });
     let isChatOpened = false;
     const apiKey = "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"; // Replace with your actual API key
