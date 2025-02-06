@@ -1,0 +1,950 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", serif;
+
+}
+
+body {
+  font-family: "Libre Franklin", serif;
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a::after {
+  text-decoration: none;
+  color: white;
+}
+
+/*--------------------------------------------------------Header CSS------------------------------------------*/
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 94px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+.navbar.shrink {
+  height: 54px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s linear;
+}
+
+.navbar.shrink .logo img {
+  height: 54px;
+  /* Adjust the height */
+  width: auto;
+  /* Maintain aspect ratio */
+  transition: all 0.2s linear;
+  /* Smooth transition */
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.logo img {
+  height: 94px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-right: 70px;
+}
+
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  font-family: 'Libre Franklin';
+}
+
+
+.navbar-links p {
+  margin: 0;
+}
+
+.navbar-link:hover {
+  color: #2BA6DC;
+  font-size: 18px;
+  transition: all 0.2s linear;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2BA6DC;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/*dropdown*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #2BA6DC;
+  color: white;
+}
+
+.nested-dropdown {
+  display: none;
+  padding-left: 20px;
+}
+
+.dropdown-item:hover+.nested-dropdown,
+.nested-dropdown:hover {
+  display: block;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #2BA6DC;
+  margin: 4px 0;
+}
+
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-item::after {
+  content: " >";
+  color: black;  
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-item:hover::after {
+  content: " v";
+  color: white;
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+/*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
+
+header img {
+  height: 50px;
+}
+
+h4 {
+  color: #2BA6DC;
+  text-align: center;
+  display: block;
+  margin: 20px 0 0 0;
+  padding-top: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+  font-size: 52px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+/*projects >*/
+.arrowprojects {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block; /* Ensures transform works */
+}
+
+.navbar-link:hover .arrowprojects {
+  transform: rotate(90deg); /* Rotates '>' to 'v' */
+}
+.hero {
+  width: 100%;
+  height: 700px;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 20px;
+  border: 1px solid #000;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  color: #2BA6DC;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.value {
+  font-size: 20px;
+  color: #666;
+}
+
+.overview h2 {
+  color: black;
+  font-size: 40px;
+}
+
+#amenities h2 {
+  color: black;
+  font-size: 40px;
+}
+
+
+.overview,
+.amenities,
+.gallery {
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+
+}
+
+h2 {
+  color: black;
+  font-size: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  width: 183px;
+  height: 52px;
+  border: none;
+  background-color: #2BA6DC;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.buttons button:hover {
+  background-color: #2798c9;
+  box-shadow: 0 5px 5px rgba(15, 174, 248, 0.3); /* Adds depth */
+  font-size: 18px;
+}
+
+.amenities {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.amenity {
+  text-align: center;
+  width: 100%;
+
+}
+
+.icon-circle {
+  width: 215px;
+  height: 217px;
+  background-color: #2BA6DC;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.icon-circle img {
+  width: 140px;
+  height: 140px;
+}
+
+.amenity p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.gallery img:hover {
+  transform: scale(1.03); /* Zoom-in effect */
+}
+/* whatsapp Bot icons*/
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #05ae3d;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+    /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
+    .chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2BA6DC;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .chat-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border-radius: 12px;
+      border-bottom-left-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background: #2BA6DC;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      color: black;
+    }
+
+    .bot {
+      background-color: rgb(168, 227, 251);
+      color: black;
+      padding-left: 5px;
+
+      border-radius: 8px;
+    }
+
+    .user {
+      background-color: white;
+      color: black;
+      text-align: right;
+      padding: 10px;
+    }
+
+    .loading {
+      padding-left: 5px;
+      border-radius: 8px;
+
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+      border-bottom-left-radius: 12px;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-bottom-left-radius: 12px;
+    }
+
+    .chat-input button {
+      padding: 10px;
+      background: #ffffff;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+    }
+
+
+/*FOOTER*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+  background-color: #666666;
+  color: #fff;
+  padding-top: 2rem 0;
+  font-size: 16px;
+
+}
+
+/*
+  .footer .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+*/
+.footer .columns {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 140px;
+  padding: 0px 0 4px 0;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.foot {
+  width: auto;
+}
+
+.footer .container .columns .foot {
+  text-align: left;
+  font-size: 12px;
+}
+
+#footer_heading {
+  text-align: left;
+  padding-top: 0%;
+  padding-bottom: 10px;
+}
+
+.footer .columns div {
+  flex: 1;
+  margin: 0 10px;
+  min-width: 200px;
+}
+
+.footer .explore h4 {
+  font-size: 20px;
+  padding-bottom: none;
+  color: #2BA6DC;
+}
+
+.footer .explore ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .explore ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer .explore li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .explore ul li a:hover {
+  color: #2dbcf5
+}
+
+.footer .bottom-bar {
+  background-color: #2BA6DC;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.get_in_touch {
+  font-size: 20px;
+  padding-bottom: none;
+  color: #2BA6DC;
+}
+
+.get_in_touch p {
+  font-size: 14px;
+  padding-bottom: none;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-around;
+  padding-left: none;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #2dbcf5;
+  font-size: 40px;
+  text-decoration: none;
+  justify-content: space-between;
+}
+.social-icons a:hover {
+  filter: drop-shadow(0 0 1px #2dbcf5); /* Glow effect */
+  transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
+.email {
+  color: white;
+  text-decoration: none;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+
+  /*---------------------------Header CSS-------------------------------------*/
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .logo img {
+    height: 60px;
+    /* Reduce logo size */
+  }
+
+  .navbar.shrink .logo img {
+    height: 40px;
+    /* Further reduce logo size when shrunk */
+  }
+
+  .navbar-links.active {
+    display: flex;
+    /* Show when toggled */
+  }
+
+  /*--------------------------------------------header css  ends----------------------------------------*/
+  /* Adjust grid for tablets */
+  .project-details {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  .buttons {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    
+  }
+
+  .buttons button {
+    width: 150px;
+    height: 45px;
+  }
+
+  .icon-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .icon-circle img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
+  .footer .columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 0px;
+    padding: 50px 0 0 0;
+    max-width: 98%;
+    margin: 0;
+  }
+
+  .footer .columns div {
+    text-align: center;
+  }
+
+  .footer .container .columns .foot {
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+
+
+  .footer .get_in_touch p {
+    text-align: justify;
+    padding-left: 65px;
+  }
+
+  .social-icons {
+
+    justify-content: center;
+    gap: 20px;
+    /* Center align social icons */
+  }
+
+  #footer_heading {
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
+}
+
+@media (max-width: 768px) {
+
+  /*---------------------------------------Header------------------------------------------------------- */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    margin-right: 24px;
+    display: block;
+  }
+
+  .navbar.shrink {
+    height: 50px;
+    /* Further reduce height when shrunk */
+  }
+
+  .logo {
+    margin-left: 20px;
+    /* Reduce margin */
+  }
+
+  .logo img {
+    height: 50px;
+    /* Further reduce logo size */
+  }
+
+  .navbar-link {
+    font-size: 16px;
+    /* Reduce navbar link font size */
+  }
+
+  .mid_btn {
+    margin-top: -2px;
+    margin-bottom: 38px;
+    padding: 1rem 2rem;
+    /* Reduce padding */
+    font-size: 20px;
+    /* Reduce font size */
+    width: 100%;
+    /* Make button width responsive */
+  }
+
+  /*----------------------------------------header css ends-------------------------------------------*/
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+  .overview h2 {
+    font-size: 25px;
+  }
+
+  #amenities {
+    font-size: 25px;
+  }
+
+  .overview p {
+    text-align: justify;
+  }
+
+  .project-details {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
+    max-width: 250px;
+    height: 45px;
+
+  }
+
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .amenities {
+
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  #amenities h2 {
+    font-size: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .amenity p {
+    font-size: 18px;
+  }
+
+  .icon-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .icon-circle img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /*---------------------------------------------------------------------------------------*/
+  .footer .columns {
+    grid-template-columns: 1fr;
+    /* Stack columns vertically */
+    gap: 20px;
+    /* Reduce gap between columns */
+    padding: 20px 0;
+    /* Adjust padding */
+  }
+
+  .footer .columns div {
+    text-align: center;
+    /* Center align text */
+  }
+
+  .footer .container .columns .foot {
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .footer .explore ul li a {
+    color: #ffffff;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+  .footer .get_in_touch p {
+    text-align: justify;
+    padding-left: 65px;
+  }
+
+  #footer_heading {
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 20px;
+    /* Center align social icons */
+  }
+
+  .social-icons i {
+    font-size: 28px;
+
+  }
+
+  .footer {
+    font-size: 14px;
+    /* Reduce footer font size */
+    text-align: justify;
+
+  }
+
+  .footer .bottom-bar {
+    font-size: 9px;
+  }
+
+  /*---------------------------------------------------------------------------------------*/
+}
