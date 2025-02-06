@@ -329,6 +329,15 @@ document.addEventListener("DOMContentLoaded", function () {
         sendMessage();
       }
     });
+    function closeChat() { 
+        const chatContainer = document.getElementById("chat-container"); 
+        chatContainer.style.display = "none"; 
+    } 
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            event.preventDefault(); closeChat(); // Call the correct function 
+        }
+    });
 
     /*Menu-toggle dropdown*/
     const navbar = document.querySelector(".navbar");

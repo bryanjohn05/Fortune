@@ -873,7 +873,7 @@
 
   <script>
 
-    
+
     /*Nav*/
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menu-toggle");
@@ -886,21 +886,21 @@
 
       /* projects dropdown */
       if (window.innerWidth > 700) {
-      document.querySelector('.lap').style.display = 'block';
-      document.querySelector('.mob').style.display = 'none';
-      document.querySelector('.lap').style.color = 'black';
-      document.querySelector('.mob').style.color = 'black';
-    }
-    else {
-      document.querySelector('.lap').style.display = 'none';
-      document.querySelector('.mob').style.display = 'block';
-      document.querySelector('.lap').style.color = 'black';
-      document.querySelector('.mob').style.color = 'black';
-    }
-    /* -=-=-=-=-=-=-=-=-=projects dropdown-=-=-=-=-=-=-=- */
+        document.querySelector('.lap').style.display = 'block';
+        document.querySelector('.mob').style.display = 'none';
+        document.querySelector('.lap').style.color = 'black';
+        document.querySelector('.mob').style.color = 'black';
+      }
+      else {
+        document.querySelector('.lap').style.display = 'none';
+        document.querySelector('.mob').style.display = 'block';
+        document.querySelector('.lap').style.color = 'black';
+        document.querySelector('.mob').style.color = 'black';
+      }
+      /* -=-=-=-=-=-=-=-=-=projects dropdown-=-=-=-=-=-=-=- */
 
     });
-    
+
     window.addEventListener('scroll', function () {
       const navbar = document.querySelector('.navbar');
       if (window.scrollY > 50) {
@@ -925,8 +925,9 @@
       <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
       <a href="#" class="navbar-link">Careers</a>
       <div class="dropdown">
-        <p class="navbar-link"><a class="lap" href="/pages/projects.html" >Projects</a>
-          <a class="mob" >Projects</a></p>
+        <p class="navbar-link"><a class="lap" href="/pages/projects.html">Projects</a>
+          <a class="mob">Projects</a>
+        </p>
         <div class="dropdown-content">
           <a href="/pages/completedproject.html" id="ongoing">Completed Projects</a>
           <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
@@ -1180,6 +1181,16 @@
         event.preventDefault(); // Prevent default form submission (if applicable)
         sendMessage();
       }
+    });
+
+    function closeChat() { 
+        const chatContainer = document.getElementById("chat-container"); 
+        chatContainer.style.display = "none"; 
+    } 
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            event.preventDefault(); closeChat(); // Call the correct function 
+        }
     });
 
     /*Menu-toggle dropdown*/
