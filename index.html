@@ -18,9 +18,1532 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
 
-    <link rel="icon" type="image/png" href="../assets/icons/fortunelogo.svg">
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="fortunelogo.svg">
+        <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.tel {
+  text-decoration: none;
+  color: white;
+}
+
+.lap {
+  text-decoration: none;
+}
+
+.mob {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 94px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+.navbar.shrink {
+  height: 54px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s linear;
+
+}
+
+.navbar.shrink .logo img {
+  height: 54px;
+  /* Adjust the height */
+  width: auto;
+  /* Maintain aspect ratio */
+  transition: all 0.2s linear;
+  /* Smooth transition */
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.logo img {
+  height: 94px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-right: 70px;
+
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  font-family: 'Libre Franklin';
+}
+
+
+.navbar-links p {
+  margin: 0;
+}
+
+.navbar-link:hover {
+  color: #2BA6DC;
+  font-size: 18px;
+  transition: all 0.2s linear;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2BA6DC;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/*dropdown*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #2BA6DC;
+  color: white;
+}
+
+.nested-dropdown {
+  display: none;
+  padding-left: 20px;
+}
+
+.dropdown-item:hover+.nested-dropdown,
+.nested-dropdown:hover {
+  display: block;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #2BA6DC;
+  margin: 4px 0;
+}
+
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-item::after {
+  content: " >";
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-item:hover::after {
+  content: " v";
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+/*projects >*/
+.arrowprojects {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  /* Ensures transform works */
+}
+
+.navbar-link:hover .arrowprojects {
+  transform: rotate(90deg);
+  /* Rotates '>' to 'v' */
+}
+
+/* ---------------------------------------------------- */
+/* homepage */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", serif;
+}
+
+.home {
+
+  position: relative;
+  width: 100%;
+  /* Remove fixed height and use aspect ratio instead */
+  aspect-ratio: 16/9;
+  /* Adjust this ratio based on your image's dimensions */
+  overflow: hidden;
+}
+
+.buildingImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Add overlay for better text visibility */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  /* Set a consistent padding */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+
+#buildingDescription {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  /* Responsive font size */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  /* Responsive font size */
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.button1 {
+  display: inline-block;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  /* Responsive padding */
+  background-color: #3b82f6;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  /* Responsive font size */
+  transition: background-color 0.3s;
+  width: min(200px, 80%);
+  /* Responsive width */
+}
+
+.button1:hover {
+  background-color: #2563eb;
+}
+
+.button1:hover::after {
+  content: ">";
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #05ae3d;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+    /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
+    .chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2BA6DC;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .chat-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border-radius: 12px;
+      border-bottom-left-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .chat-header {
+      background: #2BA6DC;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      z-index: 1000;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 1000;
+
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      color: black;
+      z-index: 1000;
+    }
+
+    .bot {
+      background-color: rgb(168, 227, 251);
+      color: black;
+      padding-left: 5px;
+
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .user {
+      background-color: white;
+      color: black;
+      text-align: right;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .loading {
+      padding-left: 5px;
+      border-radius: 8px;
+      z-index: 1000;
+
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+      border-bottom-left-radius: 12px;
+      z-index: 1000;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-bottom-left-radius: 12px;
+      z-index: 1000;
+    }
+
+    .chat-input button {
+      padding: 10px;
+      background: #ffffff;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+      z-index: 1000;
+    }
+
+
+/* Media Queries */
+@media (max-width: 1440px) {
+  .home {
+    aspect-ratio: 4/3;
+    /* Adjust aspect ratio for mobile */
+  }
+
+  .content {
+    padding: 0 110px;
+
+  }
+
+
+  /*---------------------------Header CSS-------------------------------------*/
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .logo img {
+    height: 94px;
+      width: auto;
+  }
+
+  .navbar.shrink .logo img {
+    height: 40px;
+    /* Further reduce logo size when shrunk */
+  }
+
+  .navbar-links.active {
+    display: flex;
+    /* Show when toggled */
+  }
+
+}
+
+@media (max-width: 700px) {
+
+    
+    .slick-dots{
+        position: relative;
+    }
+  .home {
+    aspect-ratio: 1/1;
+    /* Square aspect ratio for very small screens */
+    margin-top: 90px;
+  }
+
+  .content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .description p {
+    text-align: center;
+  }
+
+  .excellence-section p {
+    text-align: justify;
+  }
+
+
+  /*---------------------------------------Header------------------------------------------------------- */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar.shrink {
+    height: 50px;
+    /* Further reduce height when shrunk */
+  }
+
+  .logo {
+    margin-left: 20px;
+    /* Reduce margin */
+  }
+
+  .logo img {
+    height: 50px;
+    /* Further reduce logo size */
+  }
+
+  .navbar-link {
+    font-size: 16px;
+    /* Reduce navbar link font size */
+  }
+
+  .mid_btn {
+    margin-top: -2px;
+    margin-bottom: 38px;
+    padding: 1rem 2rem;
+    /* Reduce padding */
+    font-size: 20px;
+    /* Reduce font size */
+    width: 100%;
+    /* Make button width responsive */
+  }
+
+  .button1 {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+}
+
+/* ----------------- */
+/* stats section */
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* max-width: 1200px; */
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 150px;
+}
+
+.stat-number {
+  font-size: 58px;
+  font-weight: 500;
+  color: #0ea5e9;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+
+
+/* ----------------------------- */
+/* projects Cards */
+
+.container1 {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 120px;
+}
+
+.bankName {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 7.5rem;
+  /* justify-content: space-between; Distribute the grid items evenly across the container */
+}
+
+
+.project-card {
+  border: 1px solid #e5e5e5;
+  /* border-radius: 8px;git  */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.project-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.arrow-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e6f3ff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: #cce6ff;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  fill: #0066cc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+  }
+
+  .container1 {
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 60px;
+  }
+
+}
+
+/* ------------------------------------- */
+/* Excellence  */
+
+.excellence-section {
+  background-color: #29ABE2;
+  color: white;
+  padding: 4rem 0;
+  width: 100%;
+
+}
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 120px;
+
+}
+
+.features-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 120px;
+
+}
+
+.features-row {
+  display: flex;
+  gap: 2 rem;
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex: 1;
+  max-width: calc(50% - 1rem);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.feature-content h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.feature-content p {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 968px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    padding: 0 60px;
+  }
+
+  .features-row {
+    flex-direction: column;
+  }
+
+  .feature {
+    max-width: 100%;
+  }
+
+  .features-wrapper {
+    padding: 0 60px;
+  }
+}
+
+
+/* ------------------------------------ */
+/* Bnak Names slider */
+.bankName {
+  margin-top: 60px;
+}
+
+.bank-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1050px;
+  /* 3 images (200px each) + 2 gaps (20px each) + padding */
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bank {
+  display: flex;
+  gap: 100px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  width: 100%;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.bank img {
+  width: auto;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.bank-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.bank img:hover {
+  transform: scale(1.1);
+}
+
+.scroll-btn {
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+
+
+
+/* Scroll Buttons */
+.scroll-btn {
+  color: #2BA6DC;
+  /* White text */
+  border: none;
+  padding: 6px 14px;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  /* Keep the position relative */
+  z-index: 10;
+  margin: 0 20px;
+  /* Adds space between buttons and images */
+  border-radius: 100%;
+  /* Optional: Adds rounded corners */
+}
+
+.scroll-btn.back-btn {
+  left: 0;
+}
+
+.scroll-btn.next-btn {
+  right: 0;
+}
+
+@media (max-width: 860px) {
+
+  .bank img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  .scroll-btn {
+    padding: 4px 10px;
+    font-size: 20px;
+
+  }
+}
+
+@media (max-width: 500px) {
+
+  .bank img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+}
+
+
+
+/* ----------------------------- */
+/* Testamony */
+.testimonial-section {
+  margin: 60px auto 0;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.blue-heading {
+  color: #0099ff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.main-heading {
+  color: #333;
+  font-size: 2.5rem;
+  margin: 0 auto;
+}
+
+.testimonial-container {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  min-height: 200px;
+  display: flex;
+  /* flex-direction: co4; */
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-button:hover {
+  color: #0099ff;
+}
+
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-container {
+    width: 90%;
+  }
+
+  .testimonial-wrapper {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .nav-button {
+    font-size: 35px;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .testimonial-wrapper {
+    padding: 0 30px;
+  }
+
+  .nav-button {
+    font-size: 30px;
+  }
+
+  .prev {
+    left: -30px;
+  }
+
+  .next {
+    right: -30px;
+  }
+}
+
+
+/* --------------------------------------- */
+/* Form Filling */
+
+.form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.blue-heading {
+  color: #0099ff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.main-heading {
+  color: #333;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #e6e6e6;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  background-color: #d9d9d9;
+}
+
+textarea.form-control {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.submit-container {
+  grid-column: 1 / -1;
+  text-align: right;
+}
+
+.submit-btn {
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: padding 0.4s ease-in-out, background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #007acc;
+}
+
+@media (max-width: 1290px) {
+  .form-container {
+    margin: 0 auto;
+    padding: 40px clamp(60px, 6vw, 80px);
+    /* Smooth scaling */
+    transition: padding 0.3s ease-in-out;
+    /* Smooth effect */
+  }
+
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    margin: 0 auto;
+    padding: 40px clamp(20px, 6vw, 80px);
+    /* Smooth scaling */
+    transition: padding 0.3s ease-in-out;
+    /* Smooth effect */
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+}
+
+.submit-btn::after {
+  content: " \2192";
+  /* Unicode right arrow (→) */
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.submit-btn:hover {
+  padding-right: 30px;
+  /* Adjust padding to accommodate the arrow */
+}
+
+.submit-btn:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.footer {
+  background-color: #666666;
+  color: #fff;
+  /* padding: 30px 120px 0 120px ; */
+  font-size: 16px;
+}
+
+/*
+  .footer .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+  }
+*/
+.footer .columns {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 140px;
+  padding: 30px 120px 0 120px;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.foot {
+  width: auto;
+}
+
+.footer .container .columns .foot {
+  text-align: left;
+  font-size: 12px;
+}
+
+#footer_heading {
+  text-align: left;
+  padding-top: 0%;
+  padding-bottom: 10px;
+}
+
+.footer .columns div {
+  flex: 1;
+  margin: 0 10px;
+  min-width: 200px;
+}
+
+.footer .explore h4 {
+  font-size: 20px;
+  padding-bottom: none;
+  color: #2BA6DC;
+}
+
+.footer .explore ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .explore ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer .explore li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .explore ul li a:hover {
+  color: #2dbcf5
+}
+
+.footer .bottom-bar {
+  background-color: #2BA6DC;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.get_in_touch {
+  font-size: 20px;
+  padding-bottom: none;
+  color: #2BA6DC;
+}
+
+.get_in_touch p {
+  font-size: 14px;
+  padding-bottom: none;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-around;
+  padding-left: none;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #2dbcf5;
+  font-size: 40px;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+
+.email {
+  color: white;
+  text-decoration: none;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 700px) {
+
+  .image-section img {
+    width: 100%;
+    /* Make the image take the full width on mobile */
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+  }
+
+  .callback-section {
+    padding: 0px 24px;
+    /* Reduced padding for mobile */
+    flex-direction: column;
+    /* Stack items vertically */
+  }
+
+  .callback-image img {
+    max-width: 100%;
+    height: 190%;
+    /* Make the image bigger on mobile */
+    width: 100%;
+  }
+
+  .details-box {
+    width: 190px;
+    left: 0px;
+    /* Smaller width for mobile */
+    padding: 10px;
+    /* Reduced padding */
+    font-size: 10px;
+    margin-bottom: 6px;
+
+    /* Smaller font size */
+    /* Ensure it's not too far left */
+  }
+
+  .callback-container {
+    display: flex;
+    padding: 24px 24px;
+    flex-direction: column;
+    /* Stack the content vertically on mobile */
+    align-items: center;
+    /* Center the content */
+    gap: 20px;
+    /* Gap between image and form */
+  }
+
+  .callback-image img {
+    max-width: 100%;
+    margin-left: 10px;
+    opacity: 0.8;
+
+  }
+
+  .callback-form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  .callback-form button {
+    display: block;
+    /* Ensures it respects margin auto */
+    margin: 0 auto;
+    /* Ensure button takes full width */
+    padding: 10px 20px;
+  }
+
+  /*---------------------------------------------------------------------------------------*/
+  .footer .columns {
+    grid-template-columns: 1fr;
+    /* Stack columns vertically */
+    gap: 20px;
+    /* Reduce gap between columns */
+    padding: 0px 20px;
+    /* Adjust padding */
+  }
+
+  .footer .columns div {
+    text-align: center;
+    /* Center align text */
+  }
+
+  .footer .container .columns .foot {
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .footer .explore ul li a {
+    color: #ffffff;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+  .footer .get_in_touch p {
+    text-align: justify;
+    padding-left: 65px;
+  }
+
+  #footer_heading {
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 20px;
+    /* Center align social icons */
+  }
+
+  .social-icons i {
+    font-size: 28px;
+
+  }
+
+  .footer {
+    font-size: 14px;
+    /* Reduce footer font size */
+    text-align: justify;
+
+  }
+
+  .footer .bottom-bar {
+    font-size: 9px;
+  }
+
+  /*---------------------------------------------------------------------------------------*/
+}
+
+@media (min-width:700px) and (max-width: 1200px) {
+  header {
+    padding: 10px 40px;
+  }
+
+  .callback-image img {
+    max-width: 100%;
+    margin-left: 10px;
+    opacity: 0.8;
+  }
+
+  .details-box {
+    width: 350px;
+    height: 400px;
+    ;
+    left: 0px;
+    /* Smaller width for mobile */
+    padding: 5px;
+    /* Reduced padding */
+    font-size: 10px;
+    margin-bottom: 2px;
+    left: -2px;
+    box-shadow: 3px 3px 10px rgba(0, 86, 179, 0.5);
+
+    /* Smaller font size */
+    /* Ensure it's not too far left */
+  }
+
+  .details-box p {
+    font-size: 20px;
+
+    /* Smaller font size */
+    /* Ensure it's not too far left */
+  }
+
+  .callback-container {
+    flex-direction: column;
+    padding: 30px 30px;
+    gap: 30px;
+  }
+
+  .callback-form {
+    width: 80%;
+  }
+
+  .callback-form h2 {
+    font-size: 28px;
+    padding: 0;
+  }
+
+  .callback-form p {
+    font-size: 16px;
+  }
+
+  .callback-image {
+    Flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+    margin: 0 30px;
+  }
+
+  .input-container p {
+    font-size: 24px;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
+  .footer .columns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 0px;
+    padding: 50px 30px 0 30px;
+    max-width: 98%;
+    margin: 0;
+  }
+
+  .footer .columns div {
+    text-align: center;
+  }
+
+  .footer .container .columns .foot {
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .footer .explore ul li a:hover {
+    color: #2dbcf5
+  }
+
+
+
+  .footer .get_in_touch p {
+    text-align: justify;
+    padding-left: 65px;
+  }
+
+  .social-icons {
+
+    justify-content: center;
+    gap: 20px;
+    /* Center align social icons */
+  }
+
+  #footer_heading {
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 10px;
+  }
+
+  /*-------------------------------------------------------------------------------------------------------------------*/
+}
+    </style>
 </head>
 <script>
     src = "https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs";
@@ -46,15 +1569,15 @@
         if (window.innerWidth > 700) {
             document.querySelector('.lap').style.display = 'block';
             document.querySelector('.mob').style.display = 'none';
-            document.querySelector('.lap').style.color = 'black';
-            document.querySelector('.mob').style.color = 'black';
+            document.querySelector('.lap').style.color = '#333333';
+            document.querySelector('.mob').style.color = '#333333';
 
         }
         else {
             document.querySelector('.lap').style.display = 'none';
             document.querySelector('.mob').style.display = 'block';
-            document.querySelector('.lap').style.color = 'black';
-            document.querySelector('.mob').style.color = 'black';
+            document.querySelector('.lap').style.color = '#333333';
+            document.querySelector('.mob').style.color = '#333333';
         }
         /* -=-=-=-=-=-=-=-=-=projects dropdown-=-=-=-=-=-=-=- */
 
@@ -121,7 +1644,32 @@
                 body: JSON.stringify({
                     model: "llama3-70b-8192", // Ensure this model exists
                     messages: [
-                        { role: "system", content: "You are a polite and professional AI assistant representing Fortune Promoters, a real estate business located at Fortune Highway-II, Main Road, Moodbidri - 574227. Guidelines: Assist customers professionally and concisely. Provide answers only if certain; otherwise, politely direct them to contact Fortune Promoters via: Phone: 08258238555 / 7259514111. Email: sales@fortunepromoters.com / bedrafortune@gmail.com .Strictly avoid lengthy responses—keep answers brief, clear, and engaging. Maintain a formal and respectful tone. No unnecessary explanations—stay to the point." },
+                        { role: "system", content: `You are a professional and courteous AI assistant representing Fortune Promoters, a real estate company located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers efficiently with concise, accurate, and engaging responses.
+
+Guidelines for Interaction:
+Keep responses brief, clear, and professional—no unnecessary explanations.
+Provide accurate information only. If unsure, politely direct customers to contact Fortune Promoters.
+Contact Information:
+Phone: 08258-238555 / 72595-14111
+ Email: sales@fortunepromoters.com / bedrafortune@gmail.com
+Maintain a friendly yet formal tone to ensure a welcoming and trustworthy experience.
+Avoid lengthy responses—stay to the point while ensuring clarity and helpfulness.
+Do not exeed 20 words per response.
+ 
+Project Details:
+Ongoing Projects:
+
+Fortune Orchid - Gated community with modern amenities, prime location, and high appreciation potential.
+Fortune Hillside - Premium hilltop property with jogging tracks, security, and green spaces.
+Fortune Galaxy - Premium  property with jogging tracks, security, and green spaces, club house.
+Completed Projects:
+
+Fortune Highway (Jainpete Moodbidri)
+Fortune Highway-2 (Jainpete Moodbidri)
+Fortune Center (Bajagoli)
+Fortune Lotus (Jodurasthe Karkala)
+Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` 
+},
                         { role: "user", content: message }
                     ],
                     max_tokens: 100
@@ -167,36 +1715,36 @@
         <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
         <div class="navbar-links" id="navbar-links">
             <a href="#" class="navbar-link">Home</a>
-            <a href="aboutUs.html" class="navbar-link">About Us</a>
+            <a href="./pages/aboutUs.html" class="navbar-link">About Us</a>
             <a href="#" class="navbar-link">Careers</a>
             <div class="dropdown">
-                <p class="navbar-link"><a class="lap" href="projects.html">Projects <span
+                <p class="navbar-link"><a class="lap" href="./pages/projects.html">Projects <span
                             class="arrowprojects">></span></a>
                     <a class="mob">Projects</a>
                 </p>
                 <div class="dropdown-content">
-                    <a href="completedproject.html" id="ongoing">Completed Projects</a>
+                    <a href="./pages/completedproject.html" id="ongoing">Completed Projects</a>
                     <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
                     <div class="nested-dropdown" id="ongoing-options">
-                        <a href="Hillside.html">Fortune Hillside</a>
-                        <a href="Galaxy.html">Fortune Galaxy</a>
-                        <a href="Orchid.html">Fortune Orchid</a>
+                        <a href="./pages/Hillside.html">Fortune Hillside</a>
+                        <a href="./pages/Galaxy.html">Fortune Galaxy</a>
+                        <a href="./pages/Orchid.html">Fortune Orchid</a>
                     </div>
                 </div>
             </div>
-            <a href="contactus.html" class="navbar-link">Contact Us</a>
+            <a href="./pages/contactus.html" class="navbar-link">Contact Us</a>
         </div>
     </nav>
 
     <div class="home">
-        <img src="../public/assets/images/Project1.png" alt="Fortune Galaxy Building" class="buildingImg">
+        <img src="./assets/images/Project1.png" alt="Fortune Galaxy Building" class="buildingImg">
 
         <div class="content">
             <h1 id="buildingDescription">Fortune Galaxy</h1>
             <p class="description">
                 Stylish Spacious 2, 3 BHK and Duplex Apartments at the Mother of Seeds Bajpe
             </p>
-            <a href="./projects.html" class="button1">View Project </a>
+            <a href="./pages/projects.html" class="button1">View Project </a>
         </div>
     </div>
     <div class="stats-container">
@@ -224,14 +1772,14 @@
         <div class="projects-grid">
             <!-- Fortune Galaxy Card -->
             <div class="project-card">
-                <a href="./Galaxy.html" style="text-decoration: none;"><img src="../public/assets/images/HomeSub1.png"
+                <a href="./pages/Galaxy.html" style="text-decoration: none;"><img src="./assets/images/HomeSub1.png"
                         alt="Fortune Galaxy" class="project-image">
                     <div class="project-info">
                         <div>
                             <div class="project-name">Fortune Galaxy</div>
                             <div class="project-location">Airport Road, Bajpe</div>
                         </div>
-                        <a href="./Galaxy.html" class="arrow-button">
+                        <a href="./pages/Galaxy.html" class="arrow-button">
                             <svg class="arrow-icon" viewBox="0 0 24 24">
                                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                             </svg>
@@ -242,14 +1790,14 @@
 
         <!-- Fortune Orchid Card -->
         <div class="project-card">
-            <a href="./Orchid.html" style="text-decoration: none;">
-                <img src="../public/assets/images/HomeSub2.png" alt="Fortune Orchid" class="project-image">
+            <a href="./pages/Orchid.html" style="text-decoration: none;">
+                <img src="./assets/images/HomeSub2.png" alt="Fortune Orchid" class="project-image">
                 <div class="project-info">
                     <div>
                         <div class="project-name">Fortune Orchid</div>
                         <div class="project-location">Salmara Road, Karkala</div>
                     </div>
-                    <a href="./Orchid.html" class="arrow-button">
+                    <a href="./pages/Orchid.html" class="arrow-button">
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                         </svg>
@@ -260,14 +1808,14 @@
 
     <!-- Fortune Hillside Card -->
     <div class="project-card">
-        <a href="./Hillside.html" style="text-decoration: none;">
-            <img src="../public/assets/images/HomeSub3.png" alt="Fortune Hillside" class="project-image">
+        <a href="./pages/Hillside.html" style="text-decoration: none;">
+            <img src="./assets/images/HomeSub3.png" alt="Fortune Hillside" class="project-image">
             <div class="project-info">
                 <div>
                     <div class="project-name">Fortune Hillside</div>
                     <div class="project-location">Pachanady, Bondel</div>
                 </div>
-                <a href="./Hillside.html" class="arrow-button">
+                <a href="./pages/Hillside.html" class="arrow-button">
                     <svg class="arrow-icon" viewBox="0 0 24 24">
                         <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                     </svg>
@@ -288,7 +1836,7 @@
             <!-- First row -->
             <div class="features-row">
                 <div class="feature">
-                    <img src="../public/assets/icons/LeadershipIcon.png" alt="" class="feature-icon" />
+                    <img src="./assets/icons/LeadershipIcon.png" alt="" class="feature-icon" />
                     <div class="feature-content">
                         <h3>Leadership in Expertise and Vision</h3>
                         <p>Fortune stands out as a leader in the real estate industry due to its unmatched expertise
@@ -299,7 +1847,7 @@
                 </div>
 
                 <div class="feature">
-                    <img src="../public/assets/icons/PrimeLocationsIcon.png" alt="" class="feature-icon" />
+                    <img src="./assets/icons/PrimeLocationsIcon.png" alt="" class="feature-icon" />
                     <div class="feature-content">
                         <h3>Prime Locations for Lasting Value</h3>
                         <p>Strategic location selection is key to Fortune's success. The company's properties
@@ -314,7 +1862,7 @@
             <!-- Second row -->
             <div class="features-row">
                 <div class="feature">
-                    <img src="../public/assets/icons/Customer-CentricIcon.png" alt="" class="feature-icon" />
+                    <img src="./assets/icons/Customer-CentricIcon.png" alt="" class="feature-icon" />
                     <div class="feature-content">
                         <h3>A Customer-Centric Approach at the Core</h3>
                         <p>Fortune's business model places customer satisfaction at the forefront. The company's
@@ -326,7 +1874,7 @@
                 </div>
 
                 <div class="feature">
-                    <img src="../public/assets/icons/CommitmentIcon.png" alt="" class="feature-icon" />
+                    <img src="./assets/icons/CommitmentIcon.png" alt="" class="feature-icon" />
                     <div class="feature-content">
                         <h3>Commitment to Superior Quality</h3>
                         <p>Fortune's reputation is built on a foundation of superior quality and exceptional
@@ -347,10 +1895,10 @@
         <div class="bank-container">
             <button class="scroll-btn back-btn" onclick="scrollGallery(-1)"> < </button>
                     <div class="bank" id="bank">
-                        <img src="../public/assets/images/AxisBank.png" alt="Axis Bank">
-                        <img src="../public/assets/images/HDFCBank.png" alt="HDFC Bank">
-                        <img src="../public/assets/images/CanaraBank.png" alt="Canara Bank">
-                        <img src="../public/assets/images/UnionBank.png" alt="Union Bank">
+                        <img src="./assets/images/AxisBank.png" alt="Axis Bank">
+                        <img src="./assets/images/HDFCBank.png" alt="HDFC Bank">
+                        <img src="./assets/images/CanaraBank.png" alt="Canara Bank">
+                        <img src="./assets/images/UnionBank.png" alt="Union Bank">
                     </div>
             <button class="scroll-btn next-btn" onclick="scrollGallery(1)">></button>
         </div>
@@ -446,7 +1994,7 @@
         <div class="container">
             <div class="columns">
                 <div>
-                    <img src="../public/assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
+                    <img src="./assets/icons/fortunelogo.svg" alt="Logo" style="width: 80px;">
                     <p class="foot">Fortune Promoters is a leading real estate builder and developer in Moodbidri. Their
                         portfolio
                         includes residential spaces, commercial properties, and plots, offering exceptional quality and
@@ -468,10 +2016,10 @@
                         <h4 id="footer_heading">Explore</h4>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="aboutUs.html">About Us</a></li>
-                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="./pages/aboutUs.html">About Us</a></li>
+                            <li><a href="./pages/projects.html">Projects</a></li>
                             <li><a href="#">Careers</a></li>
-                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="./pages/contactus.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
