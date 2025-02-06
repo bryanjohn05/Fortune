@@ -273,6 +273,7 @@ text-decoration: none;
       justify-content: center;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
     }
 
     /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
@@ -290,6 +291,7 @@ text-decoration: none;
       justify-content: center;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
     }
 
     .chat-container {
@@ -304,6 +306,7 @@ text-decoration: none;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: none;
       flex-direction: column;
+      z-index: 1000;
     }
 
     .chat-header {
@@ -316,6 +319,7 @@ text-decoration: none;
       align-items: center;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
+      z-index: 1000;
     }
 
     .close-btn {
@@ -324,6 +328,7 @@ text-decoration: none;
       color: white;
       font-size: 12px;
       cursor: pointer;
+      z-index: 1000;
 
     }
 
@@ -332,14 +337,15 @@ text-decoration: none;
       padding: 10px;
       overflow-y: auto;
       color: black;
+      z-index: 1000;
     }
 
     .bot {
       background-color: #2ba6dc;
       color: black;
       padding-left: 5px;
-
       border-radius: 8px;
+      z-index: 1000;
     }
 
     .user {
@@ -347,6 +353,7 @@ text-decoration: none;
       color: black;
       text-align: right;
       padding: 10px;
+      z-index: 1000;
 
 
     }
@@ -355,6 +362,7 @@ text-decoration: none;
       display: flex;
       border-top: 1px solid #ddd;
       border-bottom-left-radius: 12px;
+      z-index: 1000;
     }
 
     .chat-input input {
@@ -363,6 +371,7 @@ text-decoration: none;
       border: none;
       outline: none;
       border-bottom-left-radius: 12px;
+      z-index: 1000;
     }
 
     .chat-input button {
@@ -372,6 +381,7 @@ text-decoration: none;
       border-radius: 12px;
       cursor: pointer;
       border: none;
+      z-index: 1000;
     }
 
 

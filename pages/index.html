@@ -42,7 +42,7 @@
             document.querySelector('.mob').style.display = 'none';
             document.querySelector('.lap').style.color = 'black';
             document.querySelector('.mob').style.color = 'black';
-            
+
         }
         else {
             document.querySelector('.lap').style.display = 'none';
@@ -57,7 +57,7 @@
 
 
 
-
+    /*Chat Bot*/
     let isChatOpened = false;
     const apiKey = "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"; // Replace with your actual API key
 
@@ -123,41 +123,6 @@
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    const navbar = document.querySelector(".navbar");
-    const navbarLinks = document.querySelector(".navbar-links");
-
-    let isHovered = false; // Track hover state
-
-    navbar.addEventListener("mousedown", () => {
-        if (window.innerWidth <= 700) {
-            isHovered = true;
-            navbarLinks.style.display = "flex";
-        }
-
-    });
-
-    navbar.addEventListener("mouseenter", () => {
-        if (window.innerWidth <= 700) {
-            isHovered = true;
-            navbarLinks.style.display = "flex";
-        }
-
-    });
-
-    navbar.addEventListener("mouseleave", () => {
-        if (window.innerWidth <= 700) {
-            isHovered = false;
-            navbarLinks.style.display = "none";
-        }
-    });
-
-    // Hide navbar-links when scrolling, but allow it to reappear on hover
-    window.addEventListener("scroll", () => {
-        if (window.innerWidth <= 700) {
-            isHovered = false;
-            navbarLinks.style.display = "none";
-        }
-    });
 </script>
 
 <body>
@@ -174,8 +139,9 @@
             <a href="aboutUs.html" class="navbar-link">About Us</a>
             <a href="#" class="navbar-link">Careers</a>
             <div class="dropdown">
-                <p class="navbar-link"><a class="lap" href="projects.html" >Projects</a>
-                    <a class="mob" >Projects</a></p>
+                <p class="navbar-link"><a class="lap" href="projects.html">Projects</a>
+                    <a class="mob">Projects</a>
+                </p>
                 <div class="dropdown-content">
                     <a href="completedproject.html" id="ongoing">Completed Projects</a>
                     <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
@@ -201,7 +167,7 @@
             <p class="description">
                 Stylish Spacious 2, 3 BHK and Duplex Apartments at the Mother of Seeds Bajpe
             </p>
-            <a href="#" class="button1">View Project</a>
+            <a href="./projects.html" class="button1">View Project</a>
         </div>
     </div>
     <div class="stats-container">
@@ -235,7 +201,7 @@
                         <div class="project-name">Fortune Galaxy</div>
                         <div class="project-location">Kochi</div>
                     </div>
-                    <a href="/projects/fortune-galaxy" class="arrow-button">
+                    <a href="./Galaxy.html" class="arrow-button">
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                         </svg>
@@ -251,7 +217,7 @@
                         <div class="project-name">Fortune Orchid</div>
                         <div class="project-location">Kochi</div>
                     </div>
-                    <a href="/projects/fortune-orchid" class="arrow-button">
+                    <a href="./Orchid.html" class="arrow-button">
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                         </svg>
@@ -267,7 +233,7 @@
                         <div class="project-name">Fortune Hillside</div>
                         <div class="project-location">Kochi</div>
                     </div>
-                    <a href="/projects/fortune-hillside" class="arrow-button">
+                    <a href="./Hillside.html" class="arrow-button">
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                         </svg>
@@ -488,15 +454,15 @@
                             Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
                     </p>
                     <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
-                        href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
-                    <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
-                        href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
-                  </p>
-                  <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
-                      href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br>
-                    <i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
-                      href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a>
-                  </p>
+                                href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
+                        <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
+                                href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
+                    </p>
+                    <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
+                            href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br>
+                        <i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp;<a class="email"
+                            href="mailto:bedrafortune@gmail.com">&nbsp;bedrafortune@gmail.com</a>
+                    </p>
                 </div>
             </div>
 
@@ -615,6 +581,63 @@
 
         // Optional: Reset form
         this.reset();
+    });
+
+    /*Enter to send*/
+    document.getElementById("user-input").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevent default form submission (if applicable)
+            sendMessage();
+        }
+    });
+
+    function closeChat() { 
+        const chatContainer = document.getElementById("chat-container"); 
+        chatContainer.style.display = "none"; 
+    } 
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            event.preventDefault(); closeChat(); // Call the correct function 
+        }
+    });
+
+
+    /*Menu-toggle dropdown*/
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar-links");
+
+    let isHovered = false; // Track hover state
+
+
+    navbar.addEventListener("mousedown", () => {
+        if (window.innerWidth <= 700) {
+            isHovered = true;
+            navbarLinks.style.display = "flex";
+        }
+
+    });
+
+    navbar.addEventListener("mouseenter", () => {
+        if (window.innerWidth <= 700) {
+            isHovered = true;
+            navbarLinks.style.display = "flex";
+        }
+
+    });
+
+    navbar.addEventListener("mouseleave", () => {
+        if (window.innerWidth <= 700) {
+            isHovered = false;
+            navbarLinks.style.display = "none";
+        }
+    });
+
+    // Hide navbar-links when scrolling, but allow it to reappear on hover
+    window.addEventListener("scroll", () => {
+        if (window.innerWidth <= 700) {
+            isHovered = false;
+            navbarLinks.style.display = "none";
+        }
     });
 
 </script>
