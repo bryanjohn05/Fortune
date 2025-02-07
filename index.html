@@ -804,23 +804,25 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 
 .features-row {
   display: flex;
-  gap: 2 rem;
-  flex:wrap;
-  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .feature {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  justify-content: center;
   flex: 1;
-  max-width: calc(50% - 1rem);
+  /* /* max-width: calc(50% - 1rem); */
 }
 
 .feature-icon {
   width: 48px;
   height: 48px;
-  flex-shrink: 0;
+  margin-left: -10px;
+  /* flex-shrink: 0; */
 }
 
 .feature-content h3 {
@@ -833,6 +835,10 @@ transition: transform 0.3s ease, opacity 0.3s ease;
   margin: 0;
   line-height: 1.6;
   opacity: 0.9;
+}
+.bank-container{
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 @media (max-width: 968px) {
