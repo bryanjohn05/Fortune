@@ -185,12 +185,12 @@ header {
   display: block;
 }
 
-.bar {
+/* .bar {
   width: 25px;
   height: 3px;
   background-color: #2BA6DC;
   margin: 4px 0;
-}
+} */
 
 .dropdown-item {
   position: relative;
@@ -247,21 +247,23 @@ header {
   height: 100vh; /* Ensure images take full viewport height */
 }
 .slick-dots {
+  
   position: absolute;
   bottom: 20px;
   width: 100%;
   text-align: center;
+  
 }
 
 .slick-dots li button:before {
   font-size: 12px;
-  color: white;
-  border: 2px solid black;
-  border-radius: 50%; /* Pagination dot color */
+  color: rgb(5, 5, 5);
+  z-index:1000;
 }
 .slick-dots li.slick-active button:before {
   color: #2BA6DC !important; /* Active dot color (Blue) */
   opacity: 1; /* Make active dot fully visible */
+  z-index:1000;
 }
 
 
@@ -295,7 +297,7 @@ header {
   width: 100%;
   height: 650px;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  
 }
 
 .content {
@@ -691,7 +693,7 @@ header {
 
 .project-image {
   width: 100%;
-  height: 400px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -887,6 +889,8 @@ header {
   max-width: 1050px;
   /* 3 images (200px each) + 2 gaps (20px each) + padding */
   width: 100%;
+  margin-top: 20px;
+  padding-top:50px ;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -995,7 +999,7 @@ header {
 /* ----------------------------- */
 /* Testamony */
 .testimonial-section {
-  margin: 60px auto 0;
+  margin: 100px auto 0;
   padding: 0 40px;
   text-align: center;
 }
@@ -1017,7 +1021,9 @@ header {
 .testimonial-container {
   position: relative;
   width: 70%;
-  margin: 0 auto;
+  margin: auto;
+  /* padding-top:60px ; */
+  /* margin-top: 60px; */
   min-height: 200px;
   display: flex;
   /* flex-direction: co4; */
@@ -1057,24 +1063,19 @@ header {
 .testimonial-wrapper .slick-dots {
  
   position: relative;
-  bottom: 20px;
+  bottom: -10px;
   width: 100%;
   text-align: center;
 }
-.testimonial-wrapper.slick-dots li button:before {
+.testimonial-wrapper.slick-dots li button:after {
     font-size: 12px;
     color: rgb(0, 0, 0); /* Pagination dot color */
     opacity: 100;
-    width: 12px;
-    display: inline-block;
-    height: 12px;
-    line-height: 12px;
   }
 
 .testimonial-wrapper.slick-dots li.slick-active button:before {
-  background-color: blue; /* Active dot fill */
-  border: 2px solid black; /* Keep border black */
-  opacity: 1;
+    color: #2BA6DC !important; /* Active dot color (Blue) */
+    opacity: 1; /* Make active dot fully visible */
   }
 
 .nav-button {
@@ -1331,7 +1332,7 @@ textarea.form-control {
 .footer .columns div {
   flex: 1;
   margin: 0 10px;
-  min-width: 200px;
+  min-width: 100px;
 }
 
 .footer .explore h4 {
@@ -1853,9 +1854,9 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
               <div class="content">
                   <h1 class="buildingDescription">Fortune Galaxy</h1>
                   <p class="description">
-                      Stylish Spacious 2, 3 BHK and Duplex Apartments at the Mother of Seeds Bajpe
+                      Stylish Spacious 2, 3 BHK and Duplex Apartments at Airport Road, Bajpe
                   </p>
-                  <a href="#" class="button1">View Project</a>
+                  <a href="./pages/Galaxy.html" class="button1">View Project</a>
               </div>
           </div>
           <div class="scroll-item">
@@ -1863,9 +1864,9 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
               <div class="content">
                   <h1 class="buildingDescription">Fortune Orchid</h1>
                   <p class="description">
-                      Stylish Spacious 2, 3 BHK and Duplex Apartments at the Mother of Seeds Bajpe
+                      Stylish Spacious 2, 3 BHK and Duplex Apartments at Salmara Road, Karkala
                   </p>
-                  <a href="#" class="button1">View Project</a>
+                  <a href="./pages/Orchid.html" class="button1">View Project</a>
               </div>
           </div>
           <div class="scroll-item">
@@ -1873,9 +1874,9 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
               <div class="content">
                   <h1 class="buildingDescription">Fortune Hillside</h1>
                   <p class="description">
-                      Stylish Spacious 2, 3 BHK and Duplex Apartments at the Mother of Seeds Bajpe
+                      Stylish Spacious 2, 3 BHK and Duplex Apartments at Bondel Vamanjoor Road
                   </p>
-                  <a href="#" class="button1">View Project</a>
+                  <a href="./pages/Hillside.html" class="button1">View Project</a>
               </div>
           </div>
       </div>
@@ -1910,7 +1911,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
         <div class="projects-grid">
             <!-- Fortune Galaxy Card -->
             <div class="project-card">
-                <a href="./pages/Galaxy.html" style="text-decoration: none;"><img src="./assets/images/HomeSub1.png"
+                <a href="./pages/Galaxy.html" style="text-decoration: none;"><img src="./assets/images/HomeSub2.png"
                         alt="Fortune Galaxy" class="project-image">
                     <div class="project-info">
                         <div>
@@ -1929,7 +1930,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
         <!-- Fortune Orchid Card -->
         <div class="project-card">
             <a href="./pages/Orchid.html" style="text-decoration: none;">
-                <img src="./assets/images/HomeSub2.png" alt="Fortune Orchid" class="project-image">
+                <img src="./assets/images/HomeSub1.png" alt="Fortune Orchid" class="project-image">
                 <div class="project-info">
                     <div>
                         <div class="project-name">Fortune Orchid</div>
@@ -1949,7 +1950,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
     <!-- Fortune Hillside Card -->
     <div class="project-card">
         <a href="./pages/Hillside.html" style="text-decoration: none;">
-            <img src="./assets/images/HomeSub3.png" alt="Fortune Hillside" class="project-image">
+            <img src="./assets/images/HillSideMain.png" alt="Fortune Hillside" class="project-image">
             <div class="project-info">
                 <div>
                     <div class="project-name">Fortune Hillside</div>
@@ -2100,8 +2101,6 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)`
                   <option value="p2">Fortune Orchid</option>
                   <option value="p3">Fortune Hillside</option>
                   <option value="p4">Furtune Highway-2</option>
-                  <option value="p5">Furtune Highway</option>
-                  <option value="p5">Furtune Center</option>
                   <option value="p5">Furtune Highway</option>
               </select>
           </div>
