@@ -638,11 +638,12 @@ header {
   margin-top: 0.25rem;
 }
 
+
 .arrow-button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #e6f3ff;
+  background-color: #c6c7c7;
   border: none;
   cursor: pointer;
   display: flex;
@@ -658,7 +659,7 @@ header {
 .arrow-icon {
   width: 20px;
   height: 20px;
-  fill: #0066cc;
+  fill: #2BA6DC;
 }
 
 @media (max-width: 768px) {
@@ -824,6 +825,7 @@ header {
 }
 
 .scroll-btn {
+  visibility: hidden;
   cursor: pointer;
   color: white;
   border: none;
@@ -836,6 +838,7 @@ header {
 
 /* Scroll Buttons */
 .scroll-btn {
+  visibility: hidden;
   color: #2BA6DC;
   /* White text */
   border: none;

@@ -843,6 +843,9 @@ select:valid {
 
 @media screen and (max-width: 700px) {
 
+  .image-section img{
+    margin-top: 90px;
+  }
   /*---------------------------------------Header------------------------------------------------------- */
   .navbar-links {
     display: none;
@@ -941,7 +944,7 @@ select:valid {
     padding: 10px;
     /* Reduced padding */
     font-size: 10px;
-    margin-bottom: 6px;
+    margin-bottom: 1px;
 
     /* Smaller font size */
     /* Ensure it's not too far left */

@@ -111,6 +111,7 @@
       cursor: pointer;
       text-align: center;
       align-items: center;
+      margin-right: 24px;
     }
 
     .navbar.shrink {
@@ -474,6 +475,14 @@
       border-top-right-radius: 12px;
     }
 
+    .video-style {
+      width: 100%;  /* Increase width */
+      max-width: 1400px; /* Limit maximum width */
+      display: block;
+      margin: auto; /* Center the video */
+     /* Optional: Rounded corners */
+  }
+
     .close-btn {
       background: none;
       border: none;
@@ -692,10 +701,7 @@
 
       /*----------------------------------------header css ends-------------------------------------------*/
 
-      .hero {
-        margin-top: 70px;
-        /* Adjust margin-top for smaller screens */
-      }
+      
 
       img {
         max-width: 100%;
@@ -817,7 +823,10 @@
   <section class="section">
     <div class="container">
       <button class="mid_btn">Our Residential & Commercial Buildings</button>
-      <img src="../assets/images/Project2.png" alt="Building Image" class="pop-up">
+      <video id="myVideo" class="video-style" autoplay muted loop>
+        <source src="../assets/video/vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
       <p>
         When it comes to finding your perfect home, Fortune Promoters is your trusted partner. Our residential offerings
         include a wide range of well-thought-out apartments designed to meet diverse lifestyles and budgets. Whether
@@ -974,7 +983,31 @@
           body: JSON.stringify({
             model: "llama3-70b-8192", // Ensure this model exists
             messages: [
-              { role: "system", content: "You are a polite and professional AI assistant representing Fortune Promoters, a real estate business located at Fortune Highway-II, Main Road, Moodbidri - 574227. Guidelines: Assist customers professionally and concisely. Provide answers only if certain; otherwise, politely direct them to contact Fortune Promoters via: Phone: 08258238555 / 7259514111. Email: sales@fortunepromoters.com / bedrafortune@gmail.com .Strictly avoid lengthy responses—keep answers brief, clear, and engaging. Maintain a formal and respectful tone. No unnecessary explanations—stay to the point." },
+              { role: "system", content: `You are a professional and courteous AI assistant representing Fortune Promoters, a real estate company located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers efficiently with concise, accurate, and engaging responses.
+
+Guidelines for Interaction:
+Keep responses brief, clear, and professional—no unnecessary explanations.
+Provide accurate information only. If unsure, politely direct customers to contact Fortune Promoters.
+Contact Information:
+Phone: 08258-238555 / 72595-14111
+ Email: sales@fortunepromoters.com / bedrafortune@gmail.com
+Maintain a friendly yet formal tone to ensure a welcoming and trustworthy experience.
+Avoid lengthy responses—stay to the point while ensuring clarity and helpfulness.
+Do not exeed 20 words per response.
+ 
+Project Details:
+Ongoing Projects:
+
+Fortune Orchid - Gated community with modern amenities, prime location, and high appreciation potential.
+Fortune Hillside - Premium hilltop property with jogging tracks, security, and green spaces.
+Fortune Galaxy - Premium  property with jogging tracks, security, and green spaces, club house.
+Completed Projects:
+
+Fortune Highway (Jainpete Moodbidri)
+Fortune Highway-2 (Jainpete Moodbidri)
+Fortune Center (Bajagoli)
+Fortune Lotus (Jodurasthe Karkala)
+Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
               { role: "user", content: message }
             ],
             max_tokens: 100
@@ -1066,6 +1099,17 @@
         navbarLinks.style.display = "none";
       }
     });
+
+
+
+    /*--------------------video js part--------------------*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.getElementById("myVideo");
+
+      video.play();
+  });
+
+
   </script>
 
 </body>
