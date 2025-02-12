@@ -23,7 +23,7 @@
     });
     document.addEventListener("DOMContentLoaded", function () {
       const sections = document.querySelectorAll(".image-section");
-    
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -34,15 +34,15 @@
         },
         { threshold: 0.2 }
       );
-    
+
       sections.forEach((section) => {
         observer.observe(section);
       });
     });
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const image = document.querySelector('.section img');
       const section = document.querySelector('.section');
-    
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -53,7 +53,7 @@
       }, {
         threshold: 0.5 // Trigger when 50% of the section is visible
       });
-    
+
       observer.observe(section);
     });
 
@@ -283,22 +283,24 @@
     .container p {
       text-align: justify;
     }
+
     .image-section {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
     }
-    
+
     .image-section.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     img.pop-up {
       opacity: 0;
       transform: translateY(50px);
       transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
-    
+
     /* Define the animation when the image is visible */
     img.pop-up.visible {
       opacity: 1;
@@ -476,12 +478,15 @@
     }
 
     .video-style {
-      width: 100%;  /* Increase width */
-      max-width: 1400px; /* Limit maximum width */
+      width: 100%;
+      /* Increase width */
+      max-width: 1400px;
+      /* Limit maximum width */
       display: block;
-      margin: auto; /* Center the video */
-     /* Optional: Rounded corners */
-  }
+      margin: auto;
+      /* Center the video */
+      /* Optional: Rounded corners */
+    }
 
     .close-btn {
       background: none;
@@ -701,7 +706,7 @@
 
       /*----------------------------------------header css ends-------------------------------------------*/
 
-      
+
 
       img {
         max-width: 100%;
@@ -792,7 +797,8 @@
   <!-- Header Section -->
   <nav class="navbar">
     <div class="logo">
-      <a href="#"><img src="../assets/icons/fortunelogo.svg" alt="Company Logo"> </a>    </div>
+      <a href="#"><img src="../assets/icons/fortunelogo.svg" alt="Company Logo"> </a>
+    </div>
     <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
     <div class="navbar-links" id="navbar-links">
       <a href="../index.html" class="navbar-link">Home</a>
@@ -810,13 +816,14 @@
           </div>
         </div>
       </div>
+      <a href="/pages/gallery.html" class="navbar-link">Gallery</a>
       <a href="/pages/contactus.html" class="navbar-link">Contact Us</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <div class="hero">
-    <img src="../assets/images/Project1.png" alt="Hero Image" class="image-section">
+    <img src="../assets/images/GalaxyMain.png" alt="Hero Image" class="image-section">
   </div>
 
   <!-- Section 1 -->
@@ -826,7 +833,7 @@
       <video id="myVideo" class="video-style" autoplay muted loop>
         <source src="../assets/video/vid.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+      </video>
       <p>
         When it comes to finding your perfect home, Fortune Promoters is your trusted partner. Our residential offerings
         include a wide range of well-thought-out apartments designed to meet diverse lifestyles and budgets. Whether
@@ -878,9 +885,9 @@
               Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
           </p>
           <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
-                href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
+                href="tel:+918258289555"></i>&nbsp;&nbsp; +91 8258289555</a><br>
             <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
-                href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
+                href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;+91 7259514111</a>
           </p>
           <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
               href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br>
@@ -894,6 +901,7 @@
     <div class="bottom-bar"> Copyright @2025 &ndash; Fortune Promoters &ndash; All rights reserved | Designed by Vision
       Flow Technologies</div>
   </footer>
+
 
   <div class="whatsapp-icon" onclick="whatsapp_link()"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
   </div>
@@ -930,7 +938,7 @@
     const apiKey = "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"; // Replace with your actual API key
 
     function whatsapp_link() {
-      window.open('https://wa.me/', '_blank');
+      window.open('https://wa.me/message/6DFG2NVU3FOFD1?src=qr', '_blank');
     }
 
     function toggleChat() {
@@ -952,7 +960,7 @@
       loadingAnime();
 
 
-      
+
       function loadingAnime() {
         const chatMessages = document.getElementById("chat-messages");
         const loading = document.createElement("div");
@@ -966,9 +974,9 @@
         chatMessages.append(loading);
 
         setTimeout(() => {
-          
+
           loading.remove();
-          
+
         }, 800);
 
       }
@@ -983,13 +991,14 @@
           body: JSON.stringify({
             model: "llama3-70b-8192", // Ensure this model exists
             messages: [
-              { role: "system", content: `You are a professional and courteous AI assistant representing Fortune Promoters, a real estate company located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers efficiently with concise, accurate, and engaging responses.
+              {
+                role: "system", content: `You are a professional and courteous AI assistant representing Fortune Promoters, a real estate company located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers efficiently with concise, accurate, and engaging responses.
 
 Guidelines for Interaction:
 Keep responses brief, clear, and professional—no unnecessary explanations.
 Provide accurate information only. If unsure, politely direct customers to contact Fortune Promoters.
 Contact Information:
-Phone: 08258-238555 / 72595-14111
+Phone: +91 8258-238555 / +91 72595-14111
  Email: sales@fortunepromoters.com / bedrafortune@gmail.com
 Maintain a friendly yet formal tone to ensure a welcoming and trustworthy experience.
 Avoid lengthy responses—stay to the point while ensuring clarity and helpfulness.
@@ -1014,7 +1023,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
           })
         });
 
-        
+
 
         const data = await response.json();
 
@@ -1026,7 +1035,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
         const reply = data.choices[0].message.content || "I couldn't understand that.";
         appendMessage("Fortune: " + reply, "bot");
 
-        
+
       } catch (error) {
         console.error("Fetch Error:", error);
         appendMessage("Fortune: Error fetching response. Please check your API key and network connection.", "bot");
@@ -1107,7 +1116,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
       const video = document.getElementById("myVideo");
 
       video.play();
-  });
+    });
 
 
   </script>
