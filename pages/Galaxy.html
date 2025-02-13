@@ -26,14 +26,15 @@
   <!-- Header Section -->
   <nav class="navbar">
     <div class="logo">
-      <a href="#"><img src="/assets/icons/fortunelogo.svg" alt="Company Logo"> </a>    </div>
+      <a href="#"><img src="/assets/icons/fortunelogo.svg" alt="Company Logo"> </a>
+    </div>
     <div class="menu-toggle" id="menu-toggle"> &#9776; </div>
     <div class="navbar-links" id="navbar-links">
       <a href="../index.html" class="navbar-link">Home</a>
       <a href="/pages/aboutUs.html" class="navbar-link">About Us</a>
       <a href="#" class="navbar-link">Careers</a>
       <div class="dropdown">
-        <a class="navbar-link" href="/pages/projects.html" >Projects <span class="arrowprojects">></span></a>
+        <a class="navbar-link" href="/pages/projects.html">Projects <span class="arrowprojects">></span></a>
         <div class="dropdown-content">
           <a href="/pages/completedproject.html" id="ongoing">Completed Projects</a>
           <a href="#" class="dropdown-item" id="ongoing">Ongoing Projects &nbsp;&nbsp;</a>
@@ -44,6 +45,7 @@
           </div>
         </div>
       </div>
+      <a href="/pages/gallery.html" class="navbar-link">Gallery</a>
       <a href="/pages/contactus.html" class="navbar-link">Contact Us</a>
     </div>
   </nav>
@@ -187,9 +189,9 @@
               Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
           </p>
           <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
-                href="tel:+918258289555"></i>&nbsp;&nbsp; 08258 289555</a><br>
+                href="tel:+918258289555"></i>&nbsp;&nbsp; +91 8258289555</a><br>
             <i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
-                href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;72595 14111</a>
+                href="tel:+917259512111">&nbsp;&nbsp;</i>&nbsp;+91 7259514111</a>
           </p>
           <p><i class="fa-solid fa-envelope" style="color: #2BA6DC;"></i>&nbsp;&nbsp; <a class="email"
               href="mailto:sales@fortunepromoters.com">sales@fortunepromoters.com</a><br>
@@ -235,18 +237,18 @@
 
       /* projects dropdown */
       if (window.innerWidth > 700) {
-      document.querySelector('.lap').style.display = 'block';
-      document.querySelector('.mob').style.display = 'none';
-      document.querySelector('.lap').style.color = 'black';
-      document.querySelector('.mob').style.color = 'black';
-    }
-    else {
-      document.querySelector('.lap').style.display = 'none';
-      document.querySelector('.mob').style.display = 'block';
-      document.querySelector('.lap').style.color = 'black';
-      document.querySelector('.mob').style.color = 'black';
-    }
-    /* -=-=-=-=-=-=-=-=-=projects dropdown-=-=-=-=-=-=-=- */
+        document.querySelector('.lap').style.display = 'block';
+        document.querySelector('.mob').style.display = 'none';
+        document.querySelector('.lap').style.color = 'black';
+        document.querySelector('.mob').style.color = 'black';
+      }
+      else {
+        document.querySelector('.lap').style.display = 'none';
+        document.querySelector('.mob').style.display = 'block';
+        document.querySelector('.lap').style.color = 'black';
+        document.querySelector('.mob').style.color = 'black';
+      }
+      /* -=-=-=-=-=-=-=-=-=projects dropdown-=-=-=-=-=-=-=- */
 
     });
 
@@ -263,7 +265,7 @@
     const apiKey = "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"; // Replace with your actual API key
 
     function whatsapp_link() {
-      window.open('https://wa.me/', '_blank');
+      window.open('https://wa.me/message/6DFG2NVU3FOFD1?src=qr', '_blank');
     }
 
     function toggleChat() {
@@ -285,7 +287,7 @@
       loadingAnime();
 
 
-      
+
       function loadingAnime() {
         const chatMessages = document.getElementById("chat-messages");
         const loading = document.createElement("div");
@@ -299,9 +301,9 @@
         chatMessages.append(loading);
 
         setTimeout(() => {
-          
+
           loading.remove();
-          
+
         }, 800);
 
       }
@@ -316,13 +318,14 @@
           body: JSON.stringify({
             model: "llama3-70b-8192", // Ensure this model exists
             messages: [
-              { role: "system", content: `You are a professional and courteous AI assistant representing Fortune Promoters, a real estate company located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers efficiently with concise, accurate, and engaging responses.
+              {
+                role: "system", content: `You are a professional and courteous AI assistant representing Fortune Promoters, a real estate company located at Fortune Highway-II, Main Road, Moodbidri - 574227. Your role is to assist customers efficiently with concise, accurate, and engaging responses.
 
 Guidelines for Interaction:
 Keep responses brief, clear, and professional—no unnecessary explanations.
 Provide accurate information only. If unsure, politely direct customers to contact Fortune Promoters.
 Contact Information:
-Phone: 08258-238555 / 72595-14111
+Phone: +91 8258-238555 / +91 72595-14111
  Email: sales@fortunepromoters.com / bedrafortune@gmail.com
 Maintain a friendly yet formal tone to ensure a welcoming and trustworthy experience.
 Avoid lengthy responses—stay to the point while ensuring clarity and helpfulness.
@@ -347,7 +350,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
           })
         });
 
-        
+
 
         const data = await response.json();
 
@@ -359,7 +362,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
         const reply = data.choices[0].message.content || "I couldn't understand that.";
         appendMessage("Fortune: " + reply, "bot");
 
-        
+
       } catch (error) {
         console.error("Fetch Error:", error);
         appendMessage("Fortune: Error fetching response. Please check your API key and network connection.", "bot");
@@ -380,7 +383,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
       const chatContainer = document.getElementById("chat-container");
       chatContainer.style.display = "none";
     }
-    
+
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
         event.preventDefault();
@@ -443,7 +446,7 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
     //Main image transions
     document.addEventListener("DOMContentLoaded", function () {
       const heroImage = document.querySelector(".hero");
-    
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -454,12 +457,12 @@ Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
         },
         { threshold: 0.2 }
       );
-    
+
       if (heroImage) {
         observer.observe(heroImage);
       }
     });
-    
+
   </script>
 </body>
 
