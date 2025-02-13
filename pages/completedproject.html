@@ -38,7 +38,6 @@
   <style>
     body {
       font-family: "Libre Franklin", sans-serif;
-      text-align: center;
       margin: 0;
       padding: 0;
     }
@@ -318,6 +317,120 @@
       transform: rotate(360deg);
       opacity: 1;
     }
+    /*  --------=========Chatbot===---=-=-=-=-=-=-=-=    */
+    .chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2BA6DC;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .chat-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border-radius: 12px;
+      border-bottom-left-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background: #2BA6DC;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .video-style {
+      width: 100%;
+      /* Increase width */
+      max-width: 1400px;
+      /* Limit maximum width */
+      display: block;
+      margin: auto;
+      /* Center the video */
+      /* Optional: Rounded corners */
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      color: black;
+    }
+
+    .bot {
+      background-color: rgb(168, 227, 251);
+      color: black;
+      padding-left: 5px;
+
+      border-radius: 8px;
+    }
+
+    .user {
+      background-color: white;
+      color: black;
+      text-align: right;
+      padding: 10px;
+    }
+
+    .loading {
+      padding-left: 5px;
+      border-radius: 8px;
+
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+      border-bottom-left-radius: 12px;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-bottom-left-radius: 12px;
+    }
+
+    .chat-input button {
+      padding: 10px;
+      background: #ffffff;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+    }
+
 
     /*-----------------------------------------------------------Header ends---------------------------------------------------------------*/
 
@@ -841,6 +954,17 @@
       border-top-right-radius: 12px;
     }
 
+    .video-style {
+      width: 100%;
+      /* Increase width */
+      max-width: 1400px;
+      /* Limit maximum width */
+      display: block;
+      margin: auto;
+      /* Center the video */
+      /* Optional: Rounded corners */
+    }
+
     .close-btn {
       background: none;
       border: none;
@@ -1017,6 +1141,8 @@
               <li><a href="/pages/projects.html">Projects</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="/pages/contactus.html">Contact Us</a></li>
+              <li><a href="/pages/privacypolicy.html">Privacy Policy</a></li>
+              <li><a href="/pages/t&c.html">Terms and conditions</a></li>
             </ul>
           </div>
         </div>
@@ -1027,7 +1153,7 @@
               &nbsp;&nbsp;FORTUNE
               PROMOTERS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fortune
               Highway-II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main Road,
-              Moodbidri<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-574227</a>
+              Moodbidri - 574227</a>
           </p>
           <p><i class="fa-solid fa-phone" style="color: #2BA6DC;"><a class="tel"
                 href="tel:+918258289555"></i>&nbsp;&nbsp; +91 8258289555</a><br>
@@ -1167,16 +1293,17 @@ Do not exeed 20 words per response.
 Project Details:
 Ongoing Projects:
 
-Fortune Orchid - Gated community with modern amenities, prime location, and high appreciation potential.
-Fortune Hillside - Premium hilltop property with jogging tracks, security, and green spaces.
-Fortune Galaxy - Premium  property with jogging tracks, security, and green spaces, club house.
+Fortune Orchid - Gated community with modern amenities, prime location, and high appreciation potential. - pages/Orchid.html 
+Fortune Hillside - Premium hilltop property with jogging tracks, security, and green spaces. - pages/Hillside.html
+Fortune Galaxy - Premium  property with jogging tracks, security, and green spaces, club house. - pages/Galaxy.html
 Completed Projects:
 
 Fortune Highway (Jainpete Moodbidri)
 Fortune Highway-2 (Jainpete Moodbidri)
 Fortune Center (Bajagoli)
 Fortune Lotus (Jodurasthe Karkala)
-Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)` },
+Fortune Neethi Heights (Opp. Government Hospital, Moodbidri)
+Our Managing Directors are Mr. Rony Fernandes, Mr. Dennis Pereira, Mr. Abulala Puthige, and Mr. Mahendra Varma Jain.` },
               { role: "user", content: message }
             ],
             max_tokens: 100

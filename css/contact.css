@@ -214,11 +214,13 @@ header {
 
 .dropdown-item::after {
   content: " >";
+  color: black;
   display: inline-block;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .dropdown-item:hover::after {
+  color: white;
   content: " v";
   transform: rotate(360deg);
   opacity: 1;
